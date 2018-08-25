@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/nInputTitle"
+        style="@style/WrapWrap.Bold.Black.14"/>
+
+    <TextView
+        android:id="@+id/nInputMandatory"
+        style="@style/WrapWrap.Bold.Purple.14"
+        app:layout_constraintLeft_toRightOf="@+id/nInputTitle"
+        android:text="*"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/nInput"
+        style="@style/MatchWrap.Regular.Black.14"
+        android:textColorHint="@color/lib_base_grey"
+        android:background="@drawable/edit_text_selector"
+        android:textCursorDrawable="@null"
+        app:layout_constraintTop_toBottomOf="@+id/nInputTitle"/>
+
+    <TextView
+        android:id="@+id/nInputError"
+        style="@style/WrapWrap.Bold.Red.14"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/nInput"/>
+
+</android.support.constraint.ConstraintLayout>

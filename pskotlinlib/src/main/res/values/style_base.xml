@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base -->
+    <style name="WrapWrap">    <item name="android:layout_width">wrap_content</item><item name="android:layout_height">wrap_content</item>  </style>
+    <style name="WrapMatch">   <item name="android:layout_width">wrap_content</item><item name="android:layout_height">match_parent</item>  </style>
+    <style name="MatchWrap">   <item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item>  </style>
+    <style name="MatchMatch">  <item name="android:layout_width">match_parent</item><item name="android:layout_height">match_parent</item>  </style>
+
+    <!-- Base-Bold -->
+    <style name="WrapWrap.Bold" parent="WrapWrap">        <item name="fontPath">Bold.ttf</item>  </style>
+    <style name="WrapMatch.Bold" parent="WrapMatch">      <item name="fontPath">Bold.ttf</item>  </style>
+    <style name="MatchWrap.Bold" parent="MatchWrap">      <item name="fontPath">Bold.ttf</item>  </style>
+    <style name="MatchMatch.Bold" parent="MatchMatch">    <item name="fontPath">Bold.ttf</item>  </style>
+
+    <!-- Base-Regular -->
+    <style name="WrapWrap.Regular" parent="WrapWrap">        <item name="fontPath">Regular.ttf</item>  </style>
+    <style name="WrapMatch.Regular" parent="WrapMatch">      <item name="fontPath">Regular.ttf</item>  </style>
+    <style name="MatchWrap.Regular" parent="MatchWrap">      <item name="fontPath">Regular.ttf</item>  </style>
+    <style name="MatchMatch.Regular" parent="MatchMatch">    <item name="fontPath">Regular.ttf</item>  </style>
+</resources>

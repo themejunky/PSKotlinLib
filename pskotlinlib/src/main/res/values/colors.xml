@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="lib_base_red">#fc0056</color>
+    <color name="lib_base_black">#333333</color>
+    <color name="lib_base_purple">#880cff</color>
+    <color name="lib_base_grey">#b1b1b1</color>
+    <color name="lib_base_green">#0cb037</color>
+    <color name="lib_base_white">#ffffff</color>
+
+    <color name="lib_base_edit_text_background_default">#FFFFFF</color>
+    <color name="lib_base_edit_text_border_default">#d1d1d1</color>
+    <color name="lib_base_edit_text_border_focus">#0cb037</color>
+    <color name="lib_base_edit_text_border_error">#fc0056</color>
+
+</resources>
