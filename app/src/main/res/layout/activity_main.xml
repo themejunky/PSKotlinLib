@@ -14,12 +14,28 @@
         app:cs_error_text="eroare"
         app:cs_title_text="Email"/>
 
-    <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
+    <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput-->
+        <!--android:layout_width="match_parent"-->
+        <!--app:ci_keyboard="text"-->
+        <!--app:ci_title_text="ceva"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/nSpinners"-->
+        <!--/>-->
+
+    <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
+        android:id="@+id/dasdasdas"
         android:layout_width="match_parent"
-        app:ci_keyboard="text"
-        app:ci_title_text="ceva"
-        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/nSpinners"
+        android:layout_height="50dp"
+        android:tag="inactive"
+        app:cb_active_background="@color/lib_purple_button_active_background"
+        app:cb_active_shadow="@color/lib_purple_button_active_shadow"
         />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/dasdasdas"
+        android:text="Inregistrare"/>
 
 </android.support.constraint.ConstraintLayout>
