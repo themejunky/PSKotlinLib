@@ -48,6 +48,8 @@ dependencies {
         exclude group: 'com.android.support'
     }
 
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+
 //    implementation "android.arch.lifecycle:runtime:1.1.1"
 //    implementation "android.arch.lifecycle:extensions:1.1.1"
 //

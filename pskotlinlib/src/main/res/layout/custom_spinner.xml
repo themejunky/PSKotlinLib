@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/nSpinnerTitle"
+        android:text="Numbers"
+        style="@style/WrapWrap.Bold.Black.14"/>
+
+    <TextView
+        android:id="@+id/nSpinnerMandatory"
+        style="@style/WrapWrap.Bold.Purple.14"
+        app:layout_constraintLeft_toRightOf="@+id/nSpinnerTitle"
+        android:text="*"
+        android:visibility="gone"/>
+
+
+    <Spinner
+        android:id="@+id/nSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_selector"
+        app:layout_constraintTop_toBottomOf="@+id/nSpinnerTitle"/>
+
+    <TextView
+        android:id="@+id/nSpinnerError"
+        style="@style/WrapWrap.Bold.Red.14"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/nSpinner"/>
+
+
+</android.support.constraint.ConstraintLayout>

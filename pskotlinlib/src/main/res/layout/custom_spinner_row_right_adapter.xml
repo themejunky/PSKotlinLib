@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch">
+
+    <TextView
+        android:id="@+id/nRowSpinerAdapterText"
+        style="@style/MatchpWrap.Bold.Black.14"
+        android:layout_gravity="right"
+        android:gravity="right"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -2,6 +2,7 @@
 <resources>
     <!-- Base Regular/Bold-->
     <style name="WrapWrap.Bold.Black" parent="WrapWrap.Bold"> <item name="android:textColor">@color/lib_base_black</item>  </style>
+    <style name="MatchWrap.Bold.Black" parent="MatchWrap.Bold"> <item name="android:textColor">@color/lib_base_black</item>  </style>
     <style name="MatchWrap.Regular.Black" parent="MatchWrap.Regular"> <item name="android:textColor">@color/lib_base_black</item>  </style>
 
     <style name="WrapWrap.Bold.Black.5" parent="WrapWrap.Bold.Black">   <item name="android:textSize">5sp</item>  </style>
@@ -38,5 +39,7 @@
     <style name="MatchWrap.Regular.Black.18" parent="MatchWrap.Regular.Black">   <item name="android:textSize">18sp</item>  </style>
     <style name="MatchWrap.Regular.Black.19" parent="MatchWrap.Regular.Black">   <item name="android:textSize">19sp</item>  </style>
     <style name="MatchWrap.Regular.Black.20" parent="MatchWrap.Regular.Black">   <item name="android:textSize">20sp</item>  </style>
+
+    <style name="MatchpWrap.Bold.Black.14" parent="MatchWrap.Bold.Black">   <item name="android:textSize">14sp</item>  </style>
 
 </resources>
