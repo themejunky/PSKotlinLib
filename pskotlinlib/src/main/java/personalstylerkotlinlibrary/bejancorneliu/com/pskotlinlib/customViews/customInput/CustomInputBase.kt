@@ -3,6 +3,7 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cu
 import android.content.Context
 import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import com.jakewharton.rxbinding2.widget.RxTextView
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -15,9 +16,13 @@ import kotlin.properties.Delegates
 
 open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomView(context, attrs) {
 
+    lateinit var mListener : CustomInput.Custom_Input_Interface
+
     var mIsInputValid by Delegates.observable<Boolean>(false) { _, _, new ->
        if (!new && mStartValidating) errorStyle() else defaultStyle()
     }
+
+
 
     protected var mStartValidating : Boolean = false
 
@@ -49,6 +54,12 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
             "3" -> validationPhone()
             "4" -> validationPassword()
             "5" -> validationNumber()
+        }
+
+        try {
+            mListener.onCustomInputChange()
+        } catch (e : Exception) {
+            Log.d("CUSTOM_INPUT",""+e.message)
         }
     }
 

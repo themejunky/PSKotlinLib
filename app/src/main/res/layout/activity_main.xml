@@ -19,6 +19,7 @@
             app:ci_title_text="Parola"
             app:ci_hint_text="*******"
             app:ci_error_text="Erroare"
+            app:ci_keyboard="password"
             />
 
 

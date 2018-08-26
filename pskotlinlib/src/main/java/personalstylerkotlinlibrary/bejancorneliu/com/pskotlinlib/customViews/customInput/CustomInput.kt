@@ -14,6 +14,16 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 
 class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(context, attrs){
 
+
+
+    interface Custom_Input_Interface {
+        fun onCustomInputChange()
+    }
+
+    fun setListener(nListener : Custom_Input_Interface) {
+        mListener = nListener
+    }
+
     init {
 
         inflate(context, R.layout.lib_custom_input, this)
