@@ -14,8 +14,6 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 
 class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(context, attrs){
 
-
-
     interface Custom_Input_Interface {
         fun onCustomInputChange()
     }
@@ -45,6 +43,7 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         if (it.hasValue(R.styleable.CustomInput_ci_error_text)) {
             nInputMandatory.visibility = View.VISIBLE
             nInputError.text = it.getString(R.styleable.CustomInput_ci_error_text)
+            mDefaultError = nInput.text.toString()
         }
 
         //set Hint
