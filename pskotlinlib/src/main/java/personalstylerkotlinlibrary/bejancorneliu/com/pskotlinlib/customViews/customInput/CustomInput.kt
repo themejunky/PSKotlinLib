@@ -43,7 +43,7 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         if (it.hasValue(R.styleable.CustomInput_ci_error_text)) {
             nInputMandatory.visibility = View.VISIBLE
             nInputError.text = it.getString(R.styleable.CustomInput_ci_error_text)
-            mDefaultError = nInput.text.toString()
+            mDefaultError = it.getString(R.styleable.CustomInput_ci_error_text)
         }
 
         //set Hint

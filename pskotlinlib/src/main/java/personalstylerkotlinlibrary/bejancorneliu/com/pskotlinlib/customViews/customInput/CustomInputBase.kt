@@ -28,7 +28,6 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
     protected var mStartValidating : Boolean = false
 
     fun errorStyle() {
-        nInputError.text = mDefaultError
         nInputTitle.setTextColor(ContextCompat.getColor(context,R.color.lib_base_red))
         nInputMandatory.setTextColor(ContextCompat.getColor(context,R.color.lib_base_red))
         nInputError.visibility= View.VISIBLE
@@ -48,7 +47,7 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
 
     private fun validationFieldCore(nInputType: String) {
         mStartValidating = true
-
+        nInputError.text = mDefaultError
         when(nInputType) {
             "1" -> validationNormalText()
             "12" -> validationTinyText()
