@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
         valori.add(Item("2","Email2"))
         valori.add(Item("3","Email3"))
         valori.add(Item("4","Email4"))
-        nSpinners.setSpinner(valori, ROW_LEFT,false)
+        nNewSpinner.setSpinner(valori, ROW_LEFT,false)
 
-        nSpinners.setSpinnerPositionById("2")
+        nNewSpinner.setSpinnerPositionById("2")
 
     }
 }

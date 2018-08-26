@@ -7,37 +7,70 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-    <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
-        android:id="@+id/nSpinners"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cs_error_text="eroare"
-        app:cs_title_text="Email"/>
+        android:layout_height="300dp"
+        android:orientation="horizontal"
+        >
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
+            android:id="@+id/nNewSpinner"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:cs_title_text="Oras"
+            app:cs_error_text="Oras necompletat"/>
 
-    <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput-->
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
+            android:id="@+id/nNewInput"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:ci_keyboard="text"
+            app:ci_title_text="Nume complet"
+            app:ci_error_text="Camp obligatoriu"
+            app:ci_hint_text="Ionescu Popescu"
+            app:ci_imei_option="next"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+    <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner-->
+        <!--android:id="@+id/nSpinners"-->
         <!--android:layout_width="match_parent"-->
-        <!--app:ci_keyboard="text"-->
-        <!--app:ci_title_text="ceva"-->
         <!--android:layout_height="wrap_content"-->
+        <!--app:cs_error_text="eroare"-->
+        <!--app:cs_title_text="Email"/>-->
+
+    <!--&lt;!&ndash;<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:ci_keyboard="text"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:ci_title_text="ceva"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:layout_constraintTop_toBottomOf="@+id/nSpinners"&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+
+    <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton-->
+        <!--android:id="@+id/dasdasdas"-->
+        <!--android:layout_width="match_parent"-->
         <!--app:layout_constraintTop_toBottomOf="@+id/nSpinners"-->
+        <!--android:layout_height="50dp"-->
+        <!--app:cb_text="text"-->
+        <!--app:cb_tag="active"-->
+        <!--app:cb_form_validation="false"-->
+        <!--app:cb_active_background="@color/lib_purple_button_active_background"-->
+        <!--app:cb_active_shadow="@color/lib_purple_button_active_shadow"-->
         <!--/>-->
 
-    <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
-        android:id="@+id/dasdasdas"
-        android:layout_width="match_parent"
-        app:layout_constraintTop_toBottomOf="@+id/nSpinners"
-        android:layout_height="50dp"
-        app:cb_text="text"
-        app:cb_tag="active"
-        app:cb_form_validation="false"
-        app:cb_active_background="@color/lib_purple_button_active_background"
-        app:cb_active_shadow="@color/lib_purple_button_active_shadow"
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/dasdasdas"
-        android:text="Inregistrare"/>
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/dasdasdas"-->
+        <!--android:text="Inregistrare"/>-->
+    <!---->
 
 </android.support.constraint.ConstraintLayout>

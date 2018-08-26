@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/MatchMatch"
+    style="@style/MatchWrap"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
         android:id="@+id/nSpinnerTitle"
-        android:text="Numbers"
         style="@style/WrapWrap.Bold.Black.14"/>
 
     <TextView
