@@ -102,4 +102,8 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
     fun getInputString() : String {
         return nInput.text.toString()
     }
+
+    fun isValid() : Boolean? {
+        return mIsInputValid
+    }
 }
