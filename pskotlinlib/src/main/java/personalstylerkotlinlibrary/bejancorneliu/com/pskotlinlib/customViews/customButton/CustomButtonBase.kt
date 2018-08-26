@@ -3,6 +3,7 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cu
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import kotlinx.android.synthetic.main.lib_custom_button.view.*
@@ -22,7 +23,6 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
     lateinit var mListener : CustomButton.Custom_Button_Interface
 
     override fun onTouch(p0: View, p1: MotionEvent): Boolean {
-
             mButtonValidation.let {
                 if (p1.action==MotionEvent.ACTION_DOWN) {
                     when(it) {
@@ -39,6 +39,13 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
                     return true
                 }
             }
+
+        try {
+            mListener.onCustomButtonClick(p0)
+        } catch (e : Exception) {
+            Log.d("CUSTOM_BUTTON",""+e.message)
+        }
+
         return false
     }
 
