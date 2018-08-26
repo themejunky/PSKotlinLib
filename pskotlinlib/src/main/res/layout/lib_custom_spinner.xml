@@ -5,28 +5,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/nInputTitle"
+        android:id="@+id/nSpinnerTitle"
+        android:text="Numbers"
         style="@style/WrapWrap.Bold.Black.14"/>
 
     <TextView
-        android:id="@+id/nInputMandatory"
+        android:id="@+id/nSpinnerMandatory"
         style="@style/WrapWrap.Bold.Purple.14"
-        app:layout_constraintLeft_toRightOf="@+id/nInputTitle"
+        app:layout_constraintLeft_toRightOf="@+id/nSpinnerTitle"
         android:text="*"
         android:visibility="gone"/>
 
-    <EditText
-        android:id="@+id/nInput"
-        style="@style/MatchWrap.Regular.Black.14"
-        android:textColorHint="@color/lib_base_grey"
-        android:background="@drawable/edit_text_selector"
-        android:textCursorDrawable="@null"
-        app:layout_constraintTop_toBottomOf="@+id/nInputTitle"/>
+
+    <Spinner
+        android:id="@+id/nSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lib_spinner_selector"
+        app:layout_constraintTop_toBottomOf="@+id/nSpinnerTitle"/>
 
     <TextView
-        android:id="@+id/nInputError"
+        android:id="@+id/nSpinnerError"
         style="@style/WrapWrap.Bold.Red.14"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@+id/nInput"/>
+        app:layout_constraintTop_toBottomOf="@+id/nSpinner"/>
+
 
 </android.support.constraint.ConstraintLayout>

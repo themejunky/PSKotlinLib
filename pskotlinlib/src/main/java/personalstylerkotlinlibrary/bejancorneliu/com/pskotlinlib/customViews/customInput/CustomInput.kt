@@ -7,7 +7,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
-import kotlinx.android.synthetic.main.custom_input.view.*
+import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 
@@ -15,7 +15,7 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
 
     init {
 
-        inflate(context, R.layout.custom_input, this)
+        inflate(context, R.layout.lib_custom_input, this)
         context.obtainStyledAttributes(attrs, R.styleable.CustomInput).use {
 
         nInput.setPadding((10*mDensity + 0.15f ).toInt(), (5*mDensity + 0.15f).toInt(), (10*mDensity + 0.15f).toInt(), (5*mDensity + 0.15f).toInt()+(14*1.0f).toInt())

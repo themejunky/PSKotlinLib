@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.view.View
 import com.jakewharton.rxbinding2.widget.RxTextView
 import io.reactivex.android.schedulers.AndroidSchedulers
-import kotlinx.android.synthetic.main.custom_input.view.*
+import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
 import java.util.concurrent.TimeUnit
@@ -25,14 +25,14 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
         nInputTitle.setTextColor(ContextCompat.getColor(context,R.color.lib_base_red))
         nInputMandatory.setTextColor(ContextCompat.getColor(context,R.color.lib_base_red))
         nInputError.visibility= View.VISIBLE
-        nInput.background = ContextCompat.getDrawable(context, R.drawable.edit_text_error)
+        nInput.background = ContextCompat.getDrawable(context, R.drawable.lib_edit_text_error)
     }
 
     private fun defaultStyle() {
         nInputTitle.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
         nInputMandatory.setTextColor(ContextCompat.getColor(context,R.color.lib_base_black))
         nInputError.visibility= View.GONE
-        nInput.background = ContextCompat.getDrawable(context, R.drawable.edit_text_selector)
+        nInput.background = ContextCompat.getDrawable(context, R.drawable.lib_edit_text_selector)
     }
 
     protected fun validationFieldObserver(nInputType: String) {

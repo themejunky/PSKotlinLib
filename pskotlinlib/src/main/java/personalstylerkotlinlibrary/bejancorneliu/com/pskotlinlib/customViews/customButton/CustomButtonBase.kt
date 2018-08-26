@@ -5,7 +5,7 @@ import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
-import kotlinx.android.synthetic.main.custom_button.view.*
+import kotlinx.android.synthetic.main.lib_custom_button.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
 
 const val ACTIVE_BUTTON = "active"

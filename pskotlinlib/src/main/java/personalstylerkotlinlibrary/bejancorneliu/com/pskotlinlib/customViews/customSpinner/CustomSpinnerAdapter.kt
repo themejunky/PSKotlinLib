@@ -49,9 +49,9 @@ open class CustomSpinnerAdapter(context: Context, nValues: List<Item>, nAlignmen
         val vh: ListRowHolder
         if (convertView == null) {
             view = if (mAlignment.equals(ROW_LEFT)) {
-                this.mInflator.inflate(R.layout.custom_spinner_row_left_adapter, parent, false)
+                this.mInflator.inflate(R.layout.lib_custom_spinner_row_left_adapter, parent, false)
             } else {
-                this.mInflator.inflate(R.layout.custom_spinner_row_right_adapter, parent, false)
+                this.mInflator.inflate(R.layout.lib_custom_spinner_row_right_adapter, parent, false)
             }
             vh = ListRowHolder(view)
             view.tag = vh

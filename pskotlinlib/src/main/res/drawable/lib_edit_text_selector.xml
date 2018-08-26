@@ -3,12 +3,12 @@
     <item
         android:state_pressed="true"
         android:state_enabled="true"
-        android:drawable="@drawable/spinner_focus" />
+        android:drawable="@drawable/lib_edit_text_focus" />
     <item
         android:state_focused="true"
         android:state_enabled="true"
-        android:drawable="@drawable/spinner_focus" />
+        android:drawable="@drawable/lib_edit_text_focus" />
     <item
         android:state_enabled="true"
-        android:drawable="@drawable/spinner_default" />
+        android:drawable="@drawable/lib_edit_text_default" />
 </selector>
