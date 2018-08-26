@@ -14,14 +14,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val valori : ArrayList<Item> = ArrayList()
-        valori.add(Item("1","Email1"))
-        valori.add(Item("2","Email2"))
-        valori.add(Item("3","Email3"))
-        valori.add(Item("4","Email4"))
-        nNewSpinner.setSpinner(valori, ROW_LEFT,false)
-
-        nNewSpinner.setSpinnerPositionById("2")
-
+        mPassword.isValid()
     }
 }

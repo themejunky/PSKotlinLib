@@ -19,7 +19,7 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
        if (!new && mStartValidating) errorStyle() else defaultStyle()
     }
 
-    private var mStartValidating : Boolean = false
+    protected var mStartValidating : Boolean = false
 
     fun errorStyle() {
         nInputTitle.setTextColor(ContextCompat.getColor(context,R.color.lib_base_red))

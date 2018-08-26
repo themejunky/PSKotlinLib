@@ -4,6 +4,7 @@ import android.content.Context
 import android.text.InputType
 import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
@@ -104,7 +105,7 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
     }
 
     fun isValid() : Boolean {
-        if (!mIsInputValid) { triggerError() }
+        if (!mIsInputValid) { mStartValidating=true; triggerError() }
         return mIsInputValid
     }
 }

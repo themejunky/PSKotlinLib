@@ -12,36 +12,13 @@
         android:layout_height="300dp"
         android:orientation="horizontal"
         >
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
-            android:id="@+id/nNewSpinner"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            app:cs_title_text="Oras"
-            app:cs_error_text="Oras necompletat"/>
-
         <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
-            android:id="@+id/nNewInput"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            app:ci_keyboard="text"
-            app:ci_title_text="Nume complet"
-            app:ci_error_text="Camp obligatoriu"
-            app:ci_hint_text="Ionescu Popescu"
-            app:ci_imei_option="next"
-            />
-
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
-            android:id="@+id/nLogin"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="50dp"
-            app:cb_text="test"
-            app:cb_tag="test"
-            app:cb_active_background="@color/lib_base_red"
-            app:cb_active_shadow="@color/lib_base_green"
-            app:cb_form_validation="true"
+            android:id="@+id/mPassword"
+            style="@style/MatchWrap"
+            app:layout_constraintTop_toBottomOf="@+id/mEmail"
+            app:ci_title_text="Parola"
+            app:ci_hint_text="*******"
+            app:ci_error_text="Erroare"
             />
 
 
