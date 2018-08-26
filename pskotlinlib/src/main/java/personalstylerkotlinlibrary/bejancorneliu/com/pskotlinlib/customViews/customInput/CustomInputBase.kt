@@ -15,11 +15,11 @@ import kotlin.properties.Delegates
 
 open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomView(context, attrs) {
 
-    var mIsInputValid by Delegates.observable<Boolean?>(false) { _, _, new ->
-       if (new == false && mStartValidating) errorStyle() else defaultStyle()
+    var mIsInputValid by Delegates.observable<Boolean>(false) { _, _, new ->
+       if (!new && mStartValidating) errorStyle() else defaultStyle()
     }
 
-    var mStartValidating : Boolean = false
+    private var mStartValidating : Boolean = false
 
     fun errorStyle() {
         nInputTitle.setTextColor(ContextCompat.getColor(context,R.color.lib_base_red))

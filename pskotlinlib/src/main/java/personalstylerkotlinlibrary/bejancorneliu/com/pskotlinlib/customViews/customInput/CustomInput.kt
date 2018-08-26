@@ -104,6 +104,7 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
     }
 
     fun isValid() : Boolean {
-        return mIsInputValid!!
+        if (!mIsInputValid) { triggerError() }
+        return mIsInputValid
     }
 }
