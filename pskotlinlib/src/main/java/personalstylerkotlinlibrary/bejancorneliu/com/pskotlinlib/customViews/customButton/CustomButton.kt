@@ -49,6 +49,8 @@ class CustomButton(context: Context, attrs: AttributeSet) : CustomButtonBase(con
             }
 
             if (it.hasValue(R.styleable.CustomButton_cb_form_validation)) {
+
+                mButtonValidation = it.getBoolean(R.styleable.CustomButton_cb_form_validation, false)
                 if (it.getBoolean(R.styleable.CustomButton_cb_form_validation, false)) {
                     mInactiveRelease()
                 } else {

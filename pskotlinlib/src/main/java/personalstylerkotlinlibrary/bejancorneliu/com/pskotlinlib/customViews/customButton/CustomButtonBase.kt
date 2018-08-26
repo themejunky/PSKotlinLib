@@ -13,6 +13,8 @@ const val INACTIVE_BUTTON = "inactive"
 
 open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomView(context, attrs), View.OnTouchListener {
 
+    var mButtonValidation : Boolean = false
+
     var mActiveBackgroundDrawable : GradientDrawable = GradientDrawable()
     var mActiveShadowDrawable : GradientDrawable = GradientDrawable()
     var mInactiveBackgroundDrawable : GradientDrawable = GradientDrawable()
@@ -21,24 +23,22 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
 
     override fun onTouch(p0: View, p1: MotionEvent): Boolean {
 
-        if (nContainer.tag!=null) {
-            nContainer.tag.let {
+            mButtonValidation.let {
                 if (p1.action==MotionEvent.ACTION_DOWN) {
                     when(it) {
-                        ACTIVE_BUTTON -> mActiveTouch()
-                        INACTIVE_BUTTON -> mInactiveTouch()
+                        false -> mActiveTouch()
+                        true -> mInactiveTouch()
                     }
                     return true
                 }
                 else if (p1.action==MotionEvent.ACTION_UP) {
                     when(it) {
-                        ACTIVE_BUTTON -> mActiveRelease()
-                        INACTIVE_BUTTON -> mInactiveRelease()
+                        false -> mActiveRelease()
+                        true -> mInactiveRelease()
                     }
                     return true
                 }
             }
-        }
         return false
     }
 
