@@ -2,17 +2,14 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cu
 
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
-import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import kotlinx.android.synthetic.main.custom_button.view.*
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
 
 const val ACTIVE_BUTTON = "active"
 const val INACTIVE_BUTTON = "inactive"
-
 
 open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomView(context, attrs), View.OnTouchListener {
 
@@ -20,24 +17,26 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
     var mActiveShadowDrawable : GradientDrawable = GradientDrawable()
     var mInactiveBackgroundDrawable : GradientDrawable = GradientDrawable()
     var mInactiveShadowDrawable : GradientDrawable = GradientDrawable()
+    lateinit var mListener : CustomButton.Custom_Button_Interface
 
     override fun onTouch(p0: View, p1: MotionEvent): Boolean {
-        if (p1.action==MotionEvent.ACTION_DOWN) {
-            if (this.tag!=null) {
-                when(this.tag) {
-                    ACTIVE_BUTTON -> mActiveTouch()
-                    INACTIVE_BUTTON -> mInactiveTouch()
+
+        if (nContainer.tag!=null) {
+            nContainer.tag.let {
+                if (p1.action==MotionEvent.ACTION_DOWN) {
+                    when(it) {
+                        ACTIVE_BUTTON -> mActiveTouch()
+                        INACTIVE_BUTTON -> mInactiveTouch()
+                    }
+                    return true
                 }
-            }
-        } else if (p1.action==MotionEvent.ACTION_UP) {
-            if (this.tag!=null) {
-                this.tag.let {
+                else if (p1.action==MotionEvent.ACTION_UP) {
                     when(it) {
                         ACTIVE_BUTTON -> mActiveRelease()
                         INACTIVE_BUTTON -> mInactiveRelease()
                     }
+                    return true
                 }
-
             }
         }
         return false
@@ -49,7 +48,7 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
         nShadow.visibility=View.GONE
     }
 
-    private fun mActiveRelease() {
+    protected fun mActiveRelease() {
         nButton.background = mActiveBackgroundDrawable;
         nShadow.background = mActiveShadowDrawable
         nShadow.visibility=View.VISIBLE
@@ -61,10 +60,9 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
         nShadow.visibility=View.GONE
     }
 
-    private fun mInactiveRelease() {
+    protected fun mInactiveRelease() {
         nButton.background = mInactiveBackgroundDrawable;
         nShadow.background = mInactiveShadowDrawable
         nShadow.visibility=View.VISIBLE
     }
-
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WrapWrap.Bold.White" parent="WrapWrap.Bold"> <item name="android:textColor">@color/lib_base_white</item>  </style>
+    <style name="MatchMatch.Regular.White" parent="WrapWrap.Regular"> <item name="android:textColor">@color/lib_base_white</item>  </style>
+
+    <style name="WrapWrap.Bold.White.14" parent="WrapWrap.Bold.White">   <item name="android:textSize">14sp</item>  </style>
+
+    <style name="MatchMatch.Regular.White.14" parent="MatchMatch.Regular.White">   <item name="android:textSize">14sp</item>  </style>
+
+</resources>
