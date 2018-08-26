@@ -11,6 +11,7 @@ import android.view.View
 
 class CustomButton(context: Context, attrs: AttributeSet) : CustomButtonBase(context, attrs) {
 
+
     /* click listener interface */
     interface Custom_Button_Interface {
         fun onCustomButtonClick(view: View)
@@ -58,6 +59,7 @@ class CustomButton(context: Context, attrs: AttributeSet) : CustomButtonBase(con
                 }
             }
             nContainer.setOnTouchListener(this)
+         //   nContainer.setOnClickListener(this)
         }
     }
 

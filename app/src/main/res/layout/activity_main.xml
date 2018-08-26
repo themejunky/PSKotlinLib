@@ -12,16 +12,17 @@
         android:layout_height="300dp"
         android:orientation="horizontal"
         >
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
-            android:id="@+id/mPassword"
-            style="@style/MatchWrap"
-            app:layout_constraintTop_toBottomOf="@+id/mEmail"
-            app:ci_title_text="Parola"
-            app:ci_hint_text="*******"
-            app:ci_error_text="Erroare"
-            app:ci_keyboard="password"
-            />
-
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
+        android:id="@+id/dasdasdas"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/nSpinners"
+        android:layout_height="50dp"
+        app:cb_text="text"
+        app:cb_tag="active"
+        app:cb_form_validation="false"
+        app:cb_active_background="@color/lib_purple_button_active_background"
+        app:cb_active_shadow="@color/lib_purple_button_active_shadow"
+        />
 
     </LinearLayout>
 

@@ -12,7 +12,7 @@ import kotlin.properties.Delegates
 
 open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustomView(context, attrs), AdapterView.OnItemSelectedListener {
 
-    var mIsSpinnerValid by Delegates.observable<Boolean?>(true) { _, _, new ->
+    var mIsSpinnerValid by Delegates.observable<Boolean?>(false) { _, _, new ->
         if (new == false && mStartValidating) errorStyle() else defaultStyle()
     }
     var mStartValidating : Boolean = false

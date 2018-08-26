@@ -36,15 +36,19 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
                         false -> mActiveRelease()
                         true -> mInactiveRelease()
                     }
+
+                    try {
+                        mListener.onCustomButtonClick(p0)
+                    } catch (e : Exception) {
+                        Log.d("CUSTOM_BUTTON",""+e.message)
+                    }
+
+
                     return true
                 }
             }
 
-        try {
-            mListener.onCustomButtonClick(p0)
-        } catch (e : Exception) {
-            Log.d("CUSTOM_BUTTON",""+e.message)
-        }
+
 
         return false
     }
