@@ -15,7 +15,7 @@ import kotlin.properties.Delegates
 
 open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomView(context, attrs) {
 
-    var mIsInputValid by Delegates.observable<Boolean?>(true) { _, _, new ->
+    var mIsInputValid by Delegates.observable<Boolean?>(false) { _, _, new ->
        if (new == false && mStartValidating) errorStyle() else defaultStyle()
     }
 
