@@ -13,12 +13,6 @@
     <color name="lib_border_focus">#0cb037</color>
     <color name="lib_border_error">#fc0056</color>
 
-
-    <!--<color name="lib_purple_button_active_background">#880cff</color>-->
-    <!--<color name="lib_purple_button_active_shadow">#66880cff</color>-->
-    <!--<color name="lib_button_inactive_background">#b1b1b1</color>-->
-    <!--<color name="lib_button_inactive_shadow">#66b1b1b1</color>-->
-
     <color name="lib_disable_active">#b1b1b1</color>
     <color name="lib_disable_pressed">#b1b1b1</color>
     <color name="lib_disable_shadow">#66b1b1b1</color>
