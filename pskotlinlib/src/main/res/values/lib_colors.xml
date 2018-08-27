@@ -19,9 +19,9 @@
     <!--<color name="lib_button_inactive_background">#b1b1b1</color>-->
     <!--<color name="lib_button_inactive_shadow">#66b1b1b1</color>-->
 
-    <color name="lib_inactive_active">#b1b1b1</color>
-    <color name="lib_inactive_pressed">#b1b1b1</color>
-    <color name="lib_inactive_shadow">#66b1b1b1</color>
+    <color name="lib_disable_active">#b1b1b1</color>
+    <color name="lib_disable_pressed">#b1b1b1</color>
+    <color name="lib_disable_shadow">#66b1b1b1</color>
 
     <color name="lib_grey_active">#b1b1b1</color>
     <color name="lib_grey_pressed">#b1b1b1</color>

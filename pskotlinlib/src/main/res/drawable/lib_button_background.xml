@@ -7,10 +7,6 @@
         android:height="30dp" />
     <corners android:radius="60dp" />
 
-    <!--<stroke-->
-    <!--android:width="3dp"-->
-    <!--android:color="@color/base_error" />-->
-
     <gradient
         android:type="radial"
         android:gradientRadius="100%p"

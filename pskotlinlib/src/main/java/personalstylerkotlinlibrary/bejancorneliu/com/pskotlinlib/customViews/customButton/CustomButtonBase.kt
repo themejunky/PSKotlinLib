@@ -16,10 +16,12 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
 
     var mButtonValidation : Boolean = false
 
-    var mActiveBackgroundDrawable : GradientDrawable = GradientDrawable()
-    var mActiveShadowDrawable : GradientDrawable = GradientDrawable()
-    var mInactiveBackgroundDrawable : GradientDrawable = GradientDrawable()
-    var mInactiveShadowDrawable : GradientDrawable = GradientDrawable()
+    var mColorActiveDrawable : GradientDrawable = GradientDrawable()
+    var mColorShadowDrawable : GradientDrawable = GradientDrawable()
+    var mColorHoverDrawable : GradientDrawable = GradientDrawable()
+    var mDisableColorActiveDrawable : GradientDrawable = GradientDrawable()
+    var mDisableColorShadowDrawable : GradientDrawable = GradientDrawable()
+    var mDisableColorHoverDrawable : GradientDrawable = GradientDrawable()
     lateinit var mListener : CustomButton.Custom_Button_Interface
 
     override fun onTouch(p0: View, p1: MotionEvent): Boolean {
@@ -50,26 +52,26 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
     }
 
     private fun mActiveTouch() {
-        nButton.background = mActiveShadowDrawable;
-        nShadow.background = mActiveBackgroundDrawable
+        nButton.background = mColorHoverDrawable
+        nShadow.background = mColorShadowDrawable
         nShadow.visibility=View.GONE
     }
 
     protected fun mActiveRelease() {
-        nButton.background = mActiveBackgroundDrawable;
-        nShadow.background = mActiveShadowDrawable
+        nButton.background = mColorActiveDrawable
+        nShadow.background = mColorShadowDrawable
         nShadow.visibility=View.VISIBLE
     }
 
     private fun mInactiveTouch() {
-        nButton.background = mInactiveShadowDrawable;
-        nShadow.background = mInactiveBackgroundDrawable
+        nButton.background = mDisableColorShadowDrawable
+        nShadow.background = mDisableColorActiveDrawable
         nShadow.visibility=View.GONE
     }
 
     protected fun mInactiveRelease() {
-        nButton.background = mInactiveBackgroundDrawable;
-        nShadow.background = mInactiveShadowDrawable
+        nButton.background = mDisableColorActiveDrawable;
+        nShadow.background = mDisableColorShadowDrawable
         nShadow.visibility=View.VISIBLE
     }
 }

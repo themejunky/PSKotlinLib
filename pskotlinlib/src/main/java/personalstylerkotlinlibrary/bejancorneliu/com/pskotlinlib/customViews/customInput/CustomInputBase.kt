@@ -23,8 +23,6 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
        if (!new && mStartValidating) errorStyle() else defaultStyle()
     }
 
-
-
     protected var mStartValidating : Boolean = false
 
     fun errorStyle() {

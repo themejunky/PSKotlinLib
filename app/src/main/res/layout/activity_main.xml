@@ -20,12 +20,16 @@
         <!--android:layout_height="wrap_content"-->
         <!--/>-->
 
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customTextView.CustomTextView
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
+            android:id="@+id/dasdasdas"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            app:ctv_button_color="red"
-            android:text="BUTON HOVER"/>
+            app:layout_constraintTop_toBottomOf="@+id/nSpinners"
+            android:layout_height="50dp"
+            app:cb_text="text"
+            app:cb_tag="active"
+            app:cb_form_validation="false"
+            app:cb_button_color="red"
+        />
 
     </LinearLayout>
 
