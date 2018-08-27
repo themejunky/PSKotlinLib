@@ -12,16 +12,12 @@
         android:layout_height="300dp"
         android:orientation="horizontal"
         >
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
-        android:id="@+id/dasdasdas"
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
         android:layout_width="match_parent"
-        app:layout_constraintTop_toBottomOf="@+id/nSpinners"
-        android:layout_height="50dp"
-        app:cb_text="text"
-        app:cb_tag="active"
-        app:cb_form_validation="false"
-        app:cb_active_background="@color/lib_purple_button_active_background"
-        app:cb_active_shadow="@color/lib_purple_button_active_shadow"
+        app:ci_keyboard="text"
+        app:ci_title_text="ceva"
+            app:ci_hint_text="ionescu.popescu@gmail.com"
+        android:layout_height="wrap_content"
         />
 
     </LinearLayout>
@@ -37,13 +33,6 @@
         <!--app:cs_error_text="eroare"-->
         <!--app:cs_title_text="Email"/>-->
 
-    <!--&lt;!&ndash;<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-        <!--&lt;!&ndash;app:ci_keyboard="text"&ndash;&gt;-->
-        <!--&lt;!&ndash;app:ci_title_text="ceva"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-        <!--&lt;!&ndash;app:layout_constraintTop_toBottomOf="@+id/nSpinners"&ndash;&gt;-->
-        <!--&lt;!&ndash;/>&ndash;&gt;-->
 
     <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton-->
         <!--android:id="@+id/dasdasdas"-->
