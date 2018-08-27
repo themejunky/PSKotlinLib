@@ -8,14 +8,38 @@
     <color name="lib_base_green">#0cb037</color>
     <color name="lib_base_white">#ffffff</color>
 
-    <color name="lib_base_customs_background_default">#FFFFFF</color>
-    <color name="lib_base_customs_border_default">#d1d1d1</color>
-    <color name="lib_base_customs_border_focus">#0cb037</color>
-    <color name="lib_base_customs_border_error">#fc0056</color>
+    <color name="lib_background_default">#FFFFFF</color>
+    <color name="lib_border_default">#d1d1d1</color>
+    <color name="lib_border_focus">#0cb037</color>
+    <color name="lib_border_error">#fc0056</color>
 
 
-    <color name="lib_purple_button_active_background">#880cff</color>
-    <color name="lib_purple_button_active_shadow">#66880cff</color>
-    <color name="lib_button_inactive_background">#b1b1b1</color>
-    <color name="lib_button_inactive_shadow">#66b1b1b1</color>
+    <!--<color name="lib_purple_button_active_background">#880cff</color>-->
+    <!--<color name="lib_purple_button_active_shadow">#66880cff</color>-->
+    <!--<color name="lib_button_inactive_background">#b1b1b1</color>-->
+    <!--<color name="lib_button_inactive_shadow">#66b1b1b1</color>-->
+
+    <color name="lib_inactive_active">#b1b1b1</color>
+    <color name="lib_inactive_pressed">#b1b1b1</color>
+    <color name="lib_inactive_shadow">#66b1b1b1</color>
+
+    <color name="lib_grey_active">#b1b1b1</color>
+    <color name="lib_grey_pressed">#b1b1b1</color>
+    <color name="lib_grey_shadow">#66b1b1b1</color>
+
+    <color name="lib_green_active">#0cb037</color>
+    <color name="lib_green_pressed">#0b9a30</color>
+    <color name="lib_green_shadow">#b3e6c0</color>
+
+    <color name="lib_blue_active">#36609f</color>
+    <color name="lib_blue_pressed">#1c488b</color>
+    <color name="lib_blue_shadow">#91a8cb</color>
+
+    <color name="lib_red_active">#dd4b39</color>
+    <color name="lib_red_pressed">#c12d1a</color>
+    <color name="lib_red_shadow">#ec9d93</color>
+
+    <color name="lib_violet_active">#880cff</color>
+    <color name="lib_violet_pressed">#750cff</color>
+    <color name="lib_violet_shadow">#66880cff</color>
 </resources>

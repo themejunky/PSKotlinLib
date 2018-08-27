@@ -40,16 +40,12 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
                     try {
                         mListener.onCustomButtonClick(p0)
                     } catch (e : Exception) {
-                        Log.d("CUSTOM_BUTTON",""+e.message)
+                        Log.d("CUSTOM_BUTTON",e.message)
                     }
-
 
                     return true
                 }
             }
-
-
-
         return false
     }
 

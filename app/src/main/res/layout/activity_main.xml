@@ -12,13 +12,20 @@
         android:layout_height="300dp"
         android:orientation="horizontal"
         >
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
-        android:layout_width="match_parent"
-        app:ci_keyboard="text"
-        app:ci_title_text="ceva"
-            app:ci_hint_text="ionescu.popescu@gmail.com"
-        android:layout_height="wrap_content"
-        />
+        <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput-->
+        <!--android:layout_width="match_parent"-->
+        <!--app:ci_keyboard="text"-->
+        <!--app:ci_title_text="ceva"-->
+            <!--app:ci_hint_text="ionescu.popescu@gmail.com"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--/>-->
+
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customTextView.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            app:ctv_button_color="red"
+            android:text="BUTON HOVER"/>
 
     </LinearLayout>
 

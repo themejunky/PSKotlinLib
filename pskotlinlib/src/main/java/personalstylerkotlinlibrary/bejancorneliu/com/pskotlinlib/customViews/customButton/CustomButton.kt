@@ -26,10 +26,10 @@ class CustomButton(context: Context, attrs: AttributeSet) : CustomButtonBase(con
         context.obtainStyledAttributes(attrs, R.styleable.CustomButton).use {
 
             mInactiveBackgroundDrawable = (ContextCompat.getDrawable(context, R.drawable.lib_shadow2) as GradientDrawable)
-            mInactiveBackgroundDrawable.setColor(ContextCompat.getColor(context, R.color.lib_button_inactive_background))
+            mInactiveBackgroundDrawable.setColor(ContextCompat.getColor(context, R.color.lib_inactive_active))
 
             mInactiveShadowDrawable = (ContextCompat.getDrawable(context, R.drawable.lib_shadow2) as GradientDrawable)
-            mInactiveShadowDrawable.setColor(ContextCompat.getColor(context, R.color.lib_button_inactive_shadow))
+            mInactiveShadowDrawable.setColor(ContextCompat.getColor(context, R.color.lib_inactive_shadow))
 
             if (it.hasValue(R.styleable.CustomButton_cb_text)) {
                 nButton.text = it.getString(R.styleable.CustomButton_cb_text)
