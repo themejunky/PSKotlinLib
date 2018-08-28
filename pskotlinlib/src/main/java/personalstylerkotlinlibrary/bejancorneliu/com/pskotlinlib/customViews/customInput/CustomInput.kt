@@ -17,6 +17,12 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 
 class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(context, attrs){
 
+    @BindingAdapter("app:Text")
+    fun setText(nMe : View, nText: Object) {
+        Log.d("asdadasd","este :  "+nMe)
+        nMe.nInput.setText(nText.toString())
+    }
+
     interface Custom_Input_Interface {
         fun onCustomInputChange()
     }
@@ -98,13 +104,7 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         }
         }
     }
-    companion object {
-    @BindingAdapter("app:Text")
-     fun setText(nMe : View, nText: Object) {
-        Log.d("asdadasd","este :  "+nMe)
-        nMe.nInput.setText(nText.toString())
-    }
-        }
+
 
     fun setErrorMessage(nErrorMessage: String) {
         nInputError.text=nErrorMessage
