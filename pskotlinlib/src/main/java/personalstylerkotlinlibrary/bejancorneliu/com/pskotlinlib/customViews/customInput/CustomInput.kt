@@ -22,6 +22,10 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         fun setText(nMe : View, nText: String) {
             nMe.nInput.setText(nText)
         }
+        @JvmStatic @BindingAdapter("Text")
+        fun getText(nMe : View) : String {
+          return  nMe.nInput.text.toString()
+        }
     }
 
     interface Custom_Input_Interface {
