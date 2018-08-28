@@ -25,11 +25,11 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.ErrorInputBindi
 class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(context, attrs){
 
     companion object {
-        @JvmStatic @BindingAdapter("Text")
+        @JvmStatic @BindingAdapter("app:Text")
         fun setText(nMe : ConstraintLayout, nText: String) {
             nMe.nInput.setText(nText)
         }
-        @InverseBindingAdapter(attribute = "Text")
+        @InverseBindingAdapter(attribute = "app:Text")
         fun getText(nMe : ConstraintLayout) : String {
           return  nMe.nInput.text.toString()
         }
