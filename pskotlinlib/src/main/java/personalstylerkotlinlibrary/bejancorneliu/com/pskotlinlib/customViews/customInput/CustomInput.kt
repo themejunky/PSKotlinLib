@@ -18,10 +18,10 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(context, attrs){
 
     companion object {
-        @BindingAdapter("Text")
-        fun setText(nMe : View, nText: Object) {
+        @JvmStatic @BindingAdapter("Text")
+        fun setText(nMe : View, nText: String) {
             Log.d("asdadasd","este :  "+nMe)
-            nMe.nInput.setText(nText.toString())
+            nMe.nInput.setText(nText)
         }
     }
 
