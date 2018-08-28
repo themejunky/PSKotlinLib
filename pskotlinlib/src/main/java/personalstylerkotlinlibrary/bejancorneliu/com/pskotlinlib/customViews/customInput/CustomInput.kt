@@ -39,6 +39,11 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
             nInputTitle.text = it.getString(R.styleable.CustomInput_ci_title_text)
         }
 
+        //set Input Text
+        if (it.hasValue(R.styleable.CustomInput_ci_text)) {
+            nInput.setText(it.getString(R.styleable.CustomInput_ci_text))
+        }
+
         //set Error & Mandatory
         if (it.hasValue(R.styleable.CustomInput_ci_error_text)) {
             nInputMandatory.visibility = View.VISIBLE
