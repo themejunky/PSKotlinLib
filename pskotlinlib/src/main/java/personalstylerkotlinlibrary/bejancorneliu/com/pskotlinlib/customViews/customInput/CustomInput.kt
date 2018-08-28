@@ -2,6 +2,7 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cu
 
 import android.content.Context
 import android.databinding.BindingAdapter
+import android.databinding.InverseBindingAdapter
 import android.text.InputType
 import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
@@ -22,7 +23,7 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         fun setText(nMe : View, nText: String) {
             nMe.nInput.setText(nText)
         }
-        @JvmStatic @BindingAdapter("Text")
+        @InverseBindingAdapter(attribute = "Text")
         fun getText(nMe : View) : String {
           return  nMe.nInput.text.toString()
         }
