@@ -3,16 +3,12 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cu
 import android.content.Context
 import android.databinding.BindingAdapter
 import android.databinding.InverseBindingAdapter
-import android.databinding.InverseBindingMethod
-import android.databinding.InverseBindingMethods
 import android.text.InputType
 import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
-import android.widget.TextView
 import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
@@ -20,34 +16,33 @@ import android.databinding.InverseBindingListener
 import android.support.constraint.ConstraintLayout
 import android.text.Editable
 import android.text.TextWatcher
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.ErrorInputBinding
 
 class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(context, attrs){
 
-    companion object {
-        @JvmStatic @BindingAdapter("app:Text")
-        fun setText(nMe : ConstraintLayout, nText: String) {
-            nMe.nInput.setText(nText)
-        }
-        @JvmStatic @InverseBindingAdapter(attribute = "app:Text")
-        fun getText(nMe : ConstraintLayout) : String {
-          return  nMe.nInput.text.toString()
-        }
-
-        @JvmStatic @BindingAdapter("TextAttrChanged")
-        fun setListener(editTextWithVoiceInput: View, listener: InverseBindingListener) {
-            editTextWithVoiceInput.nInput.addTextChangedListener(object : TextWatcher {
-                override fun afterTextChanged(p0: Editable?) {
-                    listener.onChange()
-                }
-
-                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
-                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
-            })
-        }
-
-
-    }
+//    companion object {
+//        @JvmStatic @BindingAdapter("app:Text")
+//        fun setText(nMe : ConstraintLayout, nText: String) {
+//            nMe.nInput.setText(nText)
+//        }
+//        @JvmStatic @InverseBindingAdapter(attribute = "app:Text")
+//        fun getText(nMe : ConstraintLayout) : String {
+//          return  nMe.nInput.text.toString()
+//        }
+//
+//        @JvmStatic @BindingAdapter("TextAttrChanged")
+//        fun setListener(editTextWithVoiceInput: View, listener: InverseBindingListener) {
+//            editTextWithVoiceInput.nInput.addTextChangedListener(object : TextWatcher {
+//                override fun afterTextChanged(p0: Editable?) {
+//                    listener.onChange()
+//                }
+//
+//                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+//                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+//            })
+//        }
+//
+//
+//    }
 
 
 
