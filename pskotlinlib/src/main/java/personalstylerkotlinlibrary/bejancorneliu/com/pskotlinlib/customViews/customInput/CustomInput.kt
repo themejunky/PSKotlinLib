@@ -33,24 +33,19 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
           return  nMe.nInput.text.toString()
         }
 
-        @BindingAdapter(value = "TextAttrChanged")
-        fun setListener(nMe: View, TextAttrChanged: InverseBindingListener?) {
-            if (TextAttrChanged != null) {
-                nMe.nInput.addTextChangedListener(object : TextWatcher {
-                    override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+        @BindingAdapter("TextAttrChanged")
+        fun setListener(editTextWithVoiceInput: View, listener: InverseBindingListener) {
+            editTextWithVoiceInput.nInput.addTextChangedListener(object : TextWatcher {
+                override fun afterTextChanged(p0: Editable?) {
+                    listener.onChange()
+                }
 
-                    }
-
-                    override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-
-                    }
-
-                    override fun afterTextChanged(s: Editable) {
-
-                    }
-                })
-            }
+                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            })
         }
+
+
     }
 
 
