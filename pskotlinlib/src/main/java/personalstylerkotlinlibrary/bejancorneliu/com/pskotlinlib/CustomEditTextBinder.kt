@@ -13,8 +13,7 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cus
 class CustomEditTextBinder {
     companion object {
         @JvmStatic
-      //  @BindingAdapter(value = ["textAttrChanged"])
-        @InverseBindingAdapter(attribute = "android:Text", event = "android:textAttrChanged")
+        @BindingAdapter(value = ["textAttrChanged"])
         fun setListener(editText: CustomInput, listener: InverseBindingListener?) {
             if (listener != null) {
                 editText.nInput.addTextChangedListener(object : TextWatcher {
