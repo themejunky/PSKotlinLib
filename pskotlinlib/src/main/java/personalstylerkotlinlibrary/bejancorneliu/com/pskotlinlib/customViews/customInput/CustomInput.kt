@@ -1,6 +1,7 @@
 package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput
 
 import android.content.Context
+import android.databinding.BindingAdapter
 import android.text.InputType
 import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
@@ -94,6 +95,11 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
             }
         }
         }
+    }
+
+    @BindingAdapter("ci_text")
+    fun setTitle(nTitle: String) {
+        nInput.setText(nTitle)
     }
 
     fun setErrorMessage(nErrorMessage: String) {
