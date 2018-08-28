@@ -13,8 +13,8 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cus
 class CustomEditTextBinder {
     companion object {
         @JvmStatic
-        @BindingAdapter(value = ["onTextChange","textAttrChanged"], requireAll = false)
-                fun setListener(editText: CustomInput, listener: InverseBindingListener?) {
+        @BindingAdapter(value = ["textAttrChanged"], requireAll = false)
+        fun setListener(editText: CustomInput, listener: InverseBindingListener?) {
             if (listener != null) {
                 editText.nInput.addTextChangedListener(object : TextWatcher {
                     override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
@@ -31,7 +31,6 @@ class CustomEditTextBinder {
                 })
             }
         }
-
 
 
 
