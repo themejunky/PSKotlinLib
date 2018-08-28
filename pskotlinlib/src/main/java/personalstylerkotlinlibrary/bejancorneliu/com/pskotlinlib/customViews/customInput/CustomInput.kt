@@ -34,9 +34,9 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         }
 
         @BindingAdapter(value = "TextAttrChanged")
-        fun setListener(errorInputLayout: CustomInput, textAttrChanged: InverseBindingListener?) {
-            if (textAttrChanged != null) {
-                errorInputLayout.nInput.addTextChangedListener(object : TextWatcher {
+        fun setListener(nMe: View, TextAttrChanged: InverseBindingListener?) {
+            if (TextAttrChanged != null) {
+                nMe.nInput.addTextChangedListener(object : TextWatcher {
                     override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
 
                     }
