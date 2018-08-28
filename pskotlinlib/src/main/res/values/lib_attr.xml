@@ -2,7 +2,7 @@
 <resources>
 
     <declare-styleable name="CustomInput">
-        <attr name="ciText" format="string" />
+        <attr name="Text" format="string" />
         <attr name="ci_title_text" format="string" />
         <attr name="ci_error_text" format="string" />
         <attr name="ci_hint_text" format="string" />
