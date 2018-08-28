@@ -12,6 +12,9 @@ import android.widget.EditText
 import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
+import android.databinding.adapters.TextViewBindingAdapter.setText
+
+
 
 class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(context, attrs){
 
@@ -41,8 +44,8 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         }
 
         //set Input Text
-        if (it.hasValue(R.styleable.CustomInput_ci_text)) {
-            nInput.setText(it.getString(R.styleable.CustomInput_ci_text))
+        if (it.hasValue(R.styleable.CustomInput_ciText)) {
+            nInput.setText(it.getString(R.styleable.CustomInput_ciText))
         }
 
         //set Error & Mandatory
@@ -97,9 +100,9 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         }
     }
 
-    @BindingAdapter("ci_text")
-    fun setTitle(nTitle: String) {
-        nInput.setText(nTitle)
+    @BindingAdapter("ciText")
+    fun setCiText(nMe : CustomInput, nText: String) {
+        nMe.nInput.setText(nText)
     }
 
     fun setErrorMessage(nErrorMessage: String) {
