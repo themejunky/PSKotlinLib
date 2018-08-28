@@ -99,11 +99,12 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         }
         }
     }
-
+    companion object {
     @BindingAdapter("ciText")
-    fun setCiText(nMe : CustomInput, nText: String) {
+     fun setCiText(nMe : CustomInput, nText: String) {
         nMe.nInput.setText(nText)
     }
+        }
 
     fun setErrorMessage(nErrorMessage: String) {
         nInputError.text=nErrorMessage
