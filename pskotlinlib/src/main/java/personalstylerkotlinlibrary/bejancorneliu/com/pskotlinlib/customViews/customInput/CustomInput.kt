@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 import android.databinding.InverseBindingListener
+import android.support.constraint.ConstraintLayout
 import android.text.Editable
 import android.text.TextWatcher
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.ErrorInputBinding
@@ -25,11 +26,11 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
 
     companion object {
         @JvmStatic @BindingAdapter("Text")
-        fun setText(nMe : CustomInput, nText: String) {
+        fun setText(nMe : ConstraintLayout, nText: String) {
             nMe.nInput.setText(nText)
         }
         @InverseBindingAdapter(attribute = "Text")
-        fun getText(nMe : CustomInput) : String {
+        fun getText(nMe : ConstraintLayout) : String {
           return  nMe.nInput.text.toString()
         }
 
