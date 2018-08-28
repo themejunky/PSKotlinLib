@@ -100,8 +100,9 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         }
     }
     companion object {
-    @BindingAdapter("ciText")
-     fun setCiText(nMe : CustomInput, nText: String) {
+    @BindingAdapter("app:ciText")
+     fun setCiText(nMe : View, nText: String) {
+        Log.d("asdadasd","este :  "+nMe)
         nMe.nInput.setText(nText)
     }
         }
