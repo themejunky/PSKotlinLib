@@ -14,7 +14,6 @@
         >
         <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
             android:layout_width="match_parent"
-            app:Text="asdadas"
             app:ci_keyboard="text"
             app:ci_title_text="ceva"
             app:ci_hint_text="ionescu.popescu@gmail.com"

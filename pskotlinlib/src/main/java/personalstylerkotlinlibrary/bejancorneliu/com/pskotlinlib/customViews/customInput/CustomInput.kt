@@ -20,7 +20,6 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
     companion object {
         @JvmStatic @BindingAdapter("Text")
         fun setText(nMe : View, nText: String) {
-            Log.d("asdadasd","este :  "+nMe)
             nMe.nInput.setText(nText)
         }
     }
