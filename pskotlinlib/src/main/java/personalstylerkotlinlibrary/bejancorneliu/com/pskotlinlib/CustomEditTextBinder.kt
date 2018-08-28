@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 
 
-@InverseBindingMethods(InverseBindingMethod(type = CustomInput::class,attribute = "Text",event = "textAttrChanged",method = "getText"))
+@InverseBindingMethods(InverseBindingMethod(type = CustomInput::class,attribute = "bind:Text",event = "bind:textAttrChanged",method = "bind:getText"))
 class CustomEditTextBinder {
     companion object {
         @JvmStatic
