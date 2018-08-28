@@ -29,7 +29,7 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         fun setText(nMe : ConstraintLayout, nText: String) {
             nMe.nInput.setText(nText)
         }
-        @InverseBindingAdapter(attribute = "app:Text")
+        @JvmStatic @InverseBindingAdapter(attribute = "app:Text")
         fun getText(nMe : ConstraintLayout) : String {
           return  nMe.nInput.text.toString()
         }
