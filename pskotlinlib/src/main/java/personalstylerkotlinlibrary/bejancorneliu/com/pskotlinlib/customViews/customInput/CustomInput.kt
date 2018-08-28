@@ -25,11 +25,11 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
 
     companion object {
         @JvmStatic @BindingAdapter("Text")
-        fun setText(nMe : View, nText: String) {
+        fun setText(nMe : CustomInput, nText: String) {
             nMe.nInput.setText(nText)
         }
         @InverseBindingAdapter(attribute = "Text")
-        fun getText(nMe : View) : String {
+        fun getText(nMe : CustomInput) : String {
           return  nMe.nInput.text.toString()
         }
 
