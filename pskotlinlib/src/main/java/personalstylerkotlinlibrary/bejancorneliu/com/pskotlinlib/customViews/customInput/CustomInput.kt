@@ -3,6 +3,8 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cu
 import android.content.Context
 import android.databinding.BindingAdapter
 import android.databinding.InverseBindingAdapter
+import android.databinding.InverseBindingMethod
+import android.databinding.InverseBindingMethods
 import android.text.InputType
 import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
@@ -10,11 +12,14 @@ import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
+import android.widget.TextView
 import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
-
-
+import android.databinding.InverseBindingListener
+import android.text.Editable
+import android.text.TextWatcher
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.ErrorInputBinding
 
 class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(context, attrs){
 
@@ -27,7 +32,28 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         fun getText(nMe : View) : String {
           return  nMe.nInput.text.toString()
         }
+
+        @BindingAdapter(value = "TextAttrChanged")
+        fun setListener(errorInputLayout: CustomInput, textAttrChanged: InverseBindingListener?) {
+            if (textAttrChanged != null) {
+                errorInputLayout.nInput.addTextChangedListener(object : TextWatcher {
+                    override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+
+                    }
+
+                    override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+
+                    }
+
+                    override fun afterTextChanged(s: Editable) {
+
+                    }
+                })
+            }
+        }
     }
+
+
 
     interface Custom_Input_Interface {
         fun onCustomInputChange()
