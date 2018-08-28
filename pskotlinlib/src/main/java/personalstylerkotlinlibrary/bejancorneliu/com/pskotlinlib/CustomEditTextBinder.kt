@@ -33,6 +33,12 @@ class CustomEditTextBinder {
         }
 
         @JvmStatic
+        @InverseBindingAdapter(attribute = "app:Text")
+        fun getText(nMe: CustomInput): String {
+            return nMe.nInput.text.toString()
+        }
+
+        @JvmStatic
         @BindingAdapter("app:Text")
         fun setText(editText: CustomInput, text: String?) {
             text?.let {
