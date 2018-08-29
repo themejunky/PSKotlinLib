@@ -16,7 +16,7 @@ import android.databinding.InverseBindingAdapter
 class CustomEditTextBinder {
     companion object {
         @JvmStatic
-        @BindingAdapter(value = ["textAttrChanged"], requireAll = false)
+        @BindingAdapter(value = ["textulmeuAttrChanged"], requireAll = false)
         fun setListener(editText: CustomInput, listener: InverseBindingListener?) {
             if (listener != null) {
                 editText.nInput.addTextChangedListener(object : TextWatcher {
