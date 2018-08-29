@@ -15,30 +15,30 @@ import android.databinding.InverseBindingAdapter
 @InverseBindingMethods(InverseBindingMethod(type = CustomInput::class,attribute = "Text",event = "textAttrChanged",method = "getText"))
 class CustomEditTextBinder {
     companion object {
-//        @JvmStatic
-//        @BindingAdapter(value = ["textAttrChanged"], requireAll = false)
-//        fun setListener(editText: CustomInput, listener: InverseBindingListener?) {
-//            if (listener != null) {
-//                editText.nInput.addTextChangedListener(object : TextWatcher {
-//                    override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
-//
-//                    }
-//
-//                    override fun onTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
-//
-//                    }
-//
-//                    override fun afterTextChanged(editable: Editable) {
-//                        listener.onChange()
-//                    }
-//                })
-//            }
-//        }
+        @JvmStatic
+        @BindingAdapter(value = ["textAttrChanged"], requireAll = false)
+        fun setListener(editText: CustomInput, listener: InverseBindingListener?) {
+            if (listener != null) {
+                editText.nInput.addTextChangedListener(object : TextWatcher {
+                    override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
 
-        @JvmStatic @InverseBindingAdapter(attribute = "android:text", event = "android:textAttrChanged")
-        fun getTextString(editText: CustomInput): String {
-            return editText.nInput.text.toString()
+                    }
+
+                    override fun onTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
+
+                    }
+
+                    override fun afterTextChanged(editable: Editable) {
+                        listener.onChange()
+                    }
+                })
+            }
         }
+
+//        @JvmStatic @InverseBindingAdapter(attribute = "android:text", event = "android:textAttrChanged")
+//        fun getTextString(editText: CustomInput): String {
+//            return editText.nInput.text.toString()
+//        }
 
 
 
