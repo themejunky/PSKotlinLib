@@ -72,8 +72,8 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         }
 
         //set Input Text
-        if (it.hasValue(R.styleable.CustomInput_Text)) {
-            nInput.setText(it.getString(R.styleable.CustomInput_Text))
+        if (it.hasValue(R.styleable.CustomInput_text)) {
+            nInput.setText(it.getString(R.styleable.CustomInput_text))
         }
 
         //set Error & Mandatory

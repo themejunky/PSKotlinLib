@@ -11,12 +11,12 @@ import android.databinding.InverseBindingAdapter
 
 
 
-
-@InverseBindingMethods(InverseBindingMethod(type = CustomInput::class,attribute = "app:Text",event = "android:textAttrChanged",method = "getText"))
+//,event = "android:textAttrChanged",method = "getText"
+@InverseBindingMethods(InverseBindingMethod(type = CustomInput::class,attribute = "text"))
 class CustomEditTextBinder {
     companion object {
         @JvmStatic
-        @BindingAdapter(value = ["android:textAttrChanged"], requireAll = false)
+        @BindingAdapter(value = ["textAttrChanged"], requireAll = false)
         fun setListener(editText: CustomInput, listener: InverseBindingListener?) {
             if (listener != null) {
                 editText.nInput.addTextChangedListener(object : TextWatcher {
@@ -44,13 +44,13 @@ class CustomEditTextBinder {
 
 
         @JvmStatic
-        @InverseBindingAdapter(attribute = "app:Text")
+        @InverseBindingAdapter(attribute = "text")
         fun getText(nMe: CustomInput): String {
             return nMe.nInput.text.toString()
         }
 
         @JvmStatic
-        @BindingAdapter("Text")
+        @BindingAdapter("text")
         fun setText(editText: CustomInput, text: String?) {
             text?.let {
                 if (it != editText.nInput.text.toString()) {
