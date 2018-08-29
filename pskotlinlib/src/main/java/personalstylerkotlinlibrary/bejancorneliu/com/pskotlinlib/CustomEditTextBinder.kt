@@ -45,13 +45,29 @@ class CustomEditTextBinder {
 
         @JvmStatic
         @InverseBindingAdapter(attribute = "textulmeu")
-        fun getText(nMe: CustomInput): String {
+        fun getTextulmeu(nMe: CustomInput): String {
             return nMe.nInput.text.toString()
         }
 
         @JvmStatic
         @BindingAdapter("textulmeu")
-        fun setText(editText: CustomInput, text: String?) {
+        fun setTextulmeu(editText: CustomInput, text: String?) {
+            text?.let {
+                if (it != editText.nInput.text.toString()) {
+                    editText.nInput.setText(it)
+                }
+            }
+        }
+
+        @JvmStatic
+        @InverseBindingAdapter(attribute = "textulmeu")
+        fun gettextulmeu(nMe: CustomInput): String {
+            return nMe.nInput.text.toString()
+        }
+
+        @JvmStatic
+        @BindingAdapter("textulmeu")
+        fun settextulmeu(editText: CustomInput, text: String?) {
             text?.let {
                 if (it != editText.nInput.text.toString()) {
                     editText.nInput.setText(it)
