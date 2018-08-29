@@ -44,7 +44,7 @@ class CustomEditTextBinder {
 
 
         @JvmStatic
-        @InverseBindingAdapter(attribute = "Text")
+        @InverseBindingAdapter(attribute = "app:Text")
         fun getText(nMe: CustomInput): String {
             return nMe.nInput.text.toString()
         }
