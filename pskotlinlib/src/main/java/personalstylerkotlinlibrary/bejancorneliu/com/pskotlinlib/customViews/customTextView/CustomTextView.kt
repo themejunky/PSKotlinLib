@@ -40,7 +40,7 @@ class CustomTextView(context: Context, attrs: AttributeSet) : TextView(context, 
 
             // set tag
             if (it.hasValue(R.styleable.CustomTextView_ctv_tag)) {
-                nContainer.tag = it.getString(R.styleable.CustomTextView_ctv_tag)
+                this.tag = it.getString(R.styleable.CustomTextView_ctv_tag)
             }
 
             //the above can be replaced with build in colors
