@@ -48,6 +48,7 @@
     </declare-styleable>
 
     <declare-styleable name="CustomTextView">
+
         <attr name="ctv_text_color" format="enum">
             <enum name="blue" value="1" />
             <enum name="green" value="2" />
