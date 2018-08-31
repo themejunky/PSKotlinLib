@@ -55,6 +55,7 @@
             <enum name="red" value="4" />
             <enum name="violet" value="5" />
         </attr>
+        <attr name="ctv_tag" format="string"/>
         <attr name="ctv_active_text_color" format="color" />
         <attr name="ctv_hover_text_color" format="color" />
     </declare-styleable>

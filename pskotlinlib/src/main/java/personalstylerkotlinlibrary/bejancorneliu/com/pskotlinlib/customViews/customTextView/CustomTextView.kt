@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.TextView
+import kotlinx.android.synthetic.main.lib_custom_button.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 
@@ -35,6 +36,11 @@ class CustomTextView(context: Context, attrs: AttributeSet) : TextView(context, 
             // set custom hover color
             if (it.hasValue(R.styleable.CustomTextView_ctv_hover_text_color)) {
                 mHoverTextColor = it.getColor(R.styleable.CustomTextView_ctv_hover_text_color,0)
+            }
+
+            // set tag
+            if (it.hasValue(R.styleable.CustomTextView_ctv_tag)) {
+                nContainer.tag = it.getString(R.styleable.CustomTextView_ctv_tag)
             }
 
             //the above can be replaced with build in colors
