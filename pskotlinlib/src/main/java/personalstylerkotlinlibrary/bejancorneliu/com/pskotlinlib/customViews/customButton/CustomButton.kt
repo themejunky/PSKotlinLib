@@ -47,6 +47,11 @@ class CustomButton(context: Context, attrs: AttributeSet) : CustomButtonBase(con
                 nContainer.tag = it.getString(R.styleable.CustomButton_cb_tag)
             }
 
+            // set disalbe
+            if (it.hasValue(R.styleable.CustomButton_cb_form_loading)) {
+                mButtonIsActive = it.getBoolean(R.styleable.CustomButton_cb_form_loading,false)
+            }
+
             // set custom active color
             if (it.hasValue(R.styleable.CustomButton_cb_color_active)) {
                 mColorActiveDrawable.setColor(it.getColor(R.styleable.CustomButton_cb_color_active, 0))

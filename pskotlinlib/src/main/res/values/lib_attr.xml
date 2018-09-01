@@ -34,6 +34,7 @@
         <attr name="cb_text" format="string" />
         <attr name="cb_tag" format="string" />
         <attr name="cb_form_validation" format="boolean" />
+        <attr name="cb_form_loading" format="boolean" />
         <attr name="cb_color_active" format="color" />
         <attr name="cb_color_hover" format="color" />
         <attr name="cb_color_shadow" format="color" />
