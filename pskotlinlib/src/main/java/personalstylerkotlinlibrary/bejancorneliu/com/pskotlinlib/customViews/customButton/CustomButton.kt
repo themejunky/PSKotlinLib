@@ -33,7 +33,6 @@ class CustomButton(context: Context, attrs: AttributeSet) : CustomButtonBase(con
             mDisableColorHoverDrawable = (ContextCompat.getDrawable(context, R.drawable.lib_button_background) as GradientDrawable)
             mDisableColorHoverDrawable.setColor(ContextCompat.getColor(context, R.color.lib_disable_pressed))
 
-
             mColorActiveDrawable = (ContextCompat.getDrawable(context, R.drawable.lib_button_background) as GradientDrawable)
             mColorHoverDrawable = (ContextCompat.getDrawable(context, R.drawable.lib_button_background) as GradientDrawable)
             mColorShadowDrawable = (ContextCompat.getDrawable(context, R.drawable.lib_button_background) as GradientDrawable)
@@ -128,5 +127,9 @@ class CustomButton(context: Context, attrs: AttributeSet) : CustomButtonBase(con
 
     fun setInactive() {
         mInactiveRelease()
+    }
+
+    fun setDisable(nDisable: Boolean) {
+        mButtonIsActive = nDisable
     }
 }
