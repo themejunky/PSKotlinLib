@@ -13,6 +13,9 @@
     <color name="lib_border_focus">#0cb037</color>
     <color name="lib_border_error">#fc0056</color>
 
+    <color name="lib_border_box_image_inactive">#e6e6e6</color>
+    <color name="lib_border_box_image_active">#880cff</color>
+
     <color name="lib_disable_active">#b1b1b1</color>
     <color name="lib_disable_pressed">#b1b1b1</color>
     <color name="lib_disable_shadow">#66b1b1b1</color>

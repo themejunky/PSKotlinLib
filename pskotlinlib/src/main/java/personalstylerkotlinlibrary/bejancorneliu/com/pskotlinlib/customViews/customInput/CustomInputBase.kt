@@ -86,8 +86,6 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
         mIsInputValid = nInput.text.toString().isNotEmpty()
     }
 
-
-
     /**
      * Local Library :)
      */

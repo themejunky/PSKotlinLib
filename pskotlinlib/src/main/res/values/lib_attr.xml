@@ -62,4 +62,11 @@
         <attr name="ctv_hover_text_color" format="color" />
     </declare-styleable>
 
+
+    <declare-styleable name="CustomBoxImage">
+        <attr name="cbi_icon" format="reference" />
+        <attr name="cbi_text" format="string" />
+        <attr name="cbi_active_text_color" format="color"/>
+        <attr name="cbi_hover_text_color" format="color"/>
+    </declare-styleable>
 </resources>

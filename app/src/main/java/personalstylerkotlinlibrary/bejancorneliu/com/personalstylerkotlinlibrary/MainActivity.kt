@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity(), CustomInput.Custom_Input_Interface, Cu
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        nIc.setActivationState(true)
+
        // dasdasdas.setListener(this)
     }
 }

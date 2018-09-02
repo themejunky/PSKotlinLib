@@ -12,6 +12,14 @@
         android:layout_height="300dp"
         android:orientation="horizontal"
         >
+
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImage.CustomBoxImage
+            android:id="@+id/nIc"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:cbi_icon="@drawable/ic_female"
+            app:cbi_text="Femela"/>
+
         <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput-->
             <!--android:layout_width="match_parent"-->
             <!--app:ci_keyboard="text"-->
@@ -20,16 +28,16 @@
             <!--android:layout_height="wrap_content"-->
         <!--/>-->
 
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
-            android:id="@+id/dasdasdas"
-            android:layout_width="match_parent"
-            app:layout_constraintTop_toBottomOf="@+id/nSpinners"
-            android:layout_height="50dp"
-            app:cb_text="text"
-            app:cb_tag="active"
-            app:cb_form_validation="false"
-            app:cb_button_color="red"
-        />
+        <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton-->
+            <!--android:id="@+id/dasdasdas"-->
+            <!--android:layout_width="match_parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/nSpinners"-->
+            <!--android:layout_height="50dp"-->
+            <!--app:cb_text="text"-->
+            <!--app:cb_tag="active"-->
+            <!--app:cb_form_validation="false"-->
+            <!--app:cb_button_color="red"-->
+        <!--/>-->
 
     </LinearLayout>
 
