@@ -45,14 +45,6 @@ class CustomBoxImage(context: Context, attrs: AttributeSet) : CustomBoxImageBase
                 mContainer.tag = it.getString(R.styleable.CustomBoxImage_cbi_tag)
             }
 
-            //set Tag
-            if (it.hasValue(R.styleable.CustomBoxImage_cbi_twin)) {
-
-                mTwin = it.getResourceId(R.styleable.CustomBoxImage_cbi_twin,0)
-               // Log.d("dasdad",""+it.getResourceId(R.styleable.CustomBoxImage_cbi_twin,0)+"/"+it.getInt(R.styleable.CustomBoxImage_cbi_twin,0))
-               // it.getResourceId(R.styleable.CustomBoxImage_cbi_twin,0) as CustomBoxImage
-            }
-
             // set custom active color
             mActiveTextColor = if (it.hasValue(R.styleable.CustomBoxImage_cbi_active_text_color)) {
                 it.getColor(R.styleable.CustomTextView_ctv_active_text_color,0)
@@ -71,15 +63,6 @@ class CustomBoxImage(context: Context, attrs: AttributeSet) : CustomBoxImageBase
         }
     }
 
-    @SuppressLint("MissingSuperCall")
-    public override fun onAttachedToWindow() {
-        super.onAttachedToWindow()
-
-        Handler().postDelayed({
-            Log.d("dasdad",""+ rootView.findViewById<ConstraintLayout>(mTwin))
-        }, 2000)
-
-    }
     fun setActivationState(nValue : Boolean) {
         mIsActive = nValue
     }
