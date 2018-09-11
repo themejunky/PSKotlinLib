@@ -69,7 +69,7 @@ abstract class CustomBoxImageBase(context: Context, attrs: AttributeSet) : BaseC
                 }
 
             }
-            else -> {
+            event.action== MotionEvent.ACTION_CANCEL  -> {
                 mIsActive = false
                 mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
                 mIcon.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
