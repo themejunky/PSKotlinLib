@@ -41,25 +41,29 @@ abstract class CustomBoxImageBase(context: Context, attrs: AttributeSet) : BaseC
     }
 
     override fun onTouch(v: View, event: MotionEvent): Boolean {
+
+        Log.d("actiune_but",""+event.action);
+
         if (event.action== MotionEvent.ACTION_DOWN) {
+            Log.d("actiune_but","DOWN "+event.action);
             mText.setTextColor(mHoverTextColor)
             mIcon.setColorFilter(mHoverTextColor)
             mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_roud_corners_hover)
         }
         if (event.action== MotionEvent.ACTION_UP) {
-
+            Log.d("actiune_but","UP "+event.action);
             mIsActive = !mIsActive
 
-            if (mIsActive) {
+            if (mIsActive) {  Log.d("actiune_but","UP 1"+event.action);
                 mText.setTextColor(mActiveTextColor)
                 mIcon.setColorFilter(mActiveTextColor)
                 mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners_active)
-            } else {
+            } else {   Log.d("actiune_but","UP 2"+event.action);
                 mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
                 mIcon.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
                 mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
             }
-
+            Log.d("actiune_but","UP 3"+event.action);
             try {
                 mListener.onCustomBoxImageChange(mContainer.tag.toString())
             } catch (e : Exception) {
