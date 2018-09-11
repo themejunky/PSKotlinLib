@@ -42,32 +42,38 @@ abstract class CustomBoxImageBase(context: Context, attrs: AttributeSet) : BaseC
 
     override fun onTouch(v: View, event: MotionEvent): Boolean {
 
-        Log.d("actiune_but",""+event.action);
+        when {
+            event.action== MotionEvent.ACTION_DOWN -> {
+                mText.setTextColor(mHoverTextColor)
+                mIcon.setColorFilter(mHoverTextColor)
+                mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_roud_corners_hover)
+            }
+            event.action== MotionEvent.ACTION_UP -> {
 
-        if (event.action== MotionEvent.ACTION_DOWN) {
-            Log.d("actiune_but","DOWN "+event.action);
-            mText.setTextColor(mHoverTextColor)
-            mIcon.setColorFilter(mHoverTextColor)
-            mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_roud_corners_hover)
-        }
-        if (event.action== MotionEvent.ACTION_UP) {
-            Log.d("actiune_but","UP "+event.action);
-            mIsActive = !mIsActive
+                mIsActive = !mIsActive
 
-            if (mIsActive) {  Log.d("actiune_but","UP 1"+event.action);
-                mText.setTextColor(mActiveTextColor)
-                mIcon.setColorFilter(mActiveTextColor)
-                mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners_active)
-            } else {   Log.d("actiune_but","UP 2"+event.action);
+                if (mIsActive) {
+                    mText.setTextColor(mActiveTextColor)
+                    mIcon.setColorFilter(mActiveTextColor)
+                    mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners_active)
+                } else {
+                    mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
+                    mIcon.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
+                    mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
+                }
+
+                try {
+                    mListener.onCustomBoxImageChange(mContainer.tag.toString())
+                } catch (e : Exception) {
+                    Log.d("CUSTOM_BOX_IMAGE", e.message)
+                }
+
+            }
+            else -> {
+                mIsActive = false
                 mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
                 mIcon.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
                 mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
-            }
-            Log.d("actiune_but","UP 3"+event.action);
-            try {
-                mListener.onCustomBoxImageChange(mContainer.tag.toString())
-            } catch (e : Exception) {
-                Log.d("CUSTOM_BOX_IMAGE", e.message)
             }
         }
         return true
