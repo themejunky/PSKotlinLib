@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         >
 
         <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImage.CustomBoxImage
@@ -18,7 +18,16 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             app:cbi_icon="@drawable/ic_female"
+            app:cbi_twin="@+id/Ic2"
             app:cbi_text="Femela"/>
+
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImage.CustomBoxImage
+            android:id="@+id/nIc2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:cbi_icon="@drawable/ic_female"
+            app:cbi_text="Femela"/>
+
 
         <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput-->
             <!--android:layout_width="match_parent"-->

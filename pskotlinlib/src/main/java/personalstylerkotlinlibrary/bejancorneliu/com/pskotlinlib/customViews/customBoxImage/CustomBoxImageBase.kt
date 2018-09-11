@@ -4,6 +4,7 @@ import android.content.Context
 import android.support.constraint.ConstraintLayout
 import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewTreeObserver
@@ -17,7 +18,9 @@ abstract class CustomBoxImageBase(context: Context, attrs: AttributeSet) : BaseC
     var mSavedSize = 0
     var mActiveTextColor : Int = 0
     var mHoverTextColor : Int = 0
-
+    lateinit var mTag : String
+    lateinit var mListener : CustomBoxImage.CustomBoxImageInterface
+    var mTwin : Int = 0
     var mIsActive by Delegates.observable<Boolean>(false) { _, _, _ -> judgeState() }
 
     override fun onMeasure(widthSpec: Int, heightSpec: Int) {
@@ -55,6 +58,12 @@ abstract class CustomBoxImageBase(context: Context, attrs: AttributeSet) : BaseC
                 mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
                 mIcon.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
                 mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
+            }
+
+            try {
+                mListener.onCustomBoxImageChange(mContainer.tag.toString())
+            } catch (e : Exception) {
+                Log.d("CUSTOM_BOX_IMAGE", e.message)
             }
         }
         return true
