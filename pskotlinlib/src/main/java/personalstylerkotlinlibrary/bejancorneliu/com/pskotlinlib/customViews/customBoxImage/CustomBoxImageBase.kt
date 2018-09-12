@@ -63,7 +63,7 @@ abstract class CustomBoxImageBase(context: Context, attrs: AttributeSet) : BaseC
                 }
 
                 try {
-                    mListener.onCustomBoxImageChange(mContainer.tag.toString())
+                    mListener.onCustomBoxImageChange(mContainer.tag.toString(),mIsActive)
                 } catch (e : Exception) {
                     Log.d("CUSTOM_BOX_IMAGE", e.message)
                 }

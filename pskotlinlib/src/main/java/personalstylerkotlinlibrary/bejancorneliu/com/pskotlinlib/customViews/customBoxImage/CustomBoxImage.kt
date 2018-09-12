@@ -14,7 +14,7 @@ import android.util.Log
 class CustomBoxImage(context: Context, attrs: AttributeSet) : CustomBoxImageBase(context, attrs) {
 
     interface CustomBoxImageInterface {
-        fun onCustomBoxImageChange(mTag : String)
+        fun onCustomBoxImageChange(mTag : String,mIsActive : Boolean)
     }
 
 
