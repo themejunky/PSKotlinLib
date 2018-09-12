@@ -151,6 +151,10 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         return nInput.text.toString()
     }
 
+    fun isValidWithoutErrorTriggering() : Boolean {
+        return mIsInputValid
+    }
+
     fun isValid() : Boolean {
         if (!mIsInputValid) { mStartValidating=true; triggerError() }
         return mIsInputValid
