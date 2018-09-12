@@ -67,6 +67,10 @@ class CustomBoxImage(context: Context, attrs: AttributeSet) : CustomBoxImageBase
         mIsActive = nValue
     }
 
+    fun getActivationState() : Boolean {
+        return mIsActive
+    }
+
 
 
 
