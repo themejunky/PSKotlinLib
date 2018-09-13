@@ -13,20 +13,25 @@
         android:orientation="vertical"
         >
 
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImage.CustomBoxImage
-            android:id="@+id/nIc"
-            android:layout_width="100dp"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cbi_icon="@drawable/ic_female"
-            app:cbi_twin="@+id/Ic2"
-            app:cbi_text="Femela"/>
+            android:inputType="textPassword"/>
 
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImage.CustomBoxImage
-            android:id="@+id/nIc2"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            app:cbi_icon="@drawable/ic_female"
-            app:cbi_text="Femela"/>
+        <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImage.CustomBoxImage-->
+            <!--android:id="@+id/nIc"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:cbi_icon="@drawable/ic_female"-->
+            <!--app:cbi_twin="@+id/Ic2"-->
+            <!--app:cbi_text="Femela"/>-->
+
+        <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImage.CustomBoxImage-->
+            <!--android:id="@+id/nIc2"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:cbi_icon="@drawable/ic_female"-->
+            <!--app:cbi_text="Femela"/>-->
 
 
         <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput-->
