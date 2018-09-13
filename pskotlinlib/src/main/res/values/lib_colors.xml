@@ -8,6 +8,8 @@
     <color name="lib_base_green">#0cb037</color>
     <color name="lib_base_white">#ffffff</color>
 
+    <color name="lib_default_dialog_buttons_background">#efeff4</color>
+
     <color name="lib_background_default">#f4f4f4</color>
     <color name="lib_border_default">#d1d1d1</color>
     <color name="lib_border_focus">#0cb037</color>
