@@ -69,6 +69,8 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         //set Title
         if (it.hasValue(R.styleable.CustomInput_ci_title_text)) {
             nInputTitle.text = it.getString(R.styleable.CustomInput_ci_title_text)
+        } else {
+            nInputTitle.visibility = View.GONE
         }
 
         //set Input Text
