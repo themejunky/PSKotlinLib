@@ -39,4 +39,8 @@
     <color name="lib_violet_active">#880cff</color>
     <color name="lib_violet_pressed">#750cff</color>
     <color name="lib_violet_shadow">#66880cff</color>
+
+    <color name="lib_black_active">#333333</color>
+    <color name="lib_black_pressed">#66b1b1b1</color>
+    <color name="lib_black_shadow">#b1b1b1</color>
 </resources>

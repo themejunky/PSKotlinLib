@@ -46,11 +46,12 @@ class CustomTextView(context: Context, attrs: AttributeSet) : TextView(context, 
             //the above can be replaced with build in colors
             if (it.hasValue(R.styleable.CustomTextView_ctv_text_color)) {
                 when (it.getString(R.styleable.CustomTextView_ctv_text_color)) {
-                    "1" -> { mActiveTextColor=ContextCompat.getColor(context, R.color.lib_blue_active); mHoverTextColor= ContextCompat.getColor(context, R.color.lib_blue_pressed);Log.d("asdada","1") }
-                    "2" -> { mActiveTextColor=ContextCompat.getColor(context, R.color.lib_green_active); mHoverTextColor=ContextCompat.getColor(context, R.color.lib_green_pressed) ;Log.d("asdada","2")}
-                    "3" -> { mActiveTextColor=ContextCompat.getColor(context, R.color.lib_grey_active); mHoverTextColor=ContextCompat.getColor(context, R.color.lib_grey_pressed) ;Log.d("asdada","3")}
-                    "4" -> { mActiveTextColor=ContextCompat.getColor(context, R.color.lib_red_active); mHoverTextColor=ContextCompat.getColor(context, R.color.lib_red_pressed) ;Log.d("asdada","4")}
-                    "5" -> { mActiveTextColor=ContextCompat.getColor(context, R.color.lib_violet_active); mHoverTextColor=ContextCompat.getColor(context, R.color.lib_violet_pressed) ;Log.d("asdada","5")}
+                    "0" -> { mActiveTextColor=ContextCompat.getColor(context, R.color.lib_black_active); mHoverTextColor= ContextCompat.getColor(context, R.color.lib_black_pressed) }
+                    "1" -> { mActiveTextColor=ContextCompat.getColor(context, R.color.lib_blue_active); mHoverTextColor= ContextCompat.getColor(context, R.color.lib_blue_pressed)}
+                    "2" -> { mActiveTextColor=ContextCompat.getColor(context, R.color.lib_green_active); mHoverTextColor=ContextCompat.getColor(context, R.color.lib_green_pressed)}
+                    "3" -> { mActiveTextColor=ContextCompat.getColor(context, R.color.lib_grey_active); mHoverTextColor=ContextCompat.getColor(context, R.color.lib_grey_pressed)}
+                    "4" -> { mActiveTextColor=ContextCompat.getColor(context, R.color.lib_red_active); mHoverTextColor=ContextCompat.getColor(context, R.color.lib_red_pressed)}
+                    "5" -> { mActiveTextColor=ContextCompat.getColor(context, R.color.lib_violet_active); mHoverTextColor=ContextCompat.getColor(context, R.color.lib_violet_pressed)}
                 }
             }
 
