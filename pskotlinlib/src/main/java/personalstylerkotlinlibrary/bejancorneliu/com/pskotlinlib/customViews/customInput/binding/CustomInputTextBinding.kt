@@ -1,12 +1,13 @@
-package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput
+package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.binding
 
 import android.databinding.*
 import android.text.Editable
 import android.text.TextWatcher
 import kotlinx.android.synthetic.main.lib_custom_input.view.*
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 
 @InverseBindingMethods(InverseBindingMethod(type = CustomInput::class,attribute = "ci_text_text"))
-class CustomInputBinding {
+class CustomInputTextBinding {
     companion object {
         @JvmStatic
         @BindingAdapter("ci_text_text")
