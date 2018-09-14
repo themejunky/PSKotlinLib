@@ -12,12 +12,8 @@ class CustomInputErrorBinding {
     companion object {
         @JvmStatic
         @BindingAdapter("ci_error_text")
-        fun setci_error_text(editText: CustomInput, text: String?) {
-            text?.let {
-                if (it != editText.nInputError.text.toString()) {
-                    editText.nInput.setText(it)
-                }
-            }
+        fun setci_error_text(editText: CustomInput, text: String) {
+            editText.nInputError.text = text
         }
     }
 }
