@@ -7,6 +7,7 @@
         <attr name="ci_error_text" format="string" />
         <attr name="ci_hint_text" format="string" />
         <attr name="ci_text_text" format="string" />
+        <attr name="ci_show_error" format="boolean" />
         <attr name="ci_imei_option" format="enum">
             <enum name="done" value="1" />
             <enum name="next" value="2" />
