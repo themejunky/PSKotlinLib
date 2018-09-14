@@ -79,10 +79,10 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         }
 
         //set Error & Mandatory
-        if (it.hasValue(R.styleable.CustomInput_ci_error_text)) {
+        if (it.hasValue(R.styleable.CustomInput_ci_default_error_text)) {
             nInputMandatory.visibility = View.VISIBLE
-            nInputError.text = it.getString(R.styleable.CustomInput_ci_error_text)
-            mDefaultError = it.getString(R.styleable.CustomInput_ci_error_text)
+            nInputError.text = it.getString(R.styleable.CustomInput_ci_default_error_text)
+            mDefaultError = it.getString(R.styleable.CustomInput_ci_default_error_text)
         }
 
         //set Hint
