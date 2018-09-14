@@ -10,7 +10,7 @@ class CustomInputShowErrorBinding {
     companion object {
         @JvmStatic
         @BindingAdapter("ci_show_error")
-        fun setci_error_text(editText: CustomInput, text: Boolean) {
+        fun setci_show_error(editText: CustomInput, text: Boolean) {
             editText.mIsInputValid = text
         }
     }
