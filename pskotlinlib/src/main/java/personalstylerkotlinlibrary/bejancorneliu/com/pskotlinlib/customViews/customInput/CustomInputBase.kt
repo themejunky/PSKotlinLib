@@ -47,14 +47,14 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
     private fun validationFieldCore(nInputType: String) {
         mStartValidating = true
         nInputError.text = mDefaultError
-//        when(nInputType) {
-//            "1" -> validationNormalText()
-//            "12" -> validationTinyText()
-//            "2" -> validationEmail()
-//            "3" -> validationPhone()
-//            "4" -> validationPassword()
-//            "5" -> validationNumber()
-//        }
+        when(nInputType) {
+            "1" -> validationNormalText()
+            "12" -> validationTinyText()
+            "2" -> validationEmail()
+            "3" -> validationPhone()
+            "4" -> validationPassword()
+            "5" -> validationNumber()
+        }
 
         try {
             mListener.onCustomInputChange()
