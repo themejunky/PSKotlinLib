@@ -10,7 +10,10 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.isValid3Lenght
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.isValid5Lenght
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.isValidEmail
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.isValidPhone
 import java.util.concurrent.TimeUnit
 import java.util.regex.Pattern
 import kotlin.properties.Delegates
@@ -64,11 +67,11 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
     }
 
     private fun validationNormalText() {
-        mIsInputValid = nInput.text.toString().length>=3
+        mIsInputValid = nInput.text.toString().isNotEmpty()
     }
 
     private fun validationTinyText() {
-        mIsInputValid = nInput.text.toString().isNotEmpty()
+        mIsInputValid = nInput.text.toString().isValid3Lenght()
     }
 
     private fun validationEmail() {
@@ -76,21 +79,14 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
     }
 
     private fun validationPhone() {
-        mIsInputValid = isPhoneValid(nInput.text.toString())
+        mIsInputValid = nInput.text.toString().isValidPhone()
     }
 
     private fun validationPassword() {
-        mIsInputValid = nInput.text.toString().length > 5
+        mIsInputValid = nInput.text.toString().isValid5Lenght()
     }
 
     private fun validationNumber() {
         mIsInputValid = nInput.text.toString().isNotEmpty()
-    }
-
-    /**
-     * Local Library :)
-     */
-    private fun isPhoneValid(nPhone: String): Boolean {
-        return nPhone.length == 10 // in 4..10
     }
 }

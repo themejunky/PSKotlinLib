@@ -19,6 +19,22 @@ fun String.isValidEmail(): Boolean {
     return matcher.matches()
 }
 
+fun String.isValidPassword(): Boolean {
+    return this.length > 5
+}
+
+fun String.isValid3Lenght(): Boolean {
+    return this.length >= 3
+}
+
+fun String.isValid5Lenght(): Boolean {
+    return this.length >= 5
+}
+
+fun String.isValidPhone(): Boolean {
+    return this.length == 10
+}
+
 fun String.md5(): String {
     val md = MessageDigest.getInstance("MD5")
     val digested = md.digest(toByteArray())
