@@ -37,6 +37,7 @@
         <attr name="cb_color_active" format="color" />
         <attr name="cb_color_hover" format="color" />
         <attr name="cb_color_shadow" format="color" />
+        <attr name="cb_enable" format="boolean" />
         <attr name="cb_button_color" format="enum">
             <enum name="blue" value="1" />
             <enum name="green" value="2" />
