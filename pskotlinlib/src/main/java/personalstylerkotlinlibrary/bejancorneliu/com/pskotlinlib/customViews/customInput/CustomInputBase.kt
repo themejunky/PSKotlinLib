@@ -10,6 +10,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.isValidEmail
 import java.util.concurrent.TimeUnit
 import java.util.regex.Pattern
 import kotlin.properties.Delegates
@@ -71,7 +72,7 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
     }
 
     private fun validationEmail() {
-        mIsInputValid = isEmailValid(nInput.text.toString())
+        mIsInputValid = nInput.text.toString().isValidEmail()
     }
 
     private fun validationPhone() {
@@ -89,13 +90,6 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
     /**
      * Local Library :)
      */
-    private fun isEmailValid(nEmail: String): Boolean {
-        val expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$"
-        val pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE)
-        val matcher = pattern.matcher(nEmail)
-        return matcher.matches()
-    }
-
     private fun isPhoneValid(nPhone: String): Boolean {
         return nPhone.length == 10 // in 4..10
     }
