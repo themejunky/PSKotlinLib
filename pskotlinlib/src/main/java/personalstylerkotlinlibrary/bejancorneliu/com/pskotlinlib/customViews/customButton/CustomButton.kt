@@ -12,13 +12,13 @@ import android.view.View
 
 class CustomButton(context: Context, attrs: AttributeSet) : CustomButtonBase(context, attrs) {
 
-    companion object {
-        @JvmStatic
-        @BindingAdapter("app:cb_form_loading")
-        fun setCb_form_loading(nMe: CustomButton, nValue: Boolean) {
-            nMe.mButtonIsActive=nValue
-        }
-    }
+//    companion object {
+//        @JvmStatic
+//        @BindingAdapter("app:cb_form_loading")
+//        fun setCb_form_loading(nMe: CustomButton, nValue: Boolean) {
+//            nMe.mButtonIsActive=nValue
+//        }
+//    }
     interface Custom_Button_Interface {
         fun onCustomButtonClick(view: View)
     }
