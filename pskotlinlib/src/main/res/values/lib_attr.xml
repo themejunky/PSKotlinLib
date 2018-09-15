@@ -5,6 +5,7 @@
         <attr name="textulmeu" format="string" />
         <attr name="ci_title_text" format="string" />
         <attr name="ci_default_error_text" format="string" />
+        <attr name="ci_ws_error_text" format="string" />
         <attr name="ci_hint_text" format="string" />
         <attr name="ci_text_text" format="string" />
         <attr name="ci_show_error" format="boolean" />
