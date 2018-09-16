@@ -65,6 +65,7 @@
 
 
     <declare-styleable name="CustomBoxImage">
+        <attr name="cbi_is_selected" format="boolean" />
         <attr name="cbi_icon" format="reference" />
         <attr name="cbi_text" format="string" />
         <attr name="cbi_tag" format="string"/>
