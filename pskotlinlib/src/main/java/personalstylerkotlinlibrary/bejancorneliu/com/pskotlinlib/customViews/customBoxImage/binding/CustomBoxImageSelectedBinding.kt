@@ -1,37 +1,9 @@
 package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImage.binding
 
-//@InverseBindingMethods(InverseBindingMethod(type = CustomBoxImage::class, attribute = "cbi_is_selected"))
-//class CustomBoxImageSelectedBinding {
-//    companion object {
-//        @JvmStatic
-//        @BindingAdapter("cbi_is_selected")
-//        fun setcbi_is_selected(mCustomBoxImage: CustomBoxImage, mIsSelected: Boolean) {
-//
-//            mCustomBoxImage.setActivationState(mIsSelected)
-//        }
-//
-//        @JvmStatic
-//        @InverseBindingAdapter(attribute = "cbi_is_selected")
-//        fun getcbi_is_selected(mCustomBoxImage: CustomBoxImage): Boolean {
-//            return mCustomBoxImage.getActivationState()
-//        }
-//
-//        @JvmStatic
-//        @BindingAdapter(value = ["cbi_is_selectedAttrChanged"], requireAll = false)
-//        fun setListener(editText: CustomBoxImage, listener: InverseBindingListener?) {
-//            if (listener != null) {
-//                editText.mText.addTextChangedListener(object : TextWatcher {
-//                    override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
-//                    }
-//
-//                    override fun onTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
-//                    }
-//
-//                    override fun afterTextChanged(editable: Editable) {
-//                        listener.onChange()
-//                    }
-//                })
-//            }
-//        }
-//    }
-//}
+import android.databinding.BindingAdapter
+import android.widget.CompoundButton
+
+@BindingAdapter("android:checked")
+fun setChecked(checkableView: CompoundButton, isChecked: Boolean?) {
+    checkableView.isChecked = isChecked ?: false
+}
