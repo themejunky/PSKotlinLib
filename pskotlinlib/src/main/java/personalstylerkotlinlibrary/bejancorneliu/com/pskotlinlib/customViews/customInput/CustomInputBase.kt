@@ -10,9 +10,11 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.*
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.isValid3Lenght
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.isValidEmail
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.isValidPassword
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.isValidPhone
 import java.util.concurrent.TimeUnit
-import java.util.regex.Pattern
 import kotlin.properties.Delegates
 
 open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomView(context, attrs) {
