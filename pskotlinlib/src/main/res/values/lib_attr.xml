@@ -27,6 +27,7 @@
     <declare-styleable name="CustomSpinner">
         <attr name="cs_title_text" format="string" />
         <attr name="cs_set_entries" format="reference"/>
+        <attr name="cs_position" format="integer"/>
         <attr name="cs_error_text" format="string" />
     </declare-styleable>
 
