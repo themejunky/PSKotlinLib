@@ -5,6 +5,7 @@ import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
 import android.view.View
 import android.widget.AdapterView
+import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import kotlinx.android.synthetic.main.lib_custom_spinner.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
@@ -15,6 +16,7 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
     var mIsSpinnerValid by Delegates.observable<Boolean?>(false) { _, _, new ->
         if (new == false && mStartValidating) errorStyle() else defaultStyle()
     }
+    var mDefaultError : String = ""
     var mStartValidating : Boolean = false
     var mSpinnerSelectedId : Int = 0
     var mSpinnerSelectedValue : String = ""
@@ -35,7 +37,7 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, nPositionSelected: Int, p3: Long) {
         mIsSpinnerValid = nPositionSelected != 0
-
+        nSpinnerError.text = mDefaultError
         mSpinnerSelectedId = nPositionSelected
         mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues().get(nPositionSelected).name.toString()
 
