@@ -89,6 +89,7 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
 
     fun triggerError() {
         mIsSpinnerValid=false
+        mStartValidating=true
     }
 
     fun triggerDefault() {

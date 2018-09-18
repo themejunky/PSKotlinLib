@@ -12,11 +12,25 @@
         android:layout_height="300dp"
         android:orientation="vertical"
         >
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
+            android:id="@+id/mCity"
+            style="@style/MatchWrap"
+            app:cs_title_text="Spinner"
+            app:cs_default_error_text="Erroare"
+            app:cs_show_error="true"
+            app:cs_ws_error_text="Arata"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"/>
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
+            android:id="@+id/mInput"
+        android:layout_width="match_parent"
+        app:ci_keyboard="text"
+        app:ci_title_text="ceva"
+        app:ci_hint_text="ionescu.popescu@gmail.com"
+            app:ci_default_error_text="adsdaa"
+            app:ci_show_error="true"
+        android:layout_height="wrap_content"/>
+
 
         <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImage.CustomBoxImage-->
             <!--android:id="@+id/nIc"-->
