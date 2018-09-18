@@ -3,6 +3,7 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools
 import android.content.res.TypedArray
 import android.widget.Spinner
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinnerAdapter
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.databases.Cities
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 import java.security.MessageDigest
 import java.util.regex.Pattern
@@ -48,7 +49,7 @@ fun String.md5(): String {
 }
 
 /** Spinners extensions */
-fun Spinner.setSpinnerEntries(entries: List<Item>?) {
+fun Spinner.setSpinnerEntries(entries: List<Cities>?) {
     if (entries != null) {
         adapter = CustomSpinnerAdapter(context,entries, "left",false)
     }

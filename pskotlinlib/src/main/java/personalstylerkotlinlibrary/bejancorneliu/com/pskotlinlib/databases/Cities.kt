@@ -18,4 +18,6 @@ data class Cities(
 
         @ColumnInfo(name = "type")
         var type: String = ""
+
+//TODO: de schimbat numele tabelei. aici vor fi mai multe
 )

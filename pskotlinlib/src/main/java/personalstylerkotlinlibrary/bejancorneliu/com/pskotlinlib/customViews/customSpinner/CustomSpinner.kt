@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Spinner
 import kotlinx.android.synthetic.main.lib_custom_spinner.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.databases.Cities
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 
@@ -50,7 +51,7 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
         var nPosition = 0
 
         for (item in (nSpinner.adapter as CustomSpinnerAdapter).getValues()) {
-            if (item.value.equals(nValue)) {
+            if (item.name.equals(nValue)) {
                 nSpinner.setSelection(nPosition)
             } else {
                 nPosition++
@@ -74,7 +75,7 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
         nSpinner.setSelection(nPosition)
     }
 
-    fun setSpinner(nValues : List<Item>, nAlignment: String, nBold: Boolean = false) {
+    fun setSpinner(nValues : List<Cities>, nAlignment: String, nBold: Boolean = false) {
         nSpinner.adapter = CustomSpinnerAdapter(context,nValues, nAlignment,nBold)
     }
 
