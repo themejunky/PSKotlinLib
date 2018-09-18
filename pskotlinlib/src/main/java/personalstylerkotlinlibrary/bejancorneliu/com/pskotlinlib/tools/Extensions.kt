@@ -46,6 +46,7 @@ fun String.md5(): String {
     }
 }
 
+/** Spinners extensions */
 fun Spinner.setSpinnerEntries(entries: List<Item>?) {
     if (entries != null) {
         adapter = CustomSpinnerAdapter(context,entries, "left",false)
