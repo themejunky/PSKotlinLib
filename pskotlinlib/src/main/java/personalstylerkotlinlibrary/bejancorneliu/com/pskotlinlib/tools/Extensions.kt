@@ -1,6 +1,9 @@
 package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools
 
 import android.content.res.TypedArray
+import android.widget.Spinner
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinnerAdapter
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 import java.security.MessageDigest
 import java.util.regex.Pattern
 
@@ -40,5 +43,11 @@ fun String.md5(): String {
     val digested = md.digest(toByteArray())
     return digested.joinToString("") {
         String.format("%02x", it)
+    }
+}
+
+fun Spinner.setSpinnerEntries(entries: List<Item>?) {
+    if (entries != null) {
+        adapter = CustomSpinnerAdapter(context,entries, "left",false)
     }
 }
