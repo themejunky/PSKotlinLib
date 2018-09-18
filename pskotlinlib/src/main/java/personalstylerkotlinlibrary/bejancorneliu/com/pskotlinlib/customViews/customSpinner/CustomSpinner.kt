@@ -28,7 +28,7 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
             }
 
             //set Error & Mandatory
-            if (it.hasValue(R.styleable.CustomSpinner_cs_error_text)) {
+            if (it.hasValue(R.styleable.CustomSpinner_cs_default_error_text)) {
                 nSpinnerMandatory.visibility = View.VISIBLE
                 nSpinnerError.text = it.getString(R.styleable.CustomSpinner_cs_error_text)
             }

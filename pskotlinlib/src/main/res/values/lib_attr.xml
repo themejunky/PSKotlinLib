@@ -28,7 +28,9 @@
         <attr name="cs_title_text" format="string" />
         <attr name="cs_set_entries" format="reference"/>
         <attr name="cs_position" format="integer"/>
-        <attr name="cs_error_text" format="string" />
+        <attr name="cs_default_error_text" format="string" />
+        <attr name="cs_ws_error_text" format="string" />
+        <attr name="cs_show_error" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="CustomButton">
