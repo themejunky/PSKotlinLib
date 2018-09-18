@@ -8,15 +8,16 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.databases.Cities
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 import java.util.ArrayList
 
 const val ROW_LEFT = "left"
 const val ROW_RIGHT = "right"
 
-open class CustomSpinnerAdapter(context: Context, nValues: List<Item>, nAlignment: String, nBold:Boolean=false) : BaseAdapter() {
+open class CustomSpinnerAdapter(context: Context, nValues: List<Cities>, nAlignment: String, nBold:Boolean=false) : BaseAdapter() {
     private val mInflator: LayoutInflater = LayoutInflater.from(context)
-    private val mValues: MutableList<Item>
+    private val mValues: List<Cities>
     private val typefaceRegular = Typeface.createFromAsset(context.assets, "Regular.ttf")
     private val typefaceBold = Typeface.createFromAsset(context.assets, "Bold.ttf")
     private var mDensity: Int = (context.getResources().getDisplayMetrics().density).toInt()
@@ -40,7 +41,7 @@ open class CustomSpinnerAdapter(context: Context, nValues: List<Item>, nAlignmen
         return position.toLong()
     }
 
-    fun getValues() : List<Item> {
+    fun getValues() : List<Cities> {
         return mValues
     }
 
@@ -60,7 +61,7 @@ open class CustomSpinnerAdapter(context: Context, nValues: List<Item>, nAlignmen
             vh = view.tag as ListRowHolder
         }
 
-        vh.label.text = mValues[position].value
+        vh.label.text = mValues[position].name
         vh.label.typeface = if (mBold) { typefaceBold } else { typefaceRegular }
         vh.label.setPadding((10*mDensity + 0.15f ).toInt(), (5*mDensity + 0.15f).toInt(), (10*mDensity + 0.15f).toInt(), (5*mDensity + 0.15f).toInt()+(14*1.0f).toInt())
 
