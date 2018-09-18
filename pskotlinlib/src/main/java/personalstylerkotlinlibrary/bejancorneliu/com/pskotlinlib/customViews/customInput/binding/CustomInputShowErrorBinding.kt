@@ -12,7 +12,6 @@ class CustomInputShowErrorBinding {
         @JvmStatic
         @BindingAdapter("ci_show_error")
         fun setci_show_error(editText: CustomInput, text: Boolean) {
-            Log.d("asdaddasdas","11")
             if (text) {
                 editText.triggerError() }
             else {

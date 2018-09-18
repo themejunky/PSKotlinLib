@@ -16,6 +16,7 @@ class CustomSpinnerPopulateBinding {
         fun setcs_set_entries(editText: CustomSpinner, entries: List<Cities>?) {
             if (entries!=null) {
                 editText.getSpinner().adapter =  CustomSpinnerAdapter(editText.context,entries, "left",false)
+
             }
         }
 
