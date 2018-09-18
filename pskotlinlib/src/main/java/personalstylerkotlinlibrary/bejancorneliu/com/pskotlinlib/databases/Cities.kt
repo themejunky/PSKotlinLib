@@ -14,6 +14,8 @@ data class Cities(
         var id: String = "",
 
         @ColumnInfo(name = "name")
-        var name: String = ""
+        var name: String = "",
 
+        @ColumnInfo(name = "type")
+        var type: String = ""
 )
