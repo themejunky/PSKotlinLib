@@ -20,7 +20,7 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
     fun setListener(nListener : CustomSpinner.Custom_Spinner_Interface) {
         mListener = nListener
     }
-
+/**/
     init {
 
         inflate(context, R.layout.lib_custom_spinner, this)
