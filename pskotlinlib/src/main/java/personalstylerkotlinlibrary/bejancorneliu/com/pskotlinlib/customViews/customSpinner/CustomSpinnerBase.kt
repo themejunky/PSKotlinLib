@@ -10,10 +10,11 @@ import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import kotlinx.android.synthetic.main.lib_custom_spinner.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 import kotlin.properties.Delegates
 
 open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustomView(context, attrs), AdapterView.OnItemSelectedListener {
-
+    lateinit var mListener : CustomSpinner.Custom_Spinner_Interface
     var mIsSpinnerValid by Delegates.observable<Boolean?>(false) { _, _, new ->
         if (new == false && mStartValidating) errorStyle() else defaultStyle()
     }
@@ -44,9 +45,11 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
         mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues().get(nPositionSelected).name.toString()
 
         mStartValidating = true
+
+        mListener.onCustomSpinnerChange()
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {
-        TODO("not implemented")
+        mListener.onCustomSpinnerChange()
     }
 }
