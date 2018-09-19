@@ -44,11 +44,18 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
         mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].name
 
         mStartValidating = true
-
-        mListener.onCustomSpinnerChange()
+        try {
+            mListener.onCustomSpinnerChange()
+        } catch (e : Exception) {
+            Log.d("CUSTOM_SPINNER",""+e.message)
+        }
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {
-        mListener.onCustomSpinnerChange()
+        try {
+            mListener.onCustomSpinnerChange()
+        } catch (e : Exception) {
+            Log.d("CUSTOM_SPINNER",""+e.message)
+        }
     }
 }
