@@ -107,7 +107,6 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
                 maxLines = it.getInteger(R.styleable.CustomInput_ci_lines, 1)
                 gravity = android.view.Gravity.TOP and android.view.Gravity.START
                 imeOptions = android.view.inputmethod.EditorInfo.IME_FLAG_NO_ENTER_ACTION
-                setSingleLine()
                 isVerticalScrollBarEnabled = true
             }
         }  else {
