@@ -1,8 +1,8 @@
 package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model
 
 class Item {
-    var id: String? = null
-    var value: String? = null
+    var id: String = ""
+    var value: String = ""
 
     constructor(nValue: String) {
         value = nValue

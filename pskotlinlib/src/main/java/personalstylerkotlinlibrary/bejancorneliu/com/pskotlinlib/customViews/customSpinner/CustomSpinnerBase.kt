@@ -41,7 +41,12 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
         //mIsSpinnerValid = nPositionSelected != 0
         nSpinnerError.text = mDefaultError
         mSpinnerSelectedId = nPositionSelected
-        mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].name
+
+        if (nSpinner.adapter is CustomSpinnerAdapter) {
+            mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].name
+        } else  if (nSpinner.adapter is CustomSpinnerAdapterItem) {
+            mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapterItem).getValues()[nPositionSelected].value
+        }
 
         mStartValidating = true
         try {
