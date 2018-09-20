@@ -3,6 +3,7 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cu
 import android.content.Context
 import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
+import android.view.View
 import kotlinx.android.synthetic.main.lib_custom_box_image.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
@@ -65,5 +66,9 @@ class CustomBoxImage(context: Context, attrs: AttributeSet) : CustomBoxImageBase
 
     fun getActivationState() : Boolean {
         return mIsActive
+    }
+
+    fun getParrent(): View {
+        return this
     }
 }
