@@ -34,6 +34,8 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
             //set Title
             if (it.hasValue(R.styleable.CustomSpinner_cs_title_text)) {
                 nSpinnerTitle.text = it.getString(R.styleable.CustomSpinner_cs_title_text)
+            } else {
+                nSpinnerTitle.visibility = View.GONE
             }
 
             //set Error & Mandatory

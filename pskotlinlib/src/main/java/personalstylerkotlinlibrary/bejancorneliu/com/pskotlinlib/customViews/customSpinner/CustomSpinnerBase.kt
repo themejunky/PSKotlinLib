@@ -42,6 +42,8 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
         nSpinnerError.text = mDefaultError
         mSpinnerSelectedId = nPositionSelected
 
+        //TODO : de facut o singura tye list : ITEM
+
         if (nSpinner.adapter is CustomSpinnerAdapter) {
             mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].name
         } else  if (nSpinner.adapter is CustomSpinnerAdapterItem) {
