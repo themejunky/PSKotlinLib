@@ -18,6 +18,8 @@
     <EditText
         android:id="@+id/nInput"
         style="@style/MatchWrap.Regular.Black.14"
+        android:layout_weight="1"
+        android:minLines="5"
         android:textColorHint="@color/lib_base_grey"
         android:background="@drawable/lib_edit_text_selector"
         android:textCursorDrawable="@null"

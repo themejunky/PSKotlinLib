@@ -1,8 +1,6 @@
 package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput
 
 import android.content.Context
-import android.databinding.BindingAdapter
-import android.databinding.InverseBindingAdapter
 import android.text.InputType
 import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
@@ -12,10 +10,6 @@ import android.widget.EditText
 import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
-import android.databinding.InverseBindingListener
-import android.support.constraint.ConstraintLayout
-import android.text.Editable
-import android.text.TextWatcher
 
 class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(context, attrs){
 
@@ -100,19 +94,6 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
             nInput.imeOptions = EditorInfo.IME_ACTION_DONE
         }
 
-        //set number of line
-        if (it.hasValue(R.styleable.CustomInput_ci_lines)) {
-            with(nInput) {
-                minLines = it.getInteger(R.styleable.CustomInput_ci_lines, 1)
-                maxLines = it.getInteger(R.styleable.CustomInput_ci_lines, 1)
-                gravity = android.view.Gravity.TOP and android.view.Gravity.START
-                imeOptions = android.view.inputmethod.EditorInfo.IME_FLAG_NO_ENTER_ACTION
-                isVerticalScrollBarEnabled = true
-            }
-        }  else {
-            nInput.setSingleLine()
-        }
-
         //set keyboard type
         if (it.hasValue(R.styleable.CustomInput_ci_keyboard)) {
             val mInputType = it.getString(R.styleable.CustomInput_ci_keyboard)
@@ -126,6 +107,20 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
                 "5" -> nInput.inputType = InputType.TYPE_CLASS_NUMBER
             }
         }
+            //set number of line
+            if (it.hasValue(R.styleable.CustomInput_ci_lines)) {
+                with(nInput) {
+                    minLines = it.getInteger(R.styleable.CustomInput_ci_lines, 1)
+                    maxLines = it.getInteger(R.styleable.CustomInput_ci_lines, 1)
+                    gravity = android.view.Gravity.TOP and android.view.Gravity.START
+                    imeOptions = android.view.inputmethod.EditorInfo.IME_FLAG_NO_ENTER_ACTION
+                    isVerticalScrollBarEnabled = true
+                }
+            } else {
+                nInput.setSingleLine()
+            }
+
+
         }
     }
 
