@@ -3,6 +3,7 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools
 import android.content.res.TypedArray
 import android.widget.Spinner
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinnerAdapter
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinnerAdapterItem
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.databases.Cities
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 import java.security.MessageDigest
@@ -52,5 +53,11 @@ fun String.md5(): String {
 fun Spinner.setSpinnerEntries(entries: List<Cities>?) {
     if (entries != null) {
         adapter = CustomSpinnerAdapter(context,entries, "left",false)
+    }
+}
+
+fun Spinner.setSpinnerEntriesItem(entries: List<Item>?) {
+    if (entries != null) {
+        adapter = CustomSpinnerAdapterItem(context,entries, "left",false)
     }
 }
