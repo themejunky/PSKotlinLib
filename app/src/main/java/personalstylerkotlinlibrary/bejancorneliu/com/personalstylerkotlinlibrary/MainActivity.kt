@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
 //        mCity.getSpinner().adapter = CustomSpinnerAdapter(this, valori, "left", false)
 
         mEmail.setListener(this)
-
+        mEmail.triggerError()
         //mInput.triggerError()
 
           //  nIc.setActivationState(true)

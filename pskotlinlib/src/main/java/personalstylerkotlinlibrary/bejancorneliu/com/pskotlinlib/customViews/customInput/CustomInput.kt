@@ -102,6 +102,7 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
 
     fun triggerError() {
         mIsInputValid=false
+        errorStyle()
     }
 
     fun triggerDefault() {
