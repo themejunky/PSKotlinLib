@@ -14,7 +14,7 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(context, attrs) {
 
     interface CustomSpinnerInterface {
-        fun onCustomSpinnerChange(view: View)
+        fun onCustomSpinnerChange(view: String)
     }
 
     fun setListener(nListener: CustomSpinner.CustomSpinnerInterface) {

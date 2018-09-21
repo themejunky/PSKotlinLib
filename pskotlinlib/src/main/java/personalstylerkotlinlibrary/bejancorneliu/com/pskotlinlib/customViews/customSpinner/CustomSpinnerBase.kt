@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
+import kotlinx.android.synthetic.main.lib_custom_button.view.*
 import kotlinx.android.synthetic.main.lib_custom_spinner.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
@@ -37,18 +38,18 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View, nPositionSelected: Int, p3: Long) {
-        Log.d("custom_spin", "1")
+        Log.d("custom_spinss", "1")
         mIsSpinnerValid = nPositionSelected != 0
 
         nSpinnerError.text = mDefaultError
-        Log.d("custom_spin", "2")
+        Log.d("custom_spinss", "2")
         mSpinnerSelectedId = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].id
         mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].value
-        Log.d("custom_spin", "3")
+        Log.d("custom_spinss", "3")
         mStartValidating = true
-        Log.d("custom_spin", "4" + mListener)
+        Log.d("custom_spinss", "4" + mListener)
         try {
-            mListener.onCustomSpinnerChange(this)
+            mListener.onCustomSpinnerChange(nContainer.tag.toString())
         } catch (e : Exception) {
             Log.d("CUSTOM_SPINNER",""+e.message)
             Log.d("CUSTOM_SPINNER", "" + e.cause)
