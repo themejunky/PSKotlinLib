@@ -7,7 +7,6 @@ import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.TextView
-import kotlinx.android.synthetic.main.lib_custom_button.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 
@@ -15,12 +14,13 @@ class CustomTextView(context: Context, attrs: AttributeSet) : TextView(context, 
 
     var mActiveTextColor : Int = 0
     var mHoverTextColor : Int = 0
-    lateinit var mListener : Custom_TextView_Interface
-    interface Custom_TextView_Interface {
+    lateinit var mListener: CustomTextViewInterface
+
+    interface CustomTextViewInterface {
         fun onCustomTextViewClick(view: View)
     }
 
-    fun setListener(nListener : Custom_TextView_Interface) {
+    fun setListener(nListener: CustomTextViewInterface) {
         mListener = nListener
     }
 

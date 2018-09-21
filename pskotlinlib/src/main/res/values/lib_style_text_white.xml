@@ -6,6 +6,16 @@
     <style name="MatchWrap.Bold.White" parent="MatchWrap.Bold"> <item name="android:textColor">@color/lib_base_white</item>  </style>
     <style name="MatchWrap.Regular.White" parent="MatchWrap.Regular"> <item name="android:textColor">@color/lib_base_white</item>  </style>
 
+    <style name="MatchMatch.Regular.White" parent="MatchMatch.Regular">
+        <item name="android:textColor">@color/lib_base_white</item>
+    </style>
+
+
+    <style name="MatchMatch.Regular.White.14" parent="MatchMatch.Regular.White">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
     <style name="WrapWrap.Bold.White.5" parent="WrapWrap.Bold.White">   <item name="android:textSize">5sp</item>  </style>
     <style name="WrapWrap.Bold.White.6" parent="WrapWrap.Bold.White">   <item name="android:textSize">6sp</item>  </style>
     <style name="WrapWrap.Bold.White.7" parent="WrapWrap.Bold.White">   <item name="android:textSize">7sp</item>  </style>

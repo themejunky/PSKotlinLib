@@ -94,7 +94,6 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         }
     }
 
-
     fun setErrorMessage(nErrorMessage: String) {
         nInputError.text=nErrorMessage
         mIsInputValid=false

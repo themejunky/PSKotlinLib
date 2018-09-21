@@ -6,21 +6,20 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
-import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import kotlinx.android.synthetic.main.lib_custom_spinner.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.adapter.CustomSpinnerAdapter
 import kotlin.properties.Delegates
 
 open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustomView(context, attrs), AdapterView.OnItemSelectedListener {
-    lateinit var mListener : CustomSpinner.Custom_Spinner_Interface
-    var mIsSpinnerValid by Delegates.observable<Boolean?>(false) { _, _, new ->
-        if (new == false && mStartValidating) errorStyle() else defaultStyle()
+    lateinit var mListener: CustomSpinner.CustomSpinnerInterface
+    var mIsSpinnerValid by Delegates.observable(false) { _, _, new ->
+        if (new) defaultStyle()
     }
     var mDefaultError : String = ""
     var mStartValidating : Boolean = false
-    var mSpinnerSelectedId : Int = 0
+    var mSpinnerSelectedId: String = ""
     var mSpinnerSelectedValue : String = ""
 
     fun errorStyle() {
@@ -38,30 +37,18 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, nPositionSelected: Int, p3: Long) {
-        //mIsSpinnerValid = nPositionSelected != 0
-
-        Log.d("spinner","changed 1")
+        mIsSpinnerValid = nPositionSelected != 0
 
         nSpinnerError.text = mDefaultError
-        mSpinnerSelectedId = nPositionSelected
 
+        mSpinnerSelectedId = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].id
+        mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].value
 
-        Log.d("spinner","changed 2")
-        //TODO : de facut o singura tye list : ITEM
-
-        if (nSpinner.adapter is CustomSpinnerAdapter) {
-            mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].name
-        } else  if (nSpinner.adapter is CustomSpinnerAdapterItem) {
-            mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapterItem).getValues()[nPositionSelected].value
-        }
-        Log.d("spinner","changed 3")
         mStartValidating = true
+
         try {
-            Log.d("spinner","changed 4 : "+mListener)
             mListener.onCustomSpinnerChange()
-            Log.d("spinner","changed 41 : "+mListener)
         } catch (e : Exception) {
-            Log.d("spinner","changed 5")
             Log.d("CUSTOM_SPINNER",""+e.message)
         }
     }

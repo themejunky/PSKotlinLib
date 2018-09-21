@@ -9,6 +9,6 @@ open class BaseCustomView(context: Context, attrs: AttributeSet) : ConstraintLay
 
     val typefaceRegular = Typeface.createFromAsset(context.assets, "Regular.ttf")
     val typefaceBold = Typeface.createFromAsset(context.assets, "Bold.ttf")
-    var mDensity: Int = (context.getResources().displayMetrics.density).toInt()
+    var mDensity: Int = (context.resources.displayMetrics.density).toInt()
 
 }

@@ -8,10 +8,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinnerAdapter
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.databases.Cities
 
-class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.Custom_Spinner_Interface {
+class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface {
     override fun onCustomSpinnerChange() {
         Log.d("spinner","1 : "+System.currentTimeMillis())
     }
@@ -27,13 +25,13 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val valori : ArrayList<Cities> = ArrayList()
-        valori.add(Cities(id="1",name ="Email1"))
-        valori.add(Cities(id="2",name ="Email2"))
-        valori.add(Cities(id="3",name ="Email3"))
-        valori.add(Cities(id="4",name ="Email4"))
-
-        mCity.getSpinner().adapter =  CustomSpinnerAdapter(this,valori, "left",false)
+//        val valori : ArrayList<Cities> = ArrayList()
+//        valori.add(Cities(id="1",name ="Email1"))
+//        valori.add(Cities(id="2",name ="Email2"))
+//        valori.add(Cities(id="3",name ="Email3"))
+//        valori.add(Cities(id="4",name ="Email4"))
+//
+//        mCity.getSpinner().adapter = CustomSpinnerAdapter(this, valori, "left", false)
 
         mCity.setListener(this)
 

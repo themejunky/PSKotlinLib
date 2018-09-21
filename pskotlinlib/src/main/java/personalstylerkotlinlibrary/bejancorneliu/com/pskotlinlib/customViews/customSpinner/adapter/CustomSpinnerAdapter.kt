@@ -1,4 +1,4 @@
-package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner
+package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.adapter
 
 import android.content.Context
 import android.graphics.Typeface
@@ -8,19 +8,15 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.databases.Cities
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
-import java.util.ArrayList
+import java.util.*
 
-const val ROW_LEFT = "left"
-const val ROW_RIGHT = "right"
-
-open class CustomSpinnerAdapter(context: Context, nValues: List<Cities>, nAlignment: String, nBold:Boolean=false) : BaseAdapter() {
+open class CustomSpinnerAdapter(context: Context, nValues: List<Item>, nAlignment: String, nBold: Boolean = false) : BaseAdapter() {
     private val mInflator: LayoutInflater = LayoutInflater.from(context)
-    private val mValues: List<Cities>
+    private val mValues: List<Item>
     private val typefaceRegular = Typeface.createFromAsset(context.assets, "Regular.ttf")
     private val typefaceBold = Typeface.createFromAsset(context.assets, "Bold.ttf")
-    private var mDensity: Int = (context.getResources().getDisplayMetrics().density).toInt()
+    private var mDensity: Int = (context.resources.displayMetrics.density).toInt()
     private val mAlignment = nAlignment
     private val mBold = nBold
 
@@ -41,7 +37,7 @@ open class CustomSpinnerAdapter(context: Context, nValues: List<Cities>, nAlignm
         return position.toLong()
     }
 
-    fun getValues() : List<Cities> {
+    fun getValues() : List<Item> {
         return mValues
     }
 
@@ -49,7 +45,7 @@ open class CustomSpinnerAdapter(context: Context, nValues: List<Cities>, nAlignm
         val view: View?
         val vh: ListRowHolder
         if (convertView == null) {
-            view = if (mAlignment.equals(ROW_LEFT)) {
+            view = if (mAlignment.equals("left")) {
                 this.mInflator.inflate(R.layout.lib_custom_spinner_row_left_adapter, parent, false)
             } else {
                 this.mInflator.inflate(R.layout.lib_custom_spinner_row_right_adapter, parent, false)
@@ -61,7 +57,7 @@ open class CustomSpinnerAdapter(context: Context, nValues: List<Cities>, nAlignm
             vh = view.tag as ListRowHolder
         }
 
-        vh.label.text = mValues[position].name
+        vh.label.text = mValues[position].value
         vh.label.typeface = if (mBold) { typefaceBold } else { typefaceRegular }
         vh.label.setPadding((10*mDensity + 0.15f ).toInt(), (5*mDensity + 0.15f).toInt(), (10*mDensity + 0.15f).toInt(), (5*mDensity + 0.15f).toInt()+(14*1.0f).toInt())
 
@@ -70,6 +66,5 @@ open class CustomSpinnerAdapter(context: Context, nValues: List<Cities>, nAlignm
 }
 
 private class ListRowHolder(row: View?) {
-     val label: TextView = row?.findViewById(R.id.nRowSpinerAdapterText) as TextView
-
+    val label: TextView = row?.findViewById(R.id.nRowSpinerAdapterText) as TextView
 }

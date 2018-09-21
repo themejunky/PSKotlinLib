@@ -6,18 +6,20 @@ import android.view.View
 import android.widget.Spinner
 import kotlinx.android.synthetic.main.lib_custom_spinner.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.databases.Cities
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.adapter.CustomSpinnerAdapter
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 
 class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(context, attrs) {
 
-    interface Custom_Spinner_Interface {
+    interface CustomSpinnerInterface {
         fun onCustomSpinnerChange()
     }
-    fun setListener(nListener : CustomSpinner.Custom_Spinner_Interface) {
+
+    fun setListener(nListener: CustomSpinner.CustomSpinnerInterface) {
         mListener = nListener
     }
-/**/
+
     init {
 
         inflate(context, R.layout.lib_custom_spinner, this)
@@ -52,18 +54,7 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
         return nSpinner
     }
 
-    fun getSpinnerArrayValueSelectedId() : String {
-        var mReturn= ""
-        if (nSpinner.adapter is CustomSpinnerAdapter) {
-            mReturn =  (nSpinner.adapter as CustomSpinnerAdapter).getValues()[ getSpinnerSelectedId()].id
-        } else  if (nSpinner.adapter is CustomSpinnerAdapterItem) {
-            mReturn = (nSpinner.adapter as CustomSpinnerAdapterItem).getValues()[ getSpinnerSelectedId()].id
-        }
-        return mReturn
-    }
-
-
-    fun getSpinnerSelectedId() : Int {
+    fun getSpinnerSelectedId(): String {
         return mSpinnerSelectedId
     }
 
@@ -75,7 +66,7 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
         var nPosition = 0
 
         for (item in (nSpinner.adapter as CustomSpinnerAdapter).getValues()) {
-            if (item.name.equals(nValue)) {
+            if (item.value.equals(nValue)) {
                 nSpinner.setSelection(nPosition)
             } else {
                 nPosition++
@@ -99,8 +90,8 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
         nSpinner.setSelection(nPosition)
     }
 
-    fun setSpinner(nValues : List<Cities>, nAlignment: String, nBold: Boolean = false) {
-        nSpinner.adapter = CustomSpinnerAdapter(context,nValues, nAlignment,nBold)
+    fun setSpinner(nValues: List<Item>, nAlignment: String, nBold: Boolean = false) {
+        nSpinner.adapter = CustomSpinnerAdapter(context, nValues, nAlignment, nBold)
     }
 
     fun setErrorMessage(nErrorMessage: String) {
