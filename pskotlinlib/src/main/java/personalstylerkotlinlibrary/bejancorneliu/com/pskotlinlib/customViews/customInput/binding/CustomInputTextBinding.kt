@@ -29,7 +29,7 @@ class CustomInputTextBinding {
                     }
 
                     override fun afterTextChanged(editable: Editable) {
-                        nListener.onChange()
+                        // nListener.onChange()
                     }
                 })
             }
