@@ -47,6 +47,10 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
         }
     }
 
+    fun setTitle(nTitle : String) {
+        nSpinnerTitle.text = nTitle
+    }
+
     fun getSpinner() : Spinner {
         return nSpinner
     }
