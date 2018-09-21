@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.Spinner
+import kotlinx.android.synthetic.main.lib_custom_button.view.*
 import kotlinx.android.synthetic.main.lib_custom_spinner.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.adapter.CustomSpinnerAdapter
@@ -13,7 +14,7 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(context, attrs) {
 
     interface CustomSpinnerInterface {
-        fun onCustomSpinnerChange()
+        fun onCustomSpinnerChange(view: View)
     }
 
     fun setListener(nListener: CustomSpinner.CustomSpinnerInterface) {
@@ -42,6 +43,11 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
                 nSpinnerMandatory.visibility = View.VISIBLE
                 nSpinnerError.text = it.getString(R.styleable.CustomSpinner_cs_default_error_text)
                 mDefaultError = it.getString(R.styleable.CustomSpinner_cs_default_error_text)
+            }
+
+            // set tag
+            if (it.hasValue(R.styleable.CustomSpinner_cs_tag)) {
+                nContainer.tag = it.getString(R.styleable.CustomSpinner_cs_tag)
             }
         }
     }

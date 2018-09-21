@@ -4,8 +4,8 @@ import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 
-@Entity(tableName = "cities")
-data class Cities(
+@Entity(tableName = "platform")
+data class Platform(
         @PrimaryKey(autoGenerate = true)
         @ColumnInfo(name = "uid")
         var uid: Int = 0,
@@ -18,6 +18,4 @@ data class Cities(
 
         @ColumnInfo(name = "type")
         var type: String = ""
-
-//TODO: de schimbat numele tabelei. aici vor fi mai multe
 )
