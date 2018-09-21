@@ -7,11 +7,16 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinnerAdapter
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.databases.Cities
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 
-class MainActivity : AppCompatActivity(), CustomInput.Custom_Input_Interface, CustomButton.Custom_Button_Interface {
+class MainActivity : AppCompatActivity(), CustomInput.Custom_Input_Interface, CustomButton.Custom_Button_Interface, CustomSpinner.Custom_Spinner_Interface {
+    override fun onCustomSpinnerChange() {
+        Log.d("spinner","1 : "+System.currentTimeMillis())
+    }
+
     override fun onCustomButtonClick(view: View) {
         Log.d("buton_apas","1 : "+System.currentTimeMillis());
     }
@@ -30,6 +35,8 @@ class MainActivity : AppCompatActivity(), CustomInput.Custom_Input_Interface, Cu
         valori.add(Cities(id="4",name ="Email4"))
 
         mCity.getSpinner().adapter =  CustomSpinnerAdapter(this,valori, "left",false)
+
+        mCity.setListener(this)
 
         //mInput.triggerError()
 
