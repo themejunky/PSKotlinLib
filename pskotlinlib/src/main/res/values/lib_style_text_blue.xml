@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Regular/Bold-->
+    <style name="WrapWrap.Bold.Blue" parent="WrapWrap.Bold"> <item name="android:textColor">@color/lib_base_blue</item>  </style>
+    <style name="WrapWrap.Regular.Blue" parent="WrapWrap.Regular"> <item name="android:textColor">@color/lib_base_blue</item>  </style>
+    <style name="MatchWrap.Bold.Blue" parent="MatchWrap.Bold"> <item name="android:textColor">@color/lib_base_blue</item>  </style>
+    <style name="MatchWrap.Regular.Blue" parent="MatchWrap.Regular"> <item name="android:textColor">@color/lib_base_blue</item>  </style>
+
+    <style name="WrapWrap.Bold.Blue.5" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">5sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.6" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">6sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.7" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">7sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.8" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">8sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.9" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">9sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.10" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">10sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.11" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">11sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.12" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">12sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.13" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">13sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.14" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">14sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.15" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">15sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.16" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">16sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.17" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">17sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.18" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">18sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.19" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">19sp</item>  </style>
+    <style name="WrapWrap.Bold.Blue.20" parent="WrapWrap.Bold.Blue">   <item name="android:textSize">20sp</item>  </style>
+
+    <style name="WrapWrap.Regular.Blue.5" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">5sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.6" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">6sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.7" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">7sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.8" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">8sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.9" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">9sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.10" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">10sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.11" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">11sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.12" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">12sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.13" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">13sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.14" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">14sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.15" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">15sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.16" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">16sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.17" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">17sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.18" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">18sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.19" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">19sp</item>  </style>
+    <style name="WrapWrap.Regular.Blue.20" parent="WrapWrap.Regular.Blue">   <item name="android:textSize">20sp</item>  </style>
+
+    <style name="MatchWrap.Bold.Blue.5" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">5sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.6" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">6sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.7" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">7sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.8" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">8sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.9" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">9sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.10" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">10sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.11" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">11sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.12" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">12sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.13" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">13sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.14" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">14sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.15" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">15sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.16" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">16sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.17" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">17sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.18" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">18sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.19" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">19sp</item>  </style>
+    <style name="MatchWrap.Bold.Blue.20" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">20sp</item>  </style>
+
+    <style name="MatchWrap.Regular.Blue.5" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">5sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.6" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">6sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.7" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">7sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.8" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">8sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.9" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">9sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.10" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">10sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.11" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">11sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.12" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">12sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.13" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">13sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.14" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">14sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.15" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">15sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.16" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">16sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.17" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">17sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.18" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">18sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.19" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">19sp</item>  </style>
+    <style name="MatchWrap.Regular.Blue.20" parent="MatchWrap.Regular.Blue">   <item name="android:textSize">20sp</item>  </style>
+</resources>

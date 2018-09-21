@@ -6,6 +6,14 @@
     <style name="MatchWrap">   <item name="android:layout_width">match_parent</item><item name="android:layout_height">wrap_content</item>  </style>
     <style name="MatchMatch">  <item name="android:layout_width">match_parent</item><item name="android:layout_height">match_parent</item>  </style>
 
+    <!-- LinearLayouts -->
+    <style name="MatchMatch.Vertical" parent="MatchMatch">        <item name="android:orientation">vertical</item>  </style>
+    <style name="MatchMatch.Horizontal" parent="MatchMatch">        <item name="android:orientation">horizontal</item>  </style>
+    <style name="WrapMatch.Vertical" parent="WrapMatch">        <item name="android:orientation">vertical</item>  </style>
+    <style name="WrapMatch.Horizontal" parent="WrapMatch">        <item name="android:orientation">horizontal</item>  </style>
+
+
+
     <!-- Base-Bold -->
     <style name="WrapWrap.Bold" parent="WrapWrap">        <item name="fontPath">Bold.ttf</item>  </style>
     <style name="WrapMatch.Bold" parent="WrapMatch">      <item name="fontPath">Bold.ttf</item>  </style>
@@ -17,4 +25,47 @@
     <style name="WrapMatch.Regular" parent="WrapMatch">      <item name="fontPath">Regular.ttf</item>  </style>
     <style name="MatchWrap.Regular" parent="MatchWrap">      <item name="fontPath">Regular.ttf</item>  </style>
     <style name="MatchMatch.Regular" parent="MatchMatch">    <item name="fontPath">Regular.ttf</item>  </style>
+
+    <!-- Cubes -->
+    <style name="Cube10"> <item name="android:layout_width">10dp</item> <item name="android:layout_height">10dp</item></style>
+    <style name="Cube12"> <item name="android:layout_width">12dp</item> <item name="android:layout_height">12dp</item></style>
+    <style name="Cube14"> <item name="android:layout_width">14dp</item> <item name="android:layout_height">14dp</item></style>
+    <style name="Cube16"> <item name="android:layout_width">16dp</item> <item name="android:layout_height">16dp</item></style>
+    <style name="Cube18"> <item name="android:layout_width">18dp</item> <item name="android:layout_height">18dp</item></style>
+    <style name="Cube20"> <item name="android:layout_width">20dp</item> <item name="android:layout_height">20dp</item></style>
+    <style name="Cube22"> <item name="android:layout_width">22dp</item> <item name="android:layout_height">22dp</item></style>
+    <style name="Cube24"> <item name="android:layout_width">24dp</item> <item name="android:layout_height">24dp</item></style>
+    <style name="Cube26"> <item name="android:layout_width">26dp</item> <item name="android:layout_height">26dp</item></style>
+    <style name="Cube28"> <item name="android:layout_width">28dp</item> <item name="android:layout_height">28dp</item></style>
+    <style name="Cube30"> <item name="android:layout_width">30dp</item> <item name="android:layout_height">30dp</item></style>
+    <style name="Cube32"> <item name="android:layout_width">32dp</item> <item name="android:layout_height">32dp</item></style>
+    <style name="Cube34"> <item name="android:layout_width">34dp</item> <item name="android:layout_height">34dp</item></style>
+    <style name="Cube36"> <item name="android:layout_width">36dp</item> <item name="android:layout_height">36dp</item></style>
+    <style name="Cube38"> <item name="android:layout_width">38dp</item> <item name="android:layout_height">38dp</item></style>
+    <style name="Cube40"> <item name="android:layout_width">40dp</item> <item name="android:layout_height">40dp</item></style>
+    <style name="Cube42"> <item name="android:layout_width">42dp</item> <item name="android:layout_height">42dp</item></style>
+    <style name="Cube44"> <item name="android:layout_width">44dp</item> <item name="android:layout_height">44dp</item></style>
+    <style name="Cube46"> <item name="android:layout_width">46dp</item> <item name="android:layout_height">46dp</item></style>
+    <style name="Cube48"> <item name="android:layout_width">48dp</item> <item name="android:layout_height">48dp</item></style>
+    <style name="Cube50"> <item name="android:layout_width">50dp</item> <item name="android:layout_height">50dp</item></style>
+    <style name="Cube52"> <item name="android:layout_width">52dp</item> <item name="android:layout_height">52dp</item></style>
+    <style name="Cube54"> <item name="android:layout_width">54dp</item> <item name="android:layout_height">54dp</item></style>
+    <style name="Cube56"> <item name="android:layout_width">56dp</item> <item name="android:layout_height">56dp</item></style>
+    <style name="Cube58"> <item name="android:layout_width">58dp</item> <item name="android:layout_height">58dp</item></style>
+    <style name="Cube60"> <item name="android:layout_width">60dp</item> <item name="android:layout_height">60dp</item></style>
+    <style name="Cube62"> <item name="android:layout_width">62dp</item> <item name="android:layout_height">62dp</item></style>
+    <style name="Cube64"> <item name="android:layout_width">64dp</item> <item name="android:layout_height">64dp</item></style>
+    <style name="Cube66"> <item name="android:layout_width">66dp</item> <item name="android:layout_height">66dp</item></style>
+    <style name="Cube68"> <item name="android:layout_width">68dp</item> <item name="android:layout_height">68dp</item></style>
+    <style name="Cube70"> <item name="android:layout_width">70dp</item> <item name="android:layout_height">70dp</item></style>
+    <style name="Cube72"> <item name="android:layout_width">72dp</item> <item name="android:layout_height">72dp</item></style>
+    <style name="Cube74"> <item name="android:layout_width">74dp</item> <item name="android:layout_height">74dp</item></style>
+    <style name="Cube76"> <item name="android:layout_width">76dp</item> <item name="android:layout_height">76dp</item></style>
+    <style name="Cube78"> <item name="android:layout_width">78dp</item> <item name="android:layout_height">78dp</item></style>
+    <style name="Cube80"> <item name="android:layout_width">80dp</item> <item name="android:layout_height">80dp</item></style>
+
+
+    <style name="Divider">   <item name="android:background">@color/lib_base_divider</item>  </style>
+    <style name="Divider.Horizontal">    <item name="android:layout_width">match_parent</item><item name="android:layout_height">1dp</item> </style>
+    <style name="Divider.Vertical">    <item name="android:layout_width">1dp</item><item name="android:layout_height">match_parent</item> </style>
 </resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Regular/Bold-->
+    <style name="WrapWrap.Bold.Green" parent="WrapWrap.Bold"> <item name="android:textColor">@color/lib_base_green</item>  </style>
+    <style name="WrapWrap.Regular.Green" parent="WrapWrap.Regular"> <item name="android:textColor">@color/lib_base_green</item>  </style>
+    <style name="MatchWrap.Bold.Green" parent="MatchWrap.Bold"> <item name="android:textColor">@color/lib_base_green</item>  </style>
+    <style name="MatchWrap.Regular.Green" parent="MatchWrap.Regular"> <item name="android:textColor">@color/lib_base_green</item>  </style>
+
+    <style name="WrapWrap.Bold.Green.5" parent="WrapWrap.Bold.Green">   <item name="android:textSize">5sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.6" parent="WrapWrap.Bold.Green">   <item name="android:textSize">6sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.7" parent="WrapWrap.Bold.Green">   <item name="android:textSize">7sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.8" parent="WrapWrap.Bold.Green">   <item name="android:textSize">8sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.9" parent="WrapWrap.Bold.Green">   <item name="android:textSize">9sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.10" parent="WrapWrap.Bold.Green">   <item name="android:textSize">10sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.11" parent="WrapWrap.Bold.Green">   <item name="android:textSize">11sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.12" parent="WrapWrap.Bold.Green">   <item name="android:textSize">12sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.13" parent="WrapWrap.Bold.Green">   <item name="android:textSize">13sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.14" parent="WrapWrap.Bold.Green">   <item name="android:textSize">14sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.15" parent="WrapWrap.Bold.Green">   <item name="android:textSize">15sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.16" parent="WrapWrap.Bold.Green">   <item name="android:textSize">16sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.17" parent="WrapWrap.Bold.Green">   <item name="android:textSize">17sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.18" parent="WrapWrap.Bold.Green">   <item name="android:textSize">18sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.19" parent="WrapWrap.Bold.Green">   <item name="android:textSize">19sp</item>  </style>
+    <style name="WrapWrap.Bold.Green.20" parent="WrapWrap.Bold.Green">   <item name="android:textSize">20sp</item>  </style>
+
+    <style name="WrapWrap.Regular.Green.5" parent="WrapWrap.Regular.Green">   <item name="android:textSize">5sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.6" parent="WrapWrap.Regular.Green">   <item name="android:textSize">6sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.7" parent="WrapWrap.Regular.Green">   <item name="android:textSize">7sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.8" parent="WrapWrap.Regular.Green">   <item name="android:textSize">8sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.9" parent="WrapWrap.Regular.Green">   <item name="android:textSize">9sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.10" parent="WrapWrap.Regular.Green">   <item name="android:textSize">10sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.11" parent="WrapWrap.Regular.Green">   <item name="android:textSize">11sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.12" parent="WrapWrap.Regular.Green">   <item name="android:textSize">12sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.13" parent="WrapWrap.Regular.Green">   <item name="android:textSize">13sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.14" parent="WrapWrap.Regular.Green">   <item name="android:textSize">14sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.15" parent="WrapWrap.Regular.Green">   <item name="android:textSize">15sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.16" parent="WrapWrap.Regular.Green">   <item name="android:textSize">16sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.17" parent="WrapWrap.Regular.Green">   <item name="android:textSize">17sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.18" parent="WrapWrap.Regular.Green">   <item name="android:textSize">18sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.19" parent="WrapWrap.Regular.Green">   <item name="android:textSize">19sp</item>  </style>
+    <style name="WrapWrap.Regular.Green.20" parent="WrapWrap.Regular.Green">   <item name="android:textSize">20sp</item>  </style>
+
+    <style name="MatchWrap.Bold.Green.5" parent="MatchWrap.Regular.Green">   <item name="android:textSize">5sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.6" parent="MatchWrap.Regular.Green">   <item name="android:textSize">6sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.7" parent="MatchWrap.Regular.Green">   <item name="android:textSize">7sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.8" parent="MatchWrap.Regular.Green">   <item name="android:textSize">8sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.9" parent="MatchWrap.Regular.Green">   <item name="android:textSize">9sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.10" parent="MatchWrap.Regular.Green">   <item name="android:textSize">10sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.11" parent="MatchWrap.Regular.Green">   <item name="android:textSize">11sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.12" parent="MatchWrap.Regular.Green">   <item name="android:textSize">12sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.13" parent="MatchWrap.Regular.Green">   <item name="android:textSize">13sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.14" parent="MatchWrap.Regular.Green">   <item name="android:textSize">14sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.15" parent="MatchWrap.Regular.Green">   <item name="android:textSize">15sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.16" parent="MatchWrap.Regular.Green">   <item name="android:textSize">16sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.17" parent="MatchWrap.Regular.Green">   <item name="android:textSize">17sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.18" parent="MatchWrap.Regular.Green">   <item name="android:textSize">18sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.19" parent="MatchWrap.Regular.Green">   <item name="android:textSize">19sp</item>  </style>
+    <style name="MatchWrap.Bold.Green.20" parent="MatchWrap.Regular.Green">   <item name="android:textSize">20sp</item>  </style>
+
+    <style name="MatchWrap.Regular.Green.5" parent="MatchWrap.Regular.Green">   <item name="android:textSize">5sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.6" parent="MatchWrap.Regular.Green">   <item name="android:textSize">6sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.7" parent="MatchWrap.Regular.Green">   <item name="android:textSize">7sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.8" parent="MatchWrap.Regular.Green">   <item name="android:textSize">8sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.9" parent="MatchWrap.Regular.Green">   <item name="android:textSize">9sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.10" parent="MatchWrap.Regular.Green">   <item name="android:textSize">10sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.11" parent="MatchWrap.Regular.Green">   <item name="android:textSize">11sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.12" parent="MatchWrap.Regular.Green">   <item name="android:textSize">12sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.13" parent="MatchWrap.Regular.Green">   <item name="android:textSize">13sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.14" parent="MatchWrap.Regular.Green">   <item name="android:textSize">14sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.15" parent="MatchWrap.Regular.Green">   <item name="android:textSize">15sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.16" parent="MatchWrap.Regular.Green">   <item name="android:textSize">16sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.17" parent="MatchWrap.Regular.Green">   <item name="android:textSize">17sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.18" parent="MatchWrap.Regular.Green">   <item name="android:textSize">18sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.19" parent="MatchWrap.Regular.Green">   <item name="android:textSize">19sp</item>  </style>
+    <style name="MatchWrap.Regular.Green.20" parent="MatchWrap.Regular.Green">   <item name="android:textSize">20sp</item>  </style>
+
+
+    <style name="MatchMatch.Regular.Green" parent="WrapWrap.Regular"> <item name="android:textColor">@color/lib_base_green</item>  </style>
+    <style name="MatchMatch.Regular.Green.14" parent="MatchMatch.Regular.Green">   <item name="android:textSize">14sp</item>  </style>
+
+</resources>

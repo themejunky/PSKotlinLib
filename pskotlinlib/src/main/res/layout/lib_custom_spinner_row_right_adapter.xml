@@ -5,7 +5,7 @@
 
     <TextView
         android:id="@+id/nRowSpinerAdapterText"
-        style="@style/MatchpWrap.Bold.Black.14"
+        style="@style/MatchWrap.Bold.Black.14"
         android:layout_gravity="right"
         android:gravity="right"/>
 

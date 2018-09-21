@@ -1,12 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!-- Base Regular/Bold-->
     <style name="WrapWrap.Bold.Purple" parent="WrapWrap.Bold"> <item name="android:textColor">@color/lib_base_purple</item>  </style>
     <style name="WrapWrap.Regular.Purple" parent="WrapWrap.Regular"> <item name="android:textColor">@color/lib_base_purple</item>  </style>
+    <style name="MatchWrap.Bold.Purple" parent="MatchWrap.Bold"> <item name="android:textColor">@color/lib_base_purple</item>  </style>
+    <style name="MatchWrap.Regular.Purple" parent="MatchWrap.Regular"> <item name="android:textColor">@color/lib_base_purple</item>  </style>
 
-
-
+    <style name="WrapWrap.Bold.Purple.5" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">5sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.6" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">6sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.7" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">7sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.8" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">8sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.9" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">9sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.10" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">10sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.11" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">11sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.12" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">12sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.13" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">13sp</item>  </style>
     <style name="WrapWrap.Bold.Purple.14" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">14sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.15" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">15sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.16" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">16sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.17" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">17sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.18" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">18sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.19" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">19sp</item>  </style>
+    <style name="WrapWrap.Bold.Purple.20" parent="WrapWrap.Bold.Purple">   <item name="android:textSize">20sp</item>  </style>
 
+    <style name="WrapWrap.Regular.Purple.5" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">5sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.6" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">6sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.7" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">7sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.8" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">8sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.9" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">9sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.10" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">10sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.11" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">11sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.12" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">12sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.13" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">13sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.14" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">14sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.15" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">15sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.16" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">16sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.17" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">17sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.18" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">18sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.19" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">19sp</item>  </style>
+    <style name="WrapWrap.Regular.Purple.20" parent="WrapWrap.Regular.Purple">   <item name="android:textSize">20sp</item>  </style>
 
+    <style name="MatchWrap.Bold.Purple.5" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">5sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.6" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">6sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.7" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">7sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.8" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">8sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.9" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">9sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.10" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">10sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.11" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">11sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.12" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">12sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.13" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">13sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.14" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">14sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.15" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">15sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.16" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">16sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.17" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">17sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.18" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">18sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.19" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">19sp</item>  </style>
+    <style name="MatchWrap.Bold.Purple.20" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">20sp</item>  </style>
+
+    <style name="MatchWrap.Regular.Purple.5" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">5sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.6" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">6sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.7" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">7sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.8" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">8sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.9" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">9sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.10" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">10sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.11" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">11sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.12" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">12sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.13" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">13sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.14" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">14sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.15" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">15sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.16" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">16sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.17" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">17sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.18" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">18sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.19" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">19sp</item>  </style>
+    <style name="MatchWrap.Regular.Purple.20" parent="MatchWrap.Regular.Purple">   <item name="android:textSize">20sp</item>  </style>
 </resources>
