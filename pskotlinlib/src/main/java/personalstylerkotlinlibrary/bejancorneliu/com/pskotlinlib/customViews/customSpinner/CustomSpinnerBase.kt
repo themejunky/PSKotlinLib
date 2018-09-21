@@ -48,7 +48,7 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
         mStartValidating = true
         Log.d("custom_spin", "4" + mListener)
         try {
-            mListener.onCustomSpinnerChange(p1)
+            mListener.onCustomSpinnerChange(this)
         } catch (e : Exception) {
             Log.d("CUSTOM_SPINNER",""+e.message)
             Log.d("CUSTOM_SPINNER", "" + e.cause)
