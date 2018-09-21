@@ -19,17 +19,19 @@ class CustomSpinnerPostionBinding {
 
         @JvmStatic
         @BindingAdapter(value = ["cs_positionAttrChanged"], requireAll = false)
-        fun setProvinceListener(view: CustomSpinner, cityChange: InverseBindingListener) {
-            val listener = object : AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                    cityChange.onChange()
-                }
+        fun setProvinceListener(view: CustomSpinner?, cityChange: InverseBindingListener?) {
+            if (view!=null && cityChange!=null) {
+                val listener = object : AdapterView.OnItemSelectedListener {
+                    override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+                        cityChange.onChange()
+                    }
 
-                override fun onNothingSelected(parent: AdapterView<*>) {
-                    cityChange.onChange()
+                    override fun onNothingSelected(parent: AdapterView<*>) {
+                        cityChange.onChange()
+                    }
                 }
+                view.getSpinner().onItemSelectedListener = listener
             }
-            view.getSpinner().onItemSelectedListener = listener
         }
 
 
