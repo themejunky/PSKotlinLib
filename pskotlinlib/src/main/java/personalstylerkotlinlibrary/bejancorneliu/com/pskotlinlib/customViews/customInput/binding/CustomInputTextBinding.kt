@@ -3,6 +3,7 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cu
 import android.databinding.*
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 
@@ -23,12 +24,15 @@ class CustomInputTextBinding {
             if (nListener != null && nCustomInput != null) {
                 nCustomInput.nInput.addTextChangedListener(object : TextWatcher {
                     override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
+                        Log.d("inainte1", "" + charSequence.toString())
                     }
 
                     override fun onTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
+                        Log.d("inainte2", "" + charSequence.toString())
                     }
 
                     override fun afterTextChanged(editable: Editable) {
+                        Log.d("inainte3", "")
                         // nListener.onChange()
                     }
                 })
