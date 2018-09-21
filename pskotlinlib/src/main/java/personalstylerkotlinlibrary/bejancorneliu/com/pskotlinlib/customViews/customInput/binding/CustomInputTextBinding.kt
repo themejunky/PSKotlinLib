@@ -25,16 +25,19 @@ class CustomInputTextBinding {
                 var mCompare2: String = ""
                 nCustomInput.nInput.addTextChangedListener(object : TextWatcher {
                     override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
+                        nCustomInput.nInput.setSelection(nCustomInput.nInput.length())
                         mCompare1 = charSequence.toString()
                     }
 
                     override fun onTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
+                        nCustomInput.nInput.setSelection(nCustomInput.nInput.length())
                         mCompare2 = charSequence.toString()
                     }
 
                     override fun afterTextChanged(editable: Editable) {
                         if (mCompare1 != mCompare2) {
                             nListener.onChange()
+
                         }
                     }
                 })
