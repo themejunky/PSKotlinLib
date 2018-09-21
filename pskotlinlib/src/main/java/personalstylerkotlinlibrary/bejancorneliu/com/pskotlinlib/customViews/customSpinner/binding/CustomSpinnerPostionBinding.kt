@@ -30,6 +30,7 @@ class CustomSpinnerPostionBinding {
                         cityChange.onChange()
                     }
                 }
+                if (view.getSpinner()!=null && listener!=null)
                 view.getSpinner().onItemSelectedListener = listener
             }
         }
