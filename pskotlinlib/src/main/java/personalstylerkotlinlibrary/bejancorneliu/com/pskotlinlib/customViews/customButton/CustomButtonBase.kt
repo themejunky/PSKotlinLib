@@ -19,8 +19,8 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
     var mDisableColorActiveDrawable: GradientDrawable = GradientDrawable()
     var mDisableColorShadowDrawable: GradientDrawable = GradientDrawable()
     var mDisableColorHoverDrawable: GradientDrawable = GradientDrawable()
-    lateinit var mListener: CustomButton.CustomButtonInterface
-
+    var mListener: CustomButton.CustomButtonInterface? = null
+    var mSaveListener: CustomButton.CustomButtonInterface? = null
     override fun onTouch(nView: View, nMotionEvent: MotionEvent): Boolean {
         mButtonValidation.let {
             if (nMotionEvent.action == MotionEvent.ACTION_DOWN) {
@@ -37,7 +37,7 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
 
                 if (mButtonIsActive) {
                     try {
-                        mListener.onCustomButtonClick(nView)
+                        mListener?.onCustomButtonClick(nView)
                     } catch (e: Exception) {
                         Log.d("CUSTOM_BUTTON", e.message)
                     }

@@ -15,8 +15,11 @@ class CustomButton(context: Context, attrs: AttributeSet) : CustomButtonBase(con
         fun onCustomButtonClick(view: View)
     }
 
-    fun setListener(nListener: CustomButtonInterface) {
-        mListener = nListener
+    fun setListener(nListener: CustomButtonInterface?) {
+        if (nListener != null) {
+            mListener = nListener
+            mSaveListener = nListener
+        }
     }
 
     init {
@@ -132,6 +135,14 @@ class CustomButton(context: Context, attrs: AttributeSet) : CustomButtonBase(con
 
     fun setInactive() {
         mInactiveRelease()
+    }
+
+    fun disableListener(nDisable: Boolean) {
+        if (nDisable) {
+            mListener = null
+        } else {
+            mListener = mSaveListener
+        }
     }
 
     fun setDisable(nDisable: Boolean) {
