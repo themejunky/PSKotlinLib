@@ -15,10 +15,11 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
     }
 
     override fun onCustomButtonClick(view: View) {
-        Log.d("buton_apas", "1 : " + System.currentTimeMillis())
+        Log.d("asdadadsd", "1 : " + System.currentTimeMillis())
     }
 
     override fun onCustomInputChange() {
+        Log.d("spinner", "1 : " + System.currentTimeMillis())
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
 //
 //        mCity.getSpinner().adapter = CustomSpinnerAdapter(this, valori, "left", false)
 
-        mCity.setListener(this)
+        mEmail.setListener(this)
 
         //mInput.triggerError()
 

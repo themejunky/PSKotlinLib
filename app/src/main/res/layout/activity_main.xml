@@ -11,30 +11,21 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:background="@color/lib_base_red"
-        android:orientation="horizontal"
-        >
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
-            android:id="@+id/mCity"
-            style="@style/MatchWrap"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            app:cs_title_text="Spinner"
-            app:cs_default_error_text="Erroare"
-            app:cs_show_error="true"
-            app:cs_ws_error_text="Arata"
-            app:cs_position="1"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:orientation="horizontal">
 
         <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
-            android:id="@+id/mInput"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:ci_hint_text="ionescu.popescu@gmail.com"
-            app:ci_keyboard="text"
-            app:ci_default_error_text="adsdaa"
+            android:id="@+id/mEmail"
+            style="@style/MatchWrap"
+            android:layout_marginTop="30dp"
+            app:ci_default_error_text="ceva"
+            app:ci_hint_text="cevat"
+            app:ci_imei_option="done"
+            app:ci_keyboard="email"
             app:ci_show_error="true"
-            app:ci_title_text="ceva" />
+            app:ci_text_text="ceva"
+            app:ci_title_text="ceva"
+            app:ci_ws_error_text="ceva"
+            app:layout_constraintTop_toBottomOf="@+id/mText" />
 
 
         <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImage.CustomBoxImage-->
@@ -61,16 +52,6 @@
             <!--android:layout_height="wrap_content"-->
         <!--/>-->
 
-        <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton-->
-            <!--android:id="@+id/dasdasdas"-->
-            <!--android:layout_width="match_parent"-->
-            <!--app:layout_constraintTop_toBottomOf="@+id/nSpinners"-->
-            <!--android:layout_height="50dp"-->
-            <!--app:cb_text="text"-->
-            <!--app:cb_tag="active"-->
-            <!--app:cb_form_validation="false"-->
-            <!--app:cb_button_color="red"-->
-        <!--/>-->
 
     </LinearLayout>
 

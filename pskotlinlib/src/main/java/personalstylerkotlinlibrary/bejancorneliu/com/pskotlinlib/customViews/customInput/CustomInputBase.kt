@@ -41,10 +41,12 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
     }
 
     protected fun validationFieldObserver(nInputType: String) {
+        Log.d("trecerere", "1 " + System.currentTimeMillis())
         RxTextView.afterTextChangeEvents(nInput).skip(2).debounce(10, TimeUnit.MILLISECONDS).observeOn(AndroidSchedulers.mainThread()).subscribe { _ -> validationFieldCore(nInputType)}
     }
 
     private fun validationFieldCore(nInputType: String) {
+        Log.d("trecerere", "2 " + System.currentTimeMillis())
         nInputError.text = mDefaultError
         when(nInputType) {
             "1" -> validationNormalText()
@@ -54,7 +56,7 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
             "4" -> validationPassword()
             "5" -> validationNumber()
         }
-
+        Log.d("trecerere", "3 " + System.currentTimeMillis())
         try {
             mListener.onCustomInputChange()
         } catch (e : Exception) {
