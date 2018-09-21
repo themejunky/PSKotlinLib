@@ -8,7 +8,6 @@ import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewTreeObserver
-import android.widget.Toast
 import kotlinx.android.synthetic.main.lib_custom_box_image.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
@@ -18,10 +17,8 @@ abstract class CustomBoxImageBase(context: Context, attrs: AttributeSet) : BaseC
     var mSavedSize = 0
     var mActiveTextColor : Int = 0
     var mHoverTextColor : Int = 0
-    lateinit var mTag : String
     lateinit var mListener : CustomBoxImage.CustomBoxImageInterface
-    var mTwin : Int = 0
-    var mIsActive by Delegates.observable<Boolean>(false) { _, _, _ -> judgeState() }
+    var mIsActive by Delegates.observable(false) { _, _, _ -> judgeState() }
 
     override fun onMeasure(widthSpec: Int, heightSpec: Int) {
         super.onMeasure(widthSpec, heightSpec)
@@ -41,7 +38,6 @@ abstract class CustomBoxImageBase(context: Context, attrs: AttributeSet) : BaseC
     }
 
     override fun onTouch(v: View, event: MotionEvent): Boolean {
-
         when {
             event.action== MotionEvent.ACTION_DOWN -> {
                 mText.setTextColor(mHoverTextColor)
@@ -67,7 +63,6 @@ abstract class CustomBoxImageBase(context: Context, attrs: AttributeSet) : BaseC
                 } catch (e : Exception) {
                     Log.d("CUSTOM_BOX_IMAGE", e.message)
                 }
-
             }
             event.action== MotionEvent.ACTION_CANCEL  -> {
                 mIsActive = false
@@ -79,7 +74,7 @@ abstract class CustomBoxImageBase(context: Context, attrs: AttributeSet) : BaseC
         return true
     }
 
-    fun judgeState() {
+    private fun judgeState() {
         if (mIsActive) {
             mText.setTextColor(mActiveTextColor)
             mIcon.setColorFilter(mActiveTextColor)
@@ -89,7 +84,5 @@ abstract class CustomBoxImageBase(context: Context, attrs: AttributeSet) : BaseC
             mIcon.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
             mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
         }
-
-        Toast.makeText(context,""+mIsActive,Toast.LENGTH_SHORT).show()
     }
 }

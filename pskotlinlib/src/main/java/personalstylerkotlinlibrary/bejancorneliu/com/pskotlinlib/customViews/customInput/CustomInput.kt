@@ -13,43 +13,15 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 
 class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(context, attrs){
 
-//    companion object {
-//        @JvmStatic @BindingAdapter("app:Text")
-//        fun setText(nMe : ConstraintLayout, nText: String) {
-//            nMe.nInput.setText(nText)
-//        }
-//        @JvmStatic @InverseBindingAdapter(attribute = "app:Text")
-//        fun getText(nMe : ConstraintLayout) : String {
-//          return  nMe.nInput.text.toString()
-//        }
-//
-//        @JvmStatic @BindingAdapter("TextAttrChanged")
-//        fun setListener(editTextWithVoiceInput: View, listener: InverseBindingListener) {
-//            editTextWithVoiceInput.nInput.addTextChangedListener(object : TextWatcher {
-//                override fun afterTextChanged(p0: Editable?) {
-//                    listener.onChange()
-//                }
-//
-//                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
-//                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
-//            })
-//        }
-//
-//
-//    }
-
-
-
-    interface Custom_Input_Interface {
+    interface CustomInputInterface {
         fun onCustomInputChange()
     }
 
-    fun setListener(nListener : Custom_Input_Interface) {
+    fun setListener(nListener: CustomInputInterface) {
         mListener = nListener
     }
 
     init {
-
         inflate(context, R.layout.lib_custom_input, this)
         context.obtainStyledAttributes(attrs, R.styleable.CustomInput).use {
 
@@ -119,8 +91,6 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
             } else {
                 nInput.setSingleLine()
             }
-
-
         }
     }
 
@@ -132,7 +102,6 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
     }
 
     fun triggerError() {
-        mStartValidating=true
         mIsInputValid=false
     }
 
@@ -153,7 +122,9 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
     }
 
     fun isValid() : Boolean {
-        if (!mIsInputValid) { mStartValidating=true; triggerError() }
+        if (!mIsInputValid) {
+            triggerError()
+        }
         return mIsInputValid
     }
 }

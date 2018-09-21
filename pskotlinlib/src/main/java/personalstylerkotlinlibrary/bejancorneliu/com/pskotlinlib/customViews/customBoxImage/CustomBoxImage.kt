@@ -11,10 +11,8 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 class CustomBoxImage(context: Context, attrs: AttributeSet) : CustomBoxImageBase(context, attrs) {
 
     interface CustomBoxImageInterface {
-        fun onCustomBoxImageChange(mTag : String,mIsActive : Boolean)
+        fun onCustomBoxImageChange(mTag: String, mIsActive: Boolean)
     }
-
-
 
     fun setListener(nListener: CustomBoxImageInterface) {
         mListener = nListener
@@ -44,27 +42,26 @@ class CustomBoxImage(context: Context, attrs: AttributeSet) : CustomBoxImageBase
 
             // set custom active color
             mActiveTextColor = if (it.hasValue(R.styleable.CustomBoxImage_cbi_active_text_color)) {
-                it.getColor(R.styleable.CustomTextView_ctv_active_text_color,0)
+                it.getColor(R.styleable.CustomTextView_ctv_active_text_color, 0)
             } else {
                 ContextCompat.getColor(context, R.color.lib_border_box_image_active)
             }
 
 
-
             // set custom hover color
             mHoverTextColor = if (it.hasValue(R.styleable.CustomBoxImage_cbi_hover_text_color)) {
-                it.getColor(R.styleable.CustomBoxImage_cbi_hover_text_color,0)
+                it.getColor(R.styleable.CustomBoxImage_cbi_hover_text_color, 0)
             } else {
                 ContextCompat.getColor(context, R.color.lib_border_box_image_inactive)
             }
         }
     }
 
-    fun setActivationState(nValue : Boolean) {
+    fun setActivationState(nValue: Boolean) {
         mIsActive = nValue
     }
 
-    fun getActivationState() : Boolean {
+    fun getActivationState(): Boolean {
         return mIsActive
     }
 

@@ -19,14 +19,12 @@ import kotlin.properties.Delegates
 
 open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomView(context, attrs) {
 
-    lateinit var mListener : CustomInput.Custom_Input_Interface
+    lateinit var mListener: CustomInput.CustomInputInterface
     var mDefaultError : String = ""
 
-    var mIsInputValid by Delegates.observable<Boolean>(false) { _, _, new ->
-       if (!new && mStartValidating) errorStyle() else defaultStyle()
+    var mIsInputValid by Delegates.observable(false) { _, _, new ->
+        if (new) defaultStyle()
     }
-
-    protected var mStartValidating : Boolean = false
 
     fun errorStyle() {
         nInputTitle.setTextColor(ContextCompat.getColor(context,R.color.lib_base_red))
@@ -47,7 +45,6 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
     }
 
     private fun validationFieldCore(nInputType: String) {
-        mStartValidating = true
         nInputError.text = mDefaultError
         when(nInputType) {
             "1" -> validationNormalText()

@@ -1,29 +1,21 @@
 package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton
 
 import android.content.Context
-import android.databinding.BindingAdapter
-import android.util.AttributeSet
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
-import kotlinx.android.synthetic.main.lib_custom_button.view.*
 import android.graphics.drawable.GradientDrawable
 import android.support.v4.content.ContextCompat
+import android.util.AttributeSet
 import android.view.View
+import kotlinx.android.synthetic.main.lib_custom_button.view.*
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 
 class CustomButton(context: Context, attrs: AttributeSet) : CustomButtonBase(context, attrs) {
 
-//    companion object {
-//        @JvmStatic
-//        @BindingAdapter("app:cb_form_loading")
-//        fun setCb_form_loading(nMe: CustomButton, nValue: Boolean) {
-//            nMe.mButtonIsActive=nValue
-//        }
-//    }
-    interface Custom_Button_Interface {
+    interface CustomButtonInterface {
         fun onCustomButtonClick(view: View)
     }
 
-    fun setListener(nListener : Custom_Button_Interface) {
+    fun setListener(nListener: CustomButtonInterface) {
         mListener = nListener
     }
 
@@ -57,7 +49,7 @@ class CustomButton(context: Context, attrs: AttributeSet) : CustomButtonBase(con
 
             // set disalbe
             if (it.hasValue(R.styleable.CustomButton_cb_form_loading)) {
-                mButtonIsActive = it.getBoolean(R.styleable.CustomButton_cb_form_loading,false)
+                mButtonIsActive = it.getBoolean(R.styleable.CustomButton_cb_form_loading, false)
             }
 
             // set custom active color

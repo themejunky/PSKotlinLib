@@ -7,15 +7,19 @@ import android.view.View
 import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 
-
-@InverseBindingMethods(InverseBindingMethod(type = CustomInput::class,attribute = "ci_ws_error_text"))
+@InverseBindingMethods(InverseBindingMethod(type = CustomInput::class, attribute = "ci_ws_error_text"))
 class CustomInputErrorBinding {
     companion object {
         @JvmStatic
         @BindingAdapter("ci_ws_error_text")
-        fun setci_ws_error_text(editText: CustomInput, text: String) {
-            editText.nInputError.text = text
-            editText.nInputMandatory.visibility = View.VISIBLE
+        fun setci_ws_error_text(nCustomInput: CustomInput?, nValue: String?) {
+            if (nCustomInput != null && nValue != null) {
+                with(nCustomInput)
+                {
+                    nInputError.text = nValue
+                    nInputMandatory.visibility = View.VISIBLE
+                }
+            }
         }
     }
 }

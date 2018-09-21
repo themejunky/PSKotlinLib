@@ -10,11 +10,13 @@ class CustomButtonEnableBiding {
     companion object {
         @JvmStatic
         @BindingAdapter("cb_enable")
-        fun setcb_enable(mCustomButton: CustomButton, mEnable: Boolean) {
-            if (mEnable) {
-                mCustomButton.setActive()
-            } else {
-                mCustomButton.setInactive()
+        fun setcb_enable(nCustomButton: CustomButton?, nEnable: Boolean?) {
+            if (nCustomButton != null && nEnable != null) {
+                if (nEnable) {
+                    nCustomButton.setActive()
+                } else {
+                    nCustomButton.setInactive()
+                }
             }
         }
     }

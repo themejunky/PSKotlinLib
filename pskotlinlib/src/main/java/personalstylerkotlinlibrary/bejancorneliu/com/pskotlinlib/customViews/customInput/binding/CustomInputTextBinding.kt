@@ -6,24 +6,22 @@ import android.text.TextWatcher
 import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 
-@InverseBindingMethods(InverseBindingMethod(type = CustomInput::class,attribute = "ci_text_text"))
+@InverseBindingMethods(InverseBindingMethod(type = CustomInput::class, attribute = "ci_text_text"))
 class CustomInputTextBinding {
     companion object {
         @JvmStatic
         @BindingAdapter("ci_text_text")
-        fun setci_text_text(editText: CustomInput, text: String?) {
-            text?.let {
-                if (it != editText.nInput.text.toString()) {
-                    editText.nInput.setText(it)
-                }
+        fun setci_text_text(nCustomInput: CustomInput?, nValue: String?) {
+            if (nCustomInput != null && nValue != null) {
+                nCustomInput.nInput.setText(nValue)
             }
         }
 
         @JvmStatic
         @BindingAdapter(value = ["ci_text_textAttrChanged"], requireAll = false)
-        fun setListener(editText: CustomInput, listener: InverseBindingListener?) {
-            if (listener != null) {
-                editText.nInput.addTextChangedListener(object : TextWatcher {
+        fun setListener(nCustomInput: CustomInput?, nListener: InverseBindingListener?) {
+            if (nListener != null && nCustomInput != null) {
+                nCustomInput.nInput.addTextChangedListener(object : TextWatcher {
                     override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
                     }
 
@@ -31,7 +29,7 @@ class CustomInputTextBinding {
                     }
 
                     override fun afterTextChanged(editable: Editable) {
-                        listener.onChange()
+                        nListener.onChange()
                     }
                 })
             }
@@ -39,8 +37,12 @@ class CustomInputTextBinding {
 
         @JvmStatic
         @InverseBindingAdapter(attribute = "ci_text_text")
-        fun getci_text_text(nMe: CustomInput): String {
-            return nMe.nInput.text.toString()
+        fun getci_text_text(nCustomInput: CustomInput?): String {
+            if (nCustomInput != null) {
+                return nCustomInput.nInput.text.toString()
+            } else {
+                return "null"
+            }
         }
     }
 }

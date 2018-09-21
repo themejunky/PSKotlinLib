@@ -9,11 +9,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.lib_custom_button.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
 
-const val ACTIVE_BUTTON = "active"
-const val INACTIVE_BUTTON = "inactive"
-
 open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomView(context, attrs), View.OnTouchListener {
-
     var mButtonValidation: Boolean = false
     var mButtonIsActive: Boolean = true
 
@@ -23,17 +19,17 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
     var mDisableColorActiveDrawable: GradientDrawable = GradientDrawable()
     var mDisableColorShadowDrawable: GradientDrawable = GradientDrawable()
     var mDisableColorHoverDrawable: GradientDrawable = GradientDrawable()
-    lateinit var mListener: CustomButton.Custom_Button_Interface
+    lateinit var mListener: CustomButton.CustomButtonInterface
 
-    override fun onTouch(p0: View, p1: MotionEvent): Boolean {
+    override fun onTouch(nView: View, nMotionEvent: MotionEvent): Boolean {
         mButtonValidation.let {
-            if (p1.action == MotionEvent.ACTION_DOWN) {
+            if (nMotionEvent.action == MotionEvent.ACTION_DOWN) {
                 when (it) {
                     false -> mActiveTouch()
                     true -> mInactiveTouch()
                 }
                 return true
-            } else if (p1.action == MotionEvent.ACTION_UP) {
+            } else if (nMotionEvent.action == MotionEvent.ACTION_UP) {
                 when (it) {
                     false -> mActiveRelease()
                     true -> mInactiveRelease()
@@ -41,7 +37,7 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
 
                 if (mButtonIsActive) {
                     try {
-                        mListener.onCustomButtonClick(p0)
+                        mListener.onCustomButtonClick(nView)
                     } catch (e: Exception) {
                         Log.d("CUSTOM_BUTTON", e.message)
                     }
@@ -72,7 +68,7 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
     }
 
     protected fun mInactiveRelease() {
-        nButton.background = mDisableColorActiveDrawable;
+        nButton.background = mDisableColorActiveDrawable
         nShadow.background = mDisableColorShadowDrawable
         nShadow.visibility = View.VISIBLE
     }
