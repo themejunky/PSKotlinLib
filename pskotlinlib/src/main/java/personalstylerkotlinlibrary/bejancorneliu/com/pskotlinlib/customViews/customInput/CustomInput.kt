@@ -9,7 +9,7 @@ import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.extensions.use
 
 class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(context, attrs){
 

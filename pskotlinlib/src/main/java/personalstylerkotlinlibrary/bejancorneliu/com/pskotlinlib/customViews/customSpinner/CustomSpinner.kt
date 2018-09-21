@@ -8,8 +8,8 @@ import kotlinx.android.synthetic.main.lib_custom_button.view.*
 import kotlinx.android.synthetic.main.lib_custom_spinner.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.adapter.CustomSpinnerAdapter
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.extensions.use
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 
 class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(context, attrs) {
 

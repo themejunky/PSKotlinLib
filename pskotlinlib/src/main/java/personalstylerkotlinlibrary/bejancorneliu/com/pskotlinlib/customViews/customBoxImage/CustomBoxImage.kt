@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.view.View
 import kotlinx.android.synthetic.main.lib_custom_box_image.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.extensions.use
 
 class CustomBoxImage(context: Context, attrs: AttributeSet) : CustomBoxImageBase(context, attrs) {
 

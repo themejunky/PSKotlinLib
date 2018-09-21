@@ -8,7 +8,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.TextView
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.extensions.use
 
 class CustomTextView(context: Context, attrs: AttributeSet) : TextView(context, attrs), View.OnTouchListener {
 

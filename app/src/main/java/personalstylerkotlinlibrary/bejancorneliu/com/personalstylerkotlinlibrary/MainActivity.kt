@@ -10,7 +10,7 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cus
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
 
 class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface {
-    override fun onCustomSpinnerChange() {
+    override fun onCustomSpinnerChange(view: View) {
         Log.d("spinner","1 : "+System.currentTimeMillis())
     }
 
