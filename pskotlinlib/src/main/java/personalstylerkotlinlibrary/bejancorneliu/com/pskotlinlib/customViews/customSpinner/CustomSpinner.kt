@@ -53,12 +53,13 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
     }
 
     fun getSpinnerArrayValueSelectedId() : String {
-
+        var mReturn= ""
         if (nSpinner.adapter is CustomSpinnerAdapter) {
-          return (nSpinner.adapter as CustomSpinnerAdapter).getValues()[ getSpinnerSelectedId()].id
+            mReturn =  (nSpinner.adapter as CustomSpinnerAdapter).getValues()[ getSpinnerSelectedId()].id
         } else  if (nSpinner.adapter is CustomSpinnerAdapterItem) {
-          return (nSpinner.adapter as CustomSpinnerAdapterItem).getValues()[ getSpinnerSelectedId()].id
+            mReturn = (nSpinner.adapter as CustomSpinnerAdapterItem).getValues()[ getSpinnerSelectedId()].id
         }
+        return mReturn
     }
 
 
