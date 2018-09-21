@@ -52,11 +52,12 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
         return nSpinner
     }
 
-    fun getSpinnerArrayValueSelectedId() : Int {
+    fun getSpinnerArrayValueSelectedId() : String {
+
         if (nSpinner.adapter is CustomSpinnerAdapter) {
-            mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[ getSpinnerSelectedId()].id
+          return (nSpinner.adapter as CustomSpinnerAdapter).getValues()[ getSpinnerSelectedId()].id
         } else  if (nSpinner.adapter is CustomSpinnerAdapterItem) {
-            mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapterItem).getValues()[ getSpinnerSelectedId()].id
+          return (nSpinner.adapter as CustomSpinnerAdapterItem).getValues()[ getSpinnerSelectedId()].id
         }
     }
 
