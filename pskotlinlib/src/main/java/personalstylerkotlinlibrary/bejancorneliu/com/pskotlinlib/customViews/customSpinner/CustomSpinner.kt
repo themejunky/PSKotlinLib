@@ -4,12 +4,9 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.Spinner
-import kotlinx.android.synthetic.main.lib_custom_input.view.*
 import kotlinx.android.synthetic.main.lib_custom_spinner.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.databases.Cities
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.tools.use
 
 class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(context, attrs) {
