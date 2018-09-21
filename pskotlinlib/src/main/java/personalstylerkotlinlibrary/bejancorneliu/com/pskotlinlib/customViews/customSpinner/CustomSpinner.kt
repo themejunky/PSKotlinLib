@@ -4,7 +4,6 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.Spinner
-import kotlinx.android.synthetic.main.lib_custom_button.view.*
 import kotlinx.android.synthetic.main.lib_custom_spinner.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.adapter.CustomSpinnerAdapter
