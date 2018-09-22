@@ -9,3 +9,4 @@ fun Spinner.setSpinnerEntries(nValues: List<Item>?) {
         adapter = CustomSpinnerAdapter(context, nValues, "left", false)
     }
 }
+

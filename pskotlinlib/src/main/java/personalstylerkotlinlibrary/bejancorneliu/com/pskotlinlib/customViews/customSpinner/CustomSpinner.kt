@@ -150,6 +150,10 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
     }
 
     fun byPass2() {
-        mListener.onCustomSpinnerChange(nContainer.tag.toString())
+        try {
+            mListener.onCustomSpinnerChange(nContainer.tag.toString())
+        } catch (e: Exception) {
+            Log.d("CUSTOM_SPINNER", "" + e.message)
+        }
     }
 }
