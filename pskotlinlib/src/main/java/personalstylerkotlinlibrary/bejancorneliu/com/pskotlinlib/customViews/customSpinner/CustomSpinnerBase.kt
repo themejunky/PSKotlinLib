@@ -3,6 +3,7 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cu
 import android.content.Context
 import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import kotlinx.android.synthetic.main.lib_custom_spinner.view.*
@@ -35,6 +36,7 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, nPositionSelected: Int, p3: Long) {
+        Log.d("custom_spiner", "LISTENERU!")
 //        mIsSpinnerValid = nPositionSelected != 0
 //        nSpinnerError.text = mDefaultError
 //        mSpinnerSelectedId = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].id
@@ -48,5 +50,6 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {
+        Log.d("custom_spiner", "LISTENERU!")
     }
 }
