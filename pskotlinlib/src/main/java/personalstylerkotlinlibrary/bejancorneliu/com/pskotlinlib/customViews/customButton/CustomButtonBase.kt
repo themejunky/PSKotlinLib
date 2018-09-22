@@ -34,7 +34,6 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
                     false -> mActiveRelease()
                     true -> mInactiveRelease()
                 }
-                Log.d("asdadadsd", "list : " + System.currentTimeMillis())
                 if (mButtonIsActive) {
                     try {
                         mListener?.onCustomButtonClick(nView)
