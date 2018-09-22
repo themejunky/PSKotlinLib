@@ -133,4 +133,8 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
             Log.d("CUSTOM_SPINNER", "" + e.message)
         }
     }
+
+    fun byPass2() {
+        mListener.onCustomSpinnerChange(nContainer.tag.toString())
+    }
 }
