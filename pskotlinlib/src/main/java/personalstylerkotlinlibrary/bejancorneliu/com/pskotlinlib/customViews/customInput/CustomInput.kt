@@ -93,8 +93,8 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
             }
 
             // set tag
-            if (it.hasValue(R.styleable.CustomSpinner_cs_tag)) {
-                nContainer.tag = it.getString(R.styleable.CustomSpinner_cs_tag)
+            if (it.hasValue(R.styleable.CustomInput_ci_tag)) {
+                nContainer.tag = it.getString(R.styleable.CustomInput_ci_tag)
             }
         }
     }
