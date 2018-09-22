@@ -14,6 +14,7 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
 
     interface CustomSpinnerInterface {
         fun onCustomSpinnerChange(view: String)
+        fun onCustomSpinnerChange()
     }
 
     fun setListener(nListener: CustomSpinner.CustomSpinnerInterface) {

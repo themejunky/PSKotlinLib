@@ -13,19 +13,16 @@
         android:background="@color/lib_base_blue"
         android:orientation="horizontal">
 
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
-            android:id="@+id/mEmail"
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
+            android:id="@+id/mCategory"
             style="@style/MatchWrap"
-            android:layout_marginTop="30dp"
-            app:ci_default_error_text="ceva"
-            app:ci_hint_text="cevat"
-            app:ci_imei_option="done"
-            app:ci_keyboard="email"
-            app:ci_show_error="true"
-            app:ci_text_text="ceva"
-            app:ci_title_text="ceva"
-            app:ci_ws_error_text="ceva"
-            app:layout_constraintTop_toBottomOf="@+id/mText" />
+            app:cs_default_error_text="dasdasd"
+            app:cs_position="1"
+            app:cs_show_error="true"
+            app:cs_tag="taguuu"
+            app:cs_title_text="dasdasd"
+            app:cs_ws_error_text="dasdasdas"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImage.CustomBoxImage-->
@@ -59,12 +56,6 @@
 
 
 
-    <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner-->
-        <!--android:id="@+id/nSpinners"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--app:cs_error_text="eroare"-->
-        <!--app:cs_title_text="Email"/>-->
 
 
     <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton-->

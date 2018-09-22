@@ -8,10 +8,12 @@ import kotlinx.android.synthetic.main.activity_main.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.adapter.CustomSpinnerAdapter
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 
 class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface {
     override fun onCustomSpinnerChange(view: String) {
-        Log.d("spinner","1 : "+System.currentTimeMillis())
+        Log.d("spinner", "11 : " + System.currentTimeMillis() + "/" + view)
     }
 
     override fun onCustomButtonClick(view: View) {
@@ -26,16 +28,17 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val valori : ArrayList<Cities> = ArrayList()
-//        valori.add(Cities(id="1",name ="Email1"))
-//        valori.add(Cities(id="2",name ="Email2"))
-//        valori.add(Cities(id="3",name ="Email3"))
-//        valori.add(Cities(id="4",name ="Email4"))
-//
-//        mCity.getSpinner().adapter = CustomSpinnerAdapter(this, valori, "left", false)
+        val valori: ArrayList<Item> = ArrayList()
+        valori.add(Item(nId = "1", nValue = "Email1"))
+        valori.add(Item(nId = "2", nValue = "Email2"))
+        valori.add(Item(nId = "3", nValue = "Email3"))
+        valori.add(Item(nId = "4", nValue = "Email4"))
 
-        mEmail.setListener(this)
-        mEmail.triggerError()
+        mCategory.getSpinner().adapter = CustomSpinnerAdapter(this, valori, "left", false)
+        mCategory.setListener(this)
+
+//        mEmail.setListener(this)
+//        mEmail.triggerError()
         //mInput.triggerError()
 
           //  nIc.setActivationState(true)

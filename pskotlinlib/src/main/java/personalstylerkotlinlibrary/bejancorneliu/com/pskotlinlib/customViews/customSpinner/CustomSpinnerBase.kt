@@ -36,22 +36,17 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
         nSpinner.background = ContextCompat.getDrawable(context, R.drawable.lib_spinner_default)
     }
 
-    override fun onItemSelected(p0: AdapterView<*>?, p1: View, nPositionSelected: Int, p3: Long) {
-        Log.d("custom_spinss", "1")
+    override fun onItemSelected(p0: AdapterView<*>?, p1: View?, nPositionSelected: Int, p3: Long) {
         mIsSpinnerValid = nPositionSelected != 0
 
         nSpinnerError.text = mDefaultError
-        Log.d("custom_spinss", "2")
         mSpinnerSelectedId = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].id
         mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].value
-        Log.d("custom_spinss", "3")
         mStartValidating = true
-        Log.d("custom_spinss", "4" + mListener)
         try {
-            mListener.onCustomSpinnerChange(nContainer.tag.toString())
+            mListener.onCustomSpinnerChange()
         } catch (e : Exception) {
             Log.d("CUSTOM_SPINNER",""+e.message)
-            Log.d("CUSTOM_SPINNER", "" + e.cause)
         }
     }
 
