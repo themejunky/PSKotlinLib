@@ -114,7 +114,7 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
 
     fun triggerError() {
         mIsSpinnerValid=false
-        mStartValidating=true
+        // mStartValidating=true  o sa se declanseze prea repede
         errorStyle()
     }
 
