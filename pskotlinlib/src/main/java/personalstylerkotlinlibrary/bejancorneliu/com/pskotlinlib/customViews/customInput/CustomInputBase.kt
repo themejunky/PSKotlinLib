@@ -56,7 +56,7 @@ open class CustomInputBase(context: Context, attrs: AttributeSet) : BaseCustomVi
             "5" -> validationNumber()
         }
         try {
-            mListener.onCustomInputChange()
+            mListener.onCustomInputChange(nContainer.tag.toString())
         } catch (e : Exception) {
             Log.d("CUSTOM_INPUT",""+e.message)
         }

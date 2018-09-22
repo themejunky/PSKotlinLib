@@ -14,7 +14,7 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.extensions.use
 class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(context, attrs){
 
     interface CustomInputInterface {
-        fun onCustomInputChange()
+        fun onCustomInputChange(view: String)
     }
 
     fun setListener(nListener: CustomInputInterface) {
@@ -90,6 +90,11 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
                 }
             } else {
                 nInput.setSingleLine()
+            }
+
+            // set tag
+            if (it.hasValue(R.styleable.CustomSpinner_cs_tag)) {
+                nContainer.tag = it.getString(R.styleable.CustomSpinner_cs_tag)
             }
         }
     }
