@@ -93,6 +93,11 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
         }
     }
 
+
+    fun getContainer(): View {
+        return nContainer
+    }
+
     fun setSpinnerPositionByPosition(nPosition: Int) {
         nSpinner.setSelection(nPosition)
     }
