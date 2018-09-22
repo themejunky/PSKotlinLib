@@ -116,8 +116,16 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
         mIsSpinnerValid=true
     }
 
-    fun trimite() {
-        Log.d("spinnesadasr", "bypass")
-        mListener.onCustomSpinnerChange()
+    fun byPass(nPositionSelected: Int) {
+        mIsSpinnerValid = nPositionSelected != 0
+        nSpinnerError.text = mDefaultError
+        mSpinnerSelectedId = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].id
+        mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].value
+        mStartValidating = true
+        try {
+            mListener.onCustomSpinnerChange()
+        } catch (e: Exception) {
+            Log.d("CUSTOM_SPINNER", "" + e.message)
+        }
     }
 }

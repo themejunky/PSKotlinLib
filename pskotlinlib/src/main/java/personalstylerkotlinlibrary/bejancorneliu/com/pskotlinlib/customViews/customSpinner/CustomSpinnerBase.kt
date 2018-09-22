@@ -37,19 +37,14 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, nPositionSelected: Int, p3: Long) {
-        Log.d("spinnesadasr", "custom_1")
         mIsSpinnerValid = nPositionSelected != 0
-        Log.d("spinnesadasr", "custom_2")
         nSpinnerError.text = mDefaultError
         mSpinnerSelectedId = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].id
         mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].value
         mStartValidating = true
-        Log.d("spinnesadasr", "custom_3")
         try {
-            Log.d("spinnesadasr", "custom_4")
             mListener.onCustomSpinnerChange()
         } catch (e : Exception) {
-            Log.d("spinnesadasr", "custom_5")
             Log.d("CUSTOM_SPINNER",""+e.message)
         }
     }
