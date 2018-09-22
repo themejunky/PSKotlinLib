@@ -18,6 +18,8 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
         fun onCustomSpinnerChange()
     }
 
+    var nPositionExt: Int = -1
+
     fun setListener(nListener: CustomSpinner.CustomSpinnerInterface) {
         mListener = nListener
     }
@@ -51,6 +53,14 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
                 nContainer.tag = it.getString(R.styleable.CustomSpinner_cs_tag)
             }
         }
+    }
+
+    fun getPositionExt(): Int {
+        return nPositionExt
+    }
+
+    fun setPositionExt(nValue: Int) {
+        nPositionExt = nValue
     }
 
     fun setTitle(nTitle : String) {
