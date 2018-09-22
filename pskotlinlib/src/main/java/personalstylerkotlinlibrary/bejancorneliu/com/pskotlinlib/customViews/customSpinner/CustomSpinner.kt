@@ -124,7 +124,7 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
         mSpinnerSelectedValue = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].value
         mStartValidating = true
         try {
-            mListener.onCustomSpinnerChange()
+            mListener.onCustomSpinnerChange(nContainer.tag.toString())
         } catch (e: Exception) {
             Log.d("CUSTOM_SPINNER", "" + e.message)
         }
