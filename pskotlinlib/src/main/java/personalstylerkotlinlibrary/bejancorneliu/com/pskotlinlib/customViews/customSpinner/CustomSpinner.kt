@@ -30,7 +30,7 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
         nSpinnerTitle.typeface = typefaceBold
         nSpinnerMandatory.typeface = typefaceBold
         nSpinnerError.typeface = typefaceBold
-        nSpinner.onItemSelectedListener=this
+            // nSpinner.onItemSelectedListener=this
 
             //set Title
             if (it.hasValue(R.styleable.CustomSpinner_cs_title_text)) {
