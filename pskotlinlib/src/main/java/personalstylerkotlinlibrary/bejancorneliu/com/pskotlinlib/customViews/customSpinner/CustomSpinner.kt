@@ -2,6 +2,7 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cu
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import android.widget.Spinner
 import kotlinx.android.synthetic.main.lib_custom_spinner.view.*
@@ -113,5 +114,10 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
 
     fun triggerDefault() {
         mIsSpinnerValid=true
+    }
+
+    fun trimite() {
+        Log.d("spinnesadasr", "bypass")
+        mListener.onCustomSpinnerChange()
     }
 }
