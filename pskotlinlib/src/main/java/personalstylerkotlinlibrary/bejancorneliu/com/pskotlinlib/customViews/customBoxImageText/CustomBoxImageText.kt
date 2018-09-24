@@ -33,8 +33,8 @@ class CustomBoxImageText(context: Context, attrs: AttributeSet) : CustomBoxImage
             }
 
             //set Tag
-            if (it.hasValue(R.styleable.CustomBoxImageText_cbit_text)) {
-                mContainer.tag = it.getString(R.styleable.CustomBoxImageText_cbit_text)
+            if (it.hasValue(R.styleable.CustomBoxImageText_cbit_tag)) {
+                mContainer.tag = it.getString(R.styleable.CustomBoxImageText_cbit_tag)
             }
 
             // set custom active color

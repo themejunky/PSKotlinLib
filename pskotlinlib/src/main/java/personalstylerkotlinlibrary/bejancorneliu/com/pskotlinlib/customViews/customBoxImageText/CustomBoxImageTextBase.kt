@@ -33,7 +33,7 @@ abstract class CustomBoxImageTextBase(context: Context, attrs: AttributeSet) : B
                 try {
                     mListener.onCustomBoxImageTextChange(mContainer.tag.toString(), mIsActive)
                 } catch (e: Exception) {
-                    Log.d("CUSTOM_BOX_IMAGE", e.message)
+                    Log.d("CUSTOM_BOX_IMAGE_TEXT", e.message)
                 }
             }
             event.action == MotionEvent.ACTION_CANCEL -> {
