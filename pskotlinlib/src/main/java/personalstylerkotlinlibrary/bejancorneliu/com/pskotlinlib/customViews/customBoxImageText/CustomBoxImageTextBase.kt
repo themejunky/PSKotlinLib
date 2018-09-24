@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import kotlinx.android.synthetic.main.lib_custom_box_image.view.*
+import kotlinx.android.synthetic.main.lib_custom_box_image_text.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
 import kotlin.properties.Delegates
@@ -21,8 +21,8 @@ abstract class CustomBoxImageTextBase(context: Context, attrs: AttributeSet) : B
         when {
             event.action == MotionEvent.ACTION_DOWN -> {
                 mText.setTextColor(mHoverTextColor)
-                mIcon.setColorFilter(mHoverTextColor)
-                mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_roud_corners_hover)
+                mImage.setColorFilter(mHoverTextColor)
+                mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_roud_corners_hover)
             }
             event.action == MotionEvent.ACTION_UP -> {
 
@@ -30,12 +30,12 @@ abstract class CustomBoxImageTextBase(context: Context, attrs: AttributeSet) : B
 
                 if (mIsActive) {
                     mText.setTextColor(mActiveTextColor)
-                    mIcon.setColorFilter(mActiveTextColor)
-                    mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners_active)
+                    mImage.setColorFilter(mActiveTextColor)
+                    mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners_active)
                 } else {
                     mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
-                    mIcon.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
-                    mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
+                    mImage.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
+                    mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
                 }
 
                 try {
@@ -47,8 +47,8 @@ abstract class CustomBoxImageTextBase(context: Context, attrs: AttributeSet) : B
             event.action == MotionEvent.ACTION_CANCEL -> {
                 mIsActive = false
                 mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
-                mIcon.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
-                mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
+                mImage.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
+                mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
             }
         }
         return true
@@ -57,12 +57,12 @@ abstract class CustomBoxImageTextBase(context: Context, attrs: AttributeSet) : B
     private fun judgeState() {
         if (mIsActive) {
             mText.setTextColor(mActiveTextColor)
-            mIcon.setColorFilter(mActiveTextColor)
-            mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners_active)
+            mImage.setColorFilter(mActiveTextColor)
+            mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners_active)
         } else {
             mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
-            mIcon.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
-            mPicContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
+            mImage.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
+            mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
         }
     }
 }
