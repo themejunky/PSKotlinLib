@@ -8,12 +8,16 @@
     <ImageView
         android:id="@+id/mImage"
         style="@style/Cube20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/mText" />
 
     <TextView
         android:id="@+id/mText"
         style="@style/WrapWrap.Regular.Black.13"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -26,7 +26,7 @@ abstract class CustomBoxImageTextBase(context: Context, attrs: AttributeSet) : B
             }
             event.action == MotionEvent.ACTION_UP -> {
 
-                mIsActive = !mIsActive
+                //    mIsActive = !mIsActive
 
                 if (mIsActive) {
                     mText.setTextColor(mActiveTextColor)
@@ -46,7 +46,7 @@ abstract class CustomBoxImageTextBase(context: Context, attrs: AttributeSet) : B
                 }
             }
             event.action == MotionEvent.ACTION_CANCEL -> {
-                mIsActive = false
+                // mIsActive = false
                 mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
                 mImage.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
                 mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
