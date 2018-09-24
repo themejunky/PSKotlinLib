@@ -32,7 +32,7 @@ class CustomBoxImageText(context: Context, attrs: AttributeSet) : CustomBoxImage
                 mText.text = it.getString(R.styleable.CustomBoxImageText_cbit_text)
             }
 
-            //set Tag
+            //set Tags
             if (it.hasValue(R.styleable.CustomBoxImageText_cbit_tag)) {
                 mContainer.tag = it.getString(R.styleable.CustomBoxImageText_cbit_tag)
             }
