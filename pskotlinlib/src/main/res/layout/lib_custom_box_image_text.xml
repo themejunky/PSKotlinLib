@@ -8,7 +8,7 @@
     <ImageView
         android:id="@+id/mImage"
         style="@style/Cube20"
-        app:layout_constraintRight_toRightOf="@+id/mText" />
+        app:layout_constraintRight_toLeftOf="@+id/mText" />
 
     <TextView
         android:id="@+id/mText"
