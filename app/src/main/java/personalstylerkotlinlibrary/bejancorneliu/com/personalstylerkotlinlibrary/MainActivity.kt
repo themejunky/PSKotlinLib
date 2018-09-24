@@ -12,6 +12,10 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cus
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 
 class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface {
+    override fun onCustomInputChange(view: String) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     override fun onCustomSpinnerChange(view: String) {
         Log.d("spinner", "11 : " + System.currentTimeMillis() + "/" + view)
     }
@@ -20,9 +24,6 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
         Log.d("asdadadsd", "1 : " + System.currentTimeMillis())
     }
 
-    override fun onCustomInputChange() {
-        Log.d("spinner", "1 : " + System.currentTimeMillis())
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
