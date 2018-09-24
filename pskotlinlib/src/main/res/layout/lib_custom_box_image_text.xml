@@ -5,7 +5,6 @@
     style="@style/MatchWrap"
     android:background="@drawable/lib_container_round_corners">
 
-
     <ImageView
         android:id="@+id/mImage"
         style="@style/Cube20"

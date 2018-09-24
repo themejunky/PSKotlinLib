@@ -32,6 +32,7 @@ abstract class CustomBoxImageTextBase(context: Context, attrs: AttributeSet) : B
                     mText.setTextColor(mActiveTextColor)
                     mImage.setColorFilter(mActiveTextColor)
                     mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners_active)
+                    mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
                 } else {
                     mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
                     mImage.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
@@ -59,6 +60,7 @@ abstract class CustomBoxImageTextBase(context: Context, attrs: AttributeSet) : B
             mText.setTextColor(mActiveTextColor)
             mImage.setColorFilter(mActiveTextColor)
             mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners_active)
+            mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
         } else {
             mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
             mImage.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
