@@ -26,18 +26,9 @@ abstract class CustomBoxImageTextBase(context: Context, attrs: AttributeSet) : B
             }
             event.action == MotionEvent.ACTION_UP -> {
 
-                //    mIsActive = !mIsActive
-
-                if (mIsActive) {
-                    mText.setTextColor(mActiveTextColor)
-                    mImage.setColorFilter(mActiveTextColor)
-                    mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners_active)
-                    mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
-                } else {
-                    mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
-                    mImage.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
-                    mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
-                }
+                mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
+                mImage.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
+                mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
 
                 try {
                     mListener.onCustomBoxImageTextChange(mContainer.tag.toString(), mIsActive)

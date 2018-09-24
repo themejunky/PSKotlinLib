@@ -8,6 +8,7 @@
     <ImageView
         android:id="@+id/mImage"
         style="@style/Cube20"
+        android:layout_marginRight="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/mText" />
