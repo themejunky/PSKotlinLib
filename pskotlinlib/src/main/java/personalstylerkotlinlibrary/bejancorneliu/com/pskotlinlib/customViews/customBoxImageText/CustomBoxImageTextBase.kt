@@ -15,10 +15,10 @@ abstract class CustomBoxImageTextBase(context: Context, attrs: AttributeSet) : B
     var mActiveTextColor: Int = 0
     var mHoverTextColor: Int = 0
     lateinit var mListener: CustomBoxImageText.CustomBoxImageTextInterface
-    var mIsActive by Delegates.observable(false) { _, _, _ -> judgeState() }
+    var mIsActive by Delegates.observable(true) { _, _, _ -> judgeState() }
 
     override fun onTouch(v: View, event: MotionEvent): Boolean {
-        if (!mIsActive) {
+        if (mIsActive) {
             when {
                 event.action == MotionEvent.ACTION_DOWN -> {
                     mText.setTextColor(mHoverTextColor)
