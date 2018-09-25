@@ -57,6 +57,15 @@ class CustomBoxImageText(context: Context, attrs: AttributeSet) : CustomBoxImage
 
     fun setActivationState(nValue: Boolean) {
         mIsActive = nValue
+        if (mIsActive) {
+            mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
+            mImage.setColorFilter(ContextCompat.getColor(context, R.color.lib_base_black))
+            mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_round_corners)
+        } else {
+            mText.setTextColor(mHoverTextColor)
+            mImage.setColorFilter(mHoverTextColor)
+            mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_roud_corners_hover)
+        }
     }
 
     fun getActivationState(): Boolean {
