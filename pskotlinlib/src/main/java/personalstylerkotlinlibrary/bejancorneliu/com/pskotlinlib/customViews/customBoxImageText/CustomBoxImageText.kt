@@ -45,7 +45,7 @@ class CustomBoxImageText(context: Context, attrs: AttributeSet) : CustomBoxImage
             }
 
 
-            // set custom hover color
+            // set custom hover colors
             mHoverTextColor = if (it.hasValue(R.styleable.CustomBoxImageText_cbit_hover_text_color)) {
                 it.getColor(R.styleable.CustomBoxImageText_cbit_hover_text_color, 0)
             } else {
