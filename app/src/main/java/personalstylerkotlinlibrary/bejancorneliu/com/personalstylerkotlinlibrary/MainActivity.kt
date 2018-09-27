@@ -15,6 +15,9 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cus
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 
 class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface, ManageImage.ChooseManageImage {
+
+    //adasdas
+
     override fun onDeleteImageFromGallery(nPosition: Int) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
