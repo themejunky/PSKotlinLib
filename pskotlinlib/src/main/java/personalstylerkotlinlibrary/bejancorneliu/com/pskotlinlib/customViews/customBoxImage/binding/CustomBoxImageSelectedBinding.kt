@@ -27,10 +27,3 @@ fun setChecked(nCompoundButton: CompoundButton?, isChecked: Boolean?) {
     }
 }
 
-
-@BindingAdapter("cbi:is_active")
-fun setis_active(mCustomBoxImage: CustomBoxImage?, isActive: Boolean?) {
-    if (mCustomBoxImage != null && isActive != null) {
-        mCustomBoxImage.setActivationState(isActive)
-    }
-}
