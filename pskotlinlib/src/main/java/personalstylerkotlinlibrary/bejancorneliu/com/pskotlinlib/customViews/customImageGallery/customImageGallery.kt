@@ -13,17 +13,16 @@ class customImageGallery(context: Context, private val nPosition : Int, private 
     init {
         inflate(context, R.layout.lib_custom_image_gallery, this)
         Log.d("adada","1")
-
+        mContainerGallery.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
         Log.d("adada","2")
-      //  ManageImage(context,nPosition,nListener).refresh()
+        ManageImage(context,nPosition,nListener).refresh()
     }
 
     fun setImage(nUrl : String) : customImageGallery {
-        mContainerGalery.setOnClickListener(this)
-        Glide.with(context).load(nUrl).into(mImageGalery)
+        Glide.with(context).load(nUrl).into(mImageGallery)
         return this
     }
 }
