@@ -6,14 +6,14 @@ import kotlinx.android.synthetic.main.lib_dialog_choose_photo_option.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseDialog
 
-class ManageImage(mContext: Context, nPosition : Int, nListener : ChooseManageImage )  : BaseDialog(mContext) {
+class ManageImage(mContext: Context,private val nPosition : Int, nListener : ChooseManageImage )  : BaseDialog(mContext) {
 
     var mListener = nListener
     var mPosition = nPosition
 
     interface ChooseManageImage {
-        fun onDeleteImageFromGallery()
-        fun onEditImageFromGallery()
+        fun onDeleteImageFromGallery(nPosition: Int)
+        fun onEditImageFromGallery(nPosition: Int)
     }
 
     fun refresh() {
@@ -27,8 +27,8 @@ class ManageImage(mContext: Context, nPosition : Int, nListener : ChooseManageIm
 
     override fun onClick(view: View) {
         when (view.tag) {
-           mContext.getString(R.string.lib_delete) -> mListener.onDeleteImageFromGallery()
-           mContext.getString(R.string.lib_edit) -> mListener.onEditImageFromGallery()
+           mContext.getString(R.string.lib_delete) -> mListener.onDeleteImageFromGallery(nPosition)
+           mContext.getString(R.string.lib_edit) -> mListener.onEditImageFromGallery(nPosition)
         }
         mDialog.dismiss()
     }
