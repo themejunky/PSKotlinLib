@@ -41,7 +41,9 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        UploadInfo(this).refresh()
+        var dsada = UploadInfo(this)
+        dsada.refresh()
+        dsada.setInfo("ceva")
 
         nCeva.addView(customImageGallery(this,0,this).setImage("https://image.slidesharecdn.com/androiddevelopmentwithkotlinpart2-internetservicesandjson-180205080930/95/android-development-with-kotlin-part-2-internet-services-and-json-31-638.jpg?cb=1517818354"))
 
