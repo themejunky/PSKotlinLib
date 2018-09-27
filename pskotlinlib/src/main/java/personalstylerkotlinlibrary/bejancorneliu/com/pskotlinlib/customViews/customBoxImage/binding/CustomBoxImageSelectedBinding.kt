@@ -7,7 +7,7 @@ import android.widget.CompoundButton
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImage.CustomBoxImage
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 
-@InverseBindingMethods(InverseBindingMethod(type = CustomInput::class, attribute = "cbi_is_selected"))
+@InverseBindingMethods(InverseBindingMethod(type = CustomBoxImage::class, attribute = "cbi_is_selected"))
 class CustomBoxImageSelectedBinding {
     companion object {
         @JvmStatic
@@ -24,5 +24,13 @@ class CustomBoxImageSelectedBinding {
 fun setChecked(nCompoundButton: CompoundButton?, isChecked: Boolean?) {
     if (nCompoundButton != null && isChecked != null) {
         nCompoundButton.isChecked = isChecked
+    }
+}
+
+
+@BindingAdapter("cbi:is_active")
+fun setis_active(mCustomBoxImage: CustomBoxImage?, isActive: Boolean?) {
+    if (mCustomBoxImage != null && isActive != null) {
+        mCustomBoxImage.setActivationState(isActive)
     }
 }
