@@ -4,15 +4,13 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageGallery.customImageGallery
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageGallery.dialogs.ManageImage
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageGallery.dialogs.UploadInfo
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.adapter.CustomSpinnerAdapter
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 
 class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface, ManageImage.ChooseManageImage {
 
@@ -42,6 +40,8 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        UploadInfo(this).refresh()
 
         nCeva.addView(customImageGallery(this,0,this).setImage("https://image.slidesharecdn.com/androiddevelopmentwithkotlinpart2-internetservicesandjson-180205080930/95/android-development-with-kotlin-part-2-internet-services-and-json-31-638.jpg?cb=1517818354"))
 
