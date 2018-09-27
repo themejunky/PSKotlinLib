@@ -8,7 +8,7 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.Bas
 
 class ManageImage(mContext: Context, nPosition : Int, nListener : ChooseManageImage )  : BaseDialog(mContext) {
 
-    var mListener: ChooseManageImage = nListener
+    var mListener = nListener
     var mPosition = nPosition
 
     interface ChooseManageImage {

@@ -13,27 +13,33 @@
         android:background="@color/lib_base_blue"
         android:orientation="horizontal">
 
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImageText.CustomBoxImageText
-            android:id="@+id/mYourPicture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintTop_toBottomOf="@+id/mPicturesText3"
-            app:cbit_icon="@drawable/ic_male"
-            app:cbit_tag="your_picture"
-            app:cbit_text="Pozele tale"/>
+        <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImageText.CustomBoxImageText-->
+            <!--android:id="@+id/mYourPicture"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/mPicturesText3"-->
+            <!--app:cbit_icon="@drawable/ic_male"-->
+            <!--app:cbit_tag="your_picture"-->
+            <!--app:cbit_text="Pozele tale"/>-->
 
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
-            android:id="@+id/mCategory"
-            style="@style/MatchWrap"
-            app:cs_default_error_text="dasdasd"
-            app:cs_position="1"
-            app:cs_show_error="true"
-            app:cs_tag="taguuu"
-            app:cs_title_text="dasdasd"
-            app:cs_ws_error_text="dasdasdas"
-            app:layout_constraintTop_toTopOf="parent" />
+        <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner-->
+            <!--android:id="@+id/mCategory"-->
+            <!--style="@style/MatchWrap"-->
+            <!--app:cs_default_error_text="dasdasd"-->
+            <!--app:cs_position="1"-->
+            <!--app:cs_show_error="true"-->
+            <!--app:cs_tag="taguuu"-->
+            <!--app:cs_title_text="dasdasd"-->
+            <!--app:cs_ws_error_text="dasdasdas"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
 
+        <LinearLayout
+            android:id="@+id/nCeva"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lib_base_green"
+            android:orientation="horizontal"/>
 
         <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImage.CustomBoxImage-->
             <!--android:id="@+id/nIc"-->

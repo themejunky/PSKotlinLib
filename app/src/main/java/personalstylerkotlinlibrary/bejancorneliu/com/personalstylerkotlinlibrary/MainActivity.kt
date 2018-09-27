@@ -4,15 +4,25 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageGallery.customImageGallery
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageGallery.dialogs.ManageImage
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.adapter.CustomSpinnerAdapter
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 
-class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface {
+class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface, ManageImage.ChooseManageImage {
+    override fun onDeleteImageFromGallery() {
+       Toast.makeText(this,"STERGE",Toast.LENGTH_LONG).show()
+    }
+
+    override fun onEditImageFromGallery() {
+        Toast.makeText(this,"EDIT",Toast.LENGTH_LONG).show()
+    }
+
     override fun onCustomInputChange(view: String) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
@@ -30,15 +40,17 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val valori: ArrayList<Item> = ArrayList()
-        valori.add(Item(nId = "1", nValue = "Email1"))
-        valori.add(Item(nId = "2", nValue = "Email2"))
-        valori.add(Item(nId = "3", nValue = "Email3"))
-        valori.add(Item(nId = "4", nValue = "Email4"))
+        nCeva.addView(customImageGallery(this,0,this).setImage("https://image.slidesharecdn.com/androiddevelopmentwithkotlinpart2-internetservicesandjson-180205080930/95/android-development-with-kotlin-part-2-internet-services-and-json-31-638.jpg?cb=1517818354"))
 
-
-        mCategory.getSpinner().adapter = CustomSpinnerAdapter(this, valori, "left", false)
-        mCategory.setListener(this)
+//        val valori: ArrayList<Item> = ArrayList()
+//        valori.add(Item(nId = "1", nValue = "Email1"))
+//        valori.add(Item(nId = "2", nValue = "Email2"))
+//        valori.add(Item(nId = "3", nValue = "Email3"))
+//        valori.add(Item(nId = "4", nValue = "Email4"))
+//
+//
+//        mCategory.getSpinner().adapter = CustomSpinnerAdapter(this, valori, "left", false)
+//        mCategory.setListener(this)
 
 //        mEmail.setListener(this)
 //        mEmail.triggerError()
