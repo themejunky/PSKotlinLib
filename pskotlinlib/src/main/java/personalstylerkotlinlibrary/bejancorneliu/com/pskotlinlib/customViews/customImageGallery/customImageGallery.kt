@@ -22,8 +22,8 @@ class customImageGallery(context: Context, private val nPosition : Int, private 
     }
 
     fun setImage(nUrl : String) : customImageGallery {
-       // mContainer.setOnClickListener(this)
-      //  Glide.with(context).load(nUrl).into(mImage)
+        mContainerGalery.setOnClickListener(this)
+        Glide.with(context).load(nUrl).into(mImageGalery)
         return this
     }
 }

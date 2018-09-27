@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/mContainer"
+    android:id="@+id/mContainerGalery"
     style="@style/Cube56">
 
     <ImageView
-        android:id="@+id/mImage"
+        android:id="@+id/mImageGalery"
         style="@style/Cube46"
         android:background="@drawable/lib_round_corners"
         app:layout_constraintTop_toTopOf="parent"
