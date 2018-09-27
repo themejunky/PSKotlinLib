@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageGallery.customImageGallery
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.adapter.CustomSpinnerAdapter
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
         valori.add(Item(nId = "2", nValue = "Email2"))
         valori.add(Item(nId = "3", nValue = "Email3"))
         valori.add(Item(nId = "4", nValue = "Email4"))
+
 
         mCategory.getSpinner().adapter = CustomSpinnerAdapter(this, valori, "left", false)
         mCategory.setListener(this)

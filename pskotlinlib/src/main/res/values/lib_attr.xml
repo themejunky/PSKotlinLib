@@ -89,4 +89,8 @@
         <attr name="cbit_hover_text_color" format="color" />
     </declare-styleable>
 
+    <declare-styleable name="CustomImageGallery">
+        <attr name="cig_ceva" format="boolean" />
+    </declare-styleable>
+
 </resources>

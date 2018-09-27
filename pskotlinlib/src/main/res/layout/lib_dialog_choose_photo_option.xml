@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch"
+    android:id="@+id/mContainer"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/mDelete"
+        style="@style/MatchWrap.Regular.Black.14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="12dp"
+        android:tag="@string/lib_delete"
+        android:text="@string/lib_delete_image" />
+
+    <View
+        android:id="@+id/mDivider1"
+        style="@style/Divider.Horizontal"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/mDelete"/>
+
+    <TextView
+        android:id="@+id/mEdit"
+        style="@style/MatchWrap.Regular.Black.14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mDivider1"
+        android:layout_margin="12dp"
+        android:tag="@string/lib_edit"
+        android:text="@string/lib_edit_image" />
+
+    <View
+        android:id="@+id/mDivider2"
+        style="@style/Divider.Horizontal"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/mGallery"/>
+
+    <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customTextView.CustomTextView
+        android:id="@+id/mSubmit"
+        style="@style/MatchWrap.Regular.Black.14"
+        android:text="Inchide"
+        android:gravity="center_horizontal"
+        android:padding="15dp"
+        android:background="@color/lib_default_dialog_buttons_background"
+        android:tag="@string/lib_submit"
+        app:layout_constraintTop_toBottomOf="@+id/mDivider2"
+        app:ctv_text_color="black"/>
+
+</android.support.constraint.ConstraintLayout>

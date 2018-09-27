@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="lib_delete">delete</string>
+    <string name="lib_edit">edit</string>
+    <string name="lib_submit">submit</string>
+</resources>
