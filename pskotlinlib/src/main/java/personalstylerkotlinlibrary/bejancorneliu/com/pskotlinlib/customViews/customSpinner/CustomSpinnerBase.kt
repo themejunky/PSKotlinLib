@@ -38,11 +38,12 @@ open class CustomSpinnerBase(context: Context, attrs: AttributeSet) : BaseCustom
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, nPositionSelected: Int, p3: Long) {
 
         try {
-            Log.d("custom_spiner", "LISTENERU!")
-            mListener.onCustomSpinnerChange("XYZ")
+            Log.d("custom_spiner", "tag" + nContainer.tag.toString())
+            mListener.onCustomSpinnerChange(nContainer.tag.toString())
         } catch (e: Exception) {
             Log.d("custom_spiner", "" + e.message)
         }
+
 //        mIsSpinnerValid = nPositionSelected != 0
 //        nSpinnerError.text = mDefaultError
 //        mSpinnerSelectedId = (nSpinner.adapter as CustomSpinnerAdapter).getValues()[nPositionSelected].id
