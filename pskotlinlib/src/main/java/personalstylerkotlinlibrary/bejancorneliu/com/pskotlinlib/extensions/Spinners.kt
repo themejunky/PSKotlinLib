@@ -19,5 +19,6 @@ fun Spinner.setSpinnerEntriesP(nValues: List<Platform>?) {
             mList.add(Item(nId = item.id, nValue = item.name))
         }
         adapter = CustomSpinnerAdapter(context, mList, "left", false)
+
     }
 }

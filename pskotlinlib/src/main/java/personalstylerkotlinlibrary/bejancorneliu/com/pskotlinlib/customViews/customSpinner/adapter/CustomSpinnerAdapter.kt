@@ -25,6 +25,10 @@ open class CustomSpinnerAdapter(context: Context, nValues: List<Item>, nAlignmen
         this.mValues.addAll(nValues)
     }
 
+    fun notifyDataHasChanged() {
+        notifyDataSetChanged()
+    }
+
     override fun getCount(): Int {
         return mValues.size
     }
