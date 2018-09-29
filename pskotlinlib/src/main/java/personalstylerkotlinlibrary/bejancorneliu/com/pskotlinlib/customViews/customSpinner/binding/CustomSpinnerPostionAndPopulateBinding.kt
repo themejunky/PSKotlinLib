@@ -9,7 +9,7 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.databases.Platf
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 
 @InverseBindingMethods(InverseBindingMethod(type = CustomSpinner::class,attribute = "cs_position"))
-class CustomSpinnerPostionBinding2 {
+class CustomSpinnerPostionAndPopulateBinding {
     companion object {
         @JvmStatic
         @BindingAdapter(value = ["cs_position","cs_set_entries"], requireAll = true)
