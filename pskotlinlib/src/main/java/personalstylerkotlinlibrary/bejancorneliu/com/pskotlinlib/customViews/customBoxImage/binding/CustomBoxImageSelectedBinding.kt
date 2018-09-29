@@ -15,10 +15,10 @@ fun setcbi_is_selected(nCustomBoxImage: CustomBoxImage?, nState: Boolean?) {
     }
 }
 
-@BindingAdapter("cbi_is_selected")
-fun getcbi_is_selected(box: CustomBoxImage) : Boolean {
-    return  box.getActivationState()
-}
+//@BindingAdapter("cbi_is_selected")
+//fun getcbi_is_selected(box: CustomBoxImage) : Boolean {
+//    return  box.getActivationState()
+//}
 
 @BindingAdapter("android:checked")
 fun setChecked(nCompoundButton: CompoundButton?, isChecked: Boolean?) {
