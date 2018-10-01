@@ -1,18 +1,19 @@
 package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageText
 
 import android.content.Context
+import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import kotlinx.android.synthetic.main.lib_custom_box_image_text.view.*
-import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomViewContext
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.BaseCustomView
 
-open class customImageTextBase(context : Context) : BaseCustomViewContext(context), View.OnTouchListener {
+open class CustomImageTextBase(context: Context, attrs: AttributeSet) : BaseCustomView(context, attrs), View.OnTouchListener {
 
     var mColorActiveDrawable: Int = 0
     var mColorHoverDrawable: Int = 0
 
-    lateinit var mListener: customImageText.CustomImageTextInterface
+    lateinit var mListener: CustomImageText.CustomImageTextInterface
 
     override fun onTouch(v: View, event: MotionEvent): Boolean {
             when {

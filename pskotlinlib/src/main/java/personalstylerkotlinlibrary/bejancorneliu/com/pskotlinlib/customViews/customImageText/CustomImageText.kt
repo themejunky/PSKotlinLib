@@ -3,20 +3,17 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cu
 import android.content.Context
 import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
-import android.util.Log
-import kotlinx.android.synthetic.main.lib_custom_box_image_text.view.*
+import kotlinx.android.synthetic.main.lib_custom_image_text.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.extensions.use
 
-class customImageText(context: Context, attrs: AttributeSet) : customImageTextBase(context) {
+class CustomImageText(context: Context, attrs: AttributeSet) : CustomImageTextBase(context, attrs) {
 
     interface CustomImageTextInterface {
         fun onCustomBoxImageTextChange(mTag: String)
     }
 
     fun setListener(nListener: CustomImageTextInterface) {
-        Log.d("asdasdas","2 : "+nListener)
-        Log.d("asdasdas","3 : "+mListener)
         mListener = nListener
     }
 
@@ -37,7 +34,6 @@ class customImageText(context: Context, attrs: AttributeSet) : customImageTextBa
 
             // set tagu
             if (it.hasValue(R.styleable.CustomImageText_cit_tag)) {
-                Log.d("asdasdas","1 : "+it.getString(R.styleable.CustomImageText_cit_tag))
                 mContainer.tag = it.getString(R.styleable.CustomImageText_cit_tag)
             }
 

@@ -13,7 +13,7 @@
         android:background="@color/lib_base_blue"
         android:orientation="horizontal">
 
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageText.customImageText
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageText.CustomImageText
             android:id="@+id/mAddService"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
