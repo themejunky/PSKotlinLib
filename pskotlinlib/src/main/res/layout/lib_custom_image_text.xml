@@ -19,6 +19,6 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="4dp"
         android:gravity="center"
-        android:lineSpacingExtra="-5dp"/>
+        android:lineSpacingExtra="-6dp"/>
 
 </android.support.constraint.ConstraintLayout>
