@@ -31,7 +31,7 @@ class customImageText(context: Context, attrs: AttributeSet) : customImageTextBa
                 mText.text = it.getString(R.styleable.CustomImageText_cit_text)
             }
 
-            // set tags
+            // set tagu
             if (it.hasValue(R.styleable.CustomImageText_cit_tag)) {
                 mContainer.tag = it.getString(R.styleable.CustomImageText_cit_tag)
             }
@@ -61,6 +61,9 @@ class customImageText(context: Context, attrs: AttributeSet) : customImageTextBa
                     }
                 }
             }
+
+            mText.setTextColor(mColorHoverDrawable)
+            mImage.setColorFilter(mColorHoverDrawable)
             mContainer.setOnTouchListener(this)
         }
     }
