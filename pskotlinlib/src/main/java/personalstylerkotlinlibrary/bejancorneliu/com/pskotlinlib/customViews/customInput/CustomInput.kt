@@ -122,6 +122,10 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         return nInput.text.toString()
     }
 
+    fun setInputText(nText : String) {
+        nInput.setText(nText)
+    }
+
     fun isValidWithoutErrorTriggering() : Boolean {
         return mIsInputValid
     }
