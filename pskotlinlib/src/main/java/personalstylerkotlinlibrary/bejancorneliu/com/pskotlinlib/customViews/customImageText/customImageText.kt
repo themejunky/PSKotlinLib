@@ -37,8 +37,8 @@ class customImageText(context: Context, attrs: AttributeSet) : customImageTextBa
             }
 
             //the above can be replaced with build in colors
-            if (it.hasValue(R.styleable.CustomButton_cb_button_color)) {
-                when (it.getString(R.styleable.CustomButton_cb_button_color)) {
+            if (it.hasValue(R.styleable.CustomImageText_cit_color)) {
+                when (it.getString(R.styleable.CustomImageText_cit_color)) {
                     "1" -> {
                         mColorActiveDrawable = (ContextCompat.getColor(context, R.color.lib_blue_active))
                         mColorHoverDrawable = (ContextCompat.getColor(context, R.color.lib_blue_pressed))
