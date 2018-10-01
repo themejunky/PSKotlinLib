@@ -31,7 +31,7 @@ class customImageText(context: Context, attrs: AttributeSet) : customImageTextBa
                 mText.text = it.getString(R.styleable.CustomImageText_cit_text)
             }
 
-            // set tag
+            // set tags
             if (it.hasValue(R.styleable.CustomImageText_cit_tag)) {
                 mContainer.tag = it.getString(R.styleable.CustomImageText_cit_tag)
             }
