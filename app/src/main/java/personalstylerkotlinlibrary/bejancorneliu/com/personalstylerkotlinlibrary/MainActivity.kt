@@ -9,10 +9,14 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cus
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageGallery.customImageGallery
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageGallery.dialogs.ManageImage
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageGallery.dialogs.UploadInfo
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageText.customImageText
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
 
-class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface, ManageImage.ChooseManageImage {
+class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface, ManageImage.ChooseManageImage, customImageText.CustomImageTextInterface {
+    override fun onCustomBoxImageTextChange(mTag: String) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     //adasdasasdasd
 
@@ -44,6 +48,8 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
         var dsada = UploadInfo(this)
         dsada.refresh()
         dsada.setInfo("ceva")
+
+//        mAddService.setListener(this)
 
         nCeva.addView(customImageGallery(this,0,this).setImage("https://image.slidesharecdn.com/androiddevelopmentwithkotlinpart2-internetservicesandjson-180205080930/95/android-development-with-kotlin-part-2-internet-services-and-json-31-638.jpg?cb=1517818354"))
 
