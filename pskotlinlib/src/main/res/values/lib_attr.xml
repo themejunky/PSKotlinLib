@@ -89,6 +89,19 @@
         <attr name="cbit_hover_text_color" format="color" />
     </declare-styleable>
 
+    <declare-styleable name="CustomImageText">
+        <attr name="cit_icon" format="reference" />
+        <attr name="cit_text" format="string" />
+        <attr name="cit_tag" format="string" />
+        <attr name="cit_color" format="enum">
+            <enum name="blue" value="1" />
+            <enum name="green" value="2" />
+            <enum name="grey" value="3" />
+            <enum name="red" value="4" />
+            <enum name="violet" value="5" />
+        </attr>
+    </declare-styleable>
+
     <declare-styleable name="CustomImageGallery">
         <attr name="cig_ceva" format="boolean" />
     </declare-styleable>

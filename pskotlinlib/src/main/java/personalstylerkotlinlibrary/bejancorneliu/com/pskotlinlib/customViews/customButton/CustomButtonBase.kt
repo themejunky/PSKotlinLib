@@ -41,7 +41,7 @@ open class CustomButtonBase(context: Context, attrs: AttributeSet) : BaseCustomV
                         Log.d("CUSTOM_BUTTON", e.message)
                     }
                 }
-
+//TODO : ACtiunea de cancel ca la customboximagetext
                 return true
             }
         }

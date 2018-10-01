@@ -20,11 +20,13 @@ abstract class CustomBoxImageTextBase(context: Context, attrs: AttributeSet) : B
     override fun onTouch(v: View, event: MotionEvent): Boolean {
         if (mIsActive) {
             when {
+
                 event.action == MotionEvent.ACTION_DOWN -> {
                     mText.setTextColor(mHoverTextColor)
                     mImage.setColorFilter(mHoverTextColor)
                     mContainer.background = ContextCompat.getDrawable(context, R.drawable.lib_container_roud_corners_hover)
                 }
+
                 event.action == MotionEvent.ACTION_UP -> {
 
                     mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
@@ -37,6 +39,7 @@ abstract class CustomBoxImageTextBase(context: Context, attrs: AttributeSet) : B
                         Log.d("CUSTOM_BOX_IMAGE_TEXT", e.message)
                     }
                 }
+
                 event.action == MotionEvent.ACTION_CANCEL -> {
                     // mIsActive = false
                     mText.setTextColor(ContextCompat.getColor(context, R.color.lib_base_black))
