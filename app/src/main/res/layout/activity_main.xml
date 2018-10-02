@@ -11,20 +11,20 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:background="@color/lib_base_blue"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageText.CustomImageText
-            android:id="@+id/mAddService"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="10dp"
-            app:cit_color="green"
-            app:cit_icon="@drawable/ic_male"
-            app:cit_text="Add\nService"
-            app:cit_tag="adauga"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+        <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageText.CustomImageText-->
+            <!--android:id="@+id/mAddService"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--app:cit_color="green"-->
+            <!--app:cit_icon="@drawable/ic_male"-->
+            <!--app:cit_text="Add\nService"-->
+            <!--app:cit_tag="adauga"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent" />-->
 
         <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customBoxImageText.CustomBoxImageText-->
             <!--android:id="@+id/mYourPicture"-->
@@ -36,16 +36,25 @@
             <!--app:cbit_tag="your_picture"-->
             <!--app:cbit_text="Pozele tale"/>-->
 
-        <!--<personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner-->
-            <!--android:id="@+id/mCategory"-->
-            <!--style="@style/MatchWrap"-->
-            <!--app:cs_default_error_text="dasdasd"-->
-            <!--app:cs_position="1"-->
-            <!--app:cs_show_error="true"-->
-            <!--app:cs_tag="taguuu"-->
-            <!--app:cs_title_text="dasdasd"-->
-            <!--app:cs_ws_error_text="dasdasdas"-->
-            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
+            android:id="@+id/mCategory"
+            style="@style/MatchWrap"
+            app:cs_default_error_text="dasdasd"
+            app:cs_position="1"
+            app:cs_show_error="true"
+            app:cs_tag="taguuu"
+            app:cs_title_text="dasdasd"
+            app:cs_ws_error_text="dasdasdas"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
+            android:id="@+id/mCities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cs_position="1"
+            app:cs_tag="input_category"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/nCeva"

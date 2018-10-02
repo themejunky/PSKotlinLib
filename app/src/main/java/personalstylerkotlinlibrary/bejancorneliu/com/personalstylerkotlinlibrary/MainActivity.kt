@@ -10,6 +10,8 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cus
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageText.CustomImageText
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customInput.CustomInput
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.CustomSpinner
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.adapter.CustomSpinnerAdapter
+import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 
 class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface, ManageImage.ChooseManageImage, CustomImageText.CustomImageTextInterface {
     override fun onCustomBoxImageTextChange(mTag: String) {
@@ -47,19 +49,21 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
 //        dsada.refresh()
 //        dsada.setInfo("ceva")
 
-       mAddService.setListener(this)
+  //     mAddService.setListener(this)
 
       //  nCeva.addView(customImageGallery(this,0,this).setImage("https://image.slidesharecdn.com/androiddevelopmentwithkotlinpart2-internetservicesandjson-180205080930/95/android-development-with-kotlin-part-2-internet-services-and-json-31-638.jpg?cb=1517818354"))
 
-//        val valori: ArrayList<Item> = ArrayList()
-//        valori.add(Item(nId = "1", nValue = "Email1"))
-//        valori.add(Item(nId = "2", nValue = "Email2"))
-//        valori.add(Item(nId = "3", nValue = "Email3"))
-//        valori.add(Item(nId = "4", nValue = "Email4"))
-//
-//
-//        mCategory.getSpinner().adapter = CustomSpinnerAdapter(this, valori, "left", false)
-//        mCategory.setListener(this)
+        val valori: ArrayList<Item> = ArrayList()
+        valori.add(Item(nId = "1", nValue = "Email1"))
+        valori.add(Item(nId = "2", nValue = "Email2"))
+        valori.add(Item(nId = "3", nValue = "Email3"))
+        valori.add(Item(nId = "4", nValue = "Email4"))
+
+
+        mCategory.getSpinner().adapter = CustomSpinnerAdapter(this, valori, "left", false)
+        mCategory.setListener(this)
+        mCities.getSpinner().adapter = CustomSpinnerAdapter(this, valori, "left", false)
+        mCities.setListener(this)
 
 //        mEmail.setListener(this)
 //        mEmail.triggerError()
