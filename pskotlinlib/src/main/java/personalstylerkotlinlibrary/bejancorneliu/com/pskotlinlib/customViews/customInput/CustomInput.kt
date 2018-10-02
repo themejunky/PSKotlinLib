@@ -26,7 +26,7 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
         inflate(context, R.layout.lib_custom_input, this)
         context.obtainStyledAttributes(attrs, R.styleable.CustomInput).use {
 
-        nInput.setPadding((10 * mDensity + 0.5f).toInt(), (5*mDensity + 0.5f).toInt()+(0.15f*14).toInt(),(10 * mDensity + 0.5f).toInt(), (5*mDensity + 0.5f).toInt())
+        nInput.setPadding((10 * mDensity + 0.5f).toInt(), (10*mDensity + 0.5f).toInt()+(0.15f*14).toInt(),(10 * mDensity + 0.5f).toInt(), (10*mDensity + 0.5f).toInt())
 
         nInput.typeface = typefaceRegular
         nInputTitle.typeface = typefaceBold
