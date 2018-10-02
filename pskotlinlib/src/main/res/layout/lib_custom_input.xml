@@ -22,6 +22,7 @@
         android:textColorHint="@color/lib_base_grey"
         android:background="@drawable/lib_edit_text_selector"
         android:textCursorDrawable="@null"
+        android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@+id/nInputTitle"/>
 
     <TextView

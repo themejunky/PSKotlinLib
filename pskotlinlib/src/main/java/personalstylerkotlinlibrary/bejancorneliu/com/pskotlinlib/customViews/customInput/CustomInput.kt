@@ -4,6 +4,7 @@ import android.content.Context
 import android.text.InputType
 import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
@@ -71,12 +72,12 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
             val mInputType = it.getString(R.styleable.CustomInput_ci_keyboard)
             validationFieldObserver(mInputType)
             when (it.getString(R.styleable.CustomInput_ci_keyboard)) {
-                "1" -> nInput.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_CAP_SENTENCES
+                "1" ->  nInput.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_CAP_SENTENCES
                 "12" -> nInput.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_CAP_SENTENCES
-                "2" -> nInput.inputType = InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
-                "3" -> nInput.inputType = InputType.TYPE_CLASS_PHONE
-                "4" -> nInput.transformationMethod = PasswordTransformationMethod.getInstance()
-                "5" -> nInput.inputType = InputType.TYPE_CLASS_NUMBER
+                "2" ->  nInput.inputType = InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
+                "3" ->  nInput.inputType = InputType.TYPE_CLASS_PHONE
+                "4" ->  nInput.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                "5" ->  nInput.inputType = InputType.TYPE_CLASS_NUMBER
             }
         }
             //set number of line
@@ -89,7 +90,7 @@ class CustomInput(context: Context, attrs: AttributeSet) : CustomInputBase(conte
                     isVerticalScrollBarEnabled = true
                 }
             } else {
-                nInput.setSingleLine()
+                //nInput.setSingleLine()
             }
 
             // set tag
