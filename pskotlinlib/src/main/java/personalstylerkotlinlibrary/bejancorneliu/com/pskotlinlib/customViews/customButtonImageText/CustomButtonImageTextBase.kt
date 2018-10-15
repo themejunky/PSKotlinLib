@@ -29,22 +29,11 @@ open class CustomButtonImageTextBase(context: Context, attrs: AttributeSet) : Ba
                     nContainer.background = mHoverBackgroundColor
                 }
                 event.action == MotionEvent.ACTION_UP -> {
-
                     mIsActive = !mIsActive
-
-                    if (mIsActive) {
-                        nButton.setTextColor(mActiveTextColor)
-                        nContainer.background = mActiveBackgroundColor
-                    } else {
-                        nButton.setTextColor(mInactiveTextColor)
-                        nContainer.background = mInactiveBackgroundColor
-                    }
                 }
 
                 event.action == MotionEvent.ACTION_CANCEL -> {
-                    mIsActive = false
-                    nButton.setTextColor(mInactiveTextColor)
-                    nContainer.background = mInactiveBackgroundColor
+                    judgeState()
                 }
             }
         return true

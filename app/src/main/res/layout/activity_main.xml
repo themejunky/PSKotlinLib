@@ -7,18 +7,16 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:orientation="vertical">
 
    <personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButtonImageText.CustomButtonImageText
-       android:layout_width="wrap_content"
+       android:layout_width="0dp"
        android:layout_height="45dp"
+       app:layout_constraintWidth_percent="0.50"
+       app:layout_constraintLeft_toLeftOf="parent"
        app:cbuit_text="Indisponibi"
        app:cbuit_tag="asdad"
        app:cbuit_enable="false"
+       app:cbuit_icon="true"
        />
-    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

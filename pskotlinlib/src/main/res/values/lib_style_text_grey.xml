@@ -68,5 +68,5 @@
 
     <style name="MatchMatch.Bold.Grey.14" parent="MatchMatch.Bold.Grey">  <item name="android:textSize">14sp</item> </style>
 
-    <style name="WrapMatch.Bold.Grey.14" parent="MatchMatch.Bold.Grey">  <item name="android:textSize">14sp</item> </style>
+    <style name="WrapMatch.Bold.Grey.14" parent="WrapMatch.Bold.Grey">  <item name="android:textSize">14sp</item> </style>
 </resources>

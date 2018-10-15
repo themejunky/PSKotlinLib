@@ -2,7 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nContainer"
-    style="@style/WrapWrap">
+    style="@style/MatchWrap">
 
     <ImageView
         android:id="@+id/nIcon"
@@ -10,7 +10,6 @@
         android:visibility="gone"
         android:src="@drawable/ic_available"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/nButton"
         android:layout_marginRight="5dp"/>
@@ -20,7 +19,7 @@
         style="@style/WrapMatch.Bold.Grey.14"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/nIcon"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
        />
 
