@@ -3,6 +3,7 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cu
 import android.content.Context
 import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import kotlinx.android.synthetic.main.lib_custom_button_image_text.view.*
@@ -11,6 +12,9 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.Bas
 import kotlin.properties.Delegates
 
 open class CustomButtonImageTextBase(context: Context, attrs: AttributeSet) : BaseCustomView(context, attrs), View.OnTouchListener {
+
+    lateinit var mListener: CustomButtonImageText.CustomButtonImageTextInterface
+
     var mIsActive by Delegates.observable(false) { _, _, _ -> judgeState() }
 
     var mHoverTextColor = ContextCompat.getColor(context,R.color.lib_disable_pressed)
@@ -30,6 +34,12 @@ open class CustomButtonImageTextBase(context: Context, attrs: AttributeSet) : Ba
                 }
                 event.action == MotionEvent.ACTION_UP -> {
                     mIsActive = !mIsActive
+
+                    try {
+                        mListener.onCustomBoxImageTextChange(nContainer.tag.toString(), mIsActive)
+                    } catch (e: Exception) {
+                        Log.d("CUSTOM_BUTTON_IMAGE_TEXT", e.message)
+                    }
                 }
 
                 event.action == MotionEvent.ACTION_CANCEL -> {

@@ -9,6 +9,15 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.extensions.use
 
 class CustomButtonImageText(context: Context, attrs: AttributeSet) : CustomButtonImageTextBase(context, attrs) {
+
+    interface CustomButtonImageTextInterface {
+        fun onCustomBoxImageTextChange(mTag: String, mIsActive: Boolean)
+    }
+
+    fun setListener(nListener: CustomButtonImageTextInterface) {
+        mListener = nListener
+    }
+
     init {
         inflate(context, R.layout.lib_custom_button_image_text, this)
         context.obtainStyledAttributes(attrs, R.styleable.CustomButtonImageText).use {
