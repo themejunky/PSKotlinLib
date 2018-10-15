@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nContainer"
+    style="@style/WrapWrap">
+
+    <ImageView
+        android:id="@+id/nIcon"
+        style="@style/Cube14"
+        android:visibility="gone"
+        android:src="@drawable/ic_available"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/nButton"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:id="@+id/nButton"
+        style="@style/WrapMatch.Bold.Grey.14"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/nIcon"
+        app:layout_constraintRight_toRightOf="parent"
+       />
+
+</android.support.constraint.ConstraintLayout>

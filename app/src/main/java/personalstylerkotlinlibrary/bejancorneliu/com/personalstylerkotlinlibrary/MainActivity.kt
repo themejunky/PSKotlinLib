@@ -45,32 +45,5 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        var dsada = UploadInfo(this)
-//        dsada.refresh()
-//        dsada.setInfo("ceva")
-
-  //     mAddService.setListener(this)
-
-      //  nCeva.addView(customImageGallery(this,0,this).setImage("https://image.slidesharecdn.com/androiddevelopmentwithkotlinpart2-internetservicesandjson-180205080930/95/android-development-with-kotlin-part-2-internet-services-and-json-31-638.jpg?cb=1517818354"))
-
-        val valori: ArrayList<Item> = ArrayList()
-        valori.add(Item(nId = "1", nValue = "Email1"))
-        valori.add(Item(nId = "2", nValue = "Email2"))
-        valori.add(Item(nId = "3", nValue = "Email3"))
-        valori.add(Item(nId = "4", nValue = "Email4"))
-
-
-        mCategory.getSpinner().adapter = CustomSpinnerAdapter(this, valori, "left", false)
-        mCategory.setListener(this)
-        mCities.getSpinner().adapter = CustomSpinnerAdapter(this, valori, "left", false)
-        mCities.setListener(this)
-
-//        mEmail.setListener(this)
-//        mEmail.triggerError()
-        //mInput.triggerError()
-
-          //  nIc.setActivationState(true)
-
-       // dasdasdas.setListener(this)
     }
 }

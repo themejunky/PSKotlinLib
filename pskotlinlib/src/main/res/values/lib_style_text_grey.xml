@@ -6,7 +6,8 @@
 
     <style name="MatchWrap.Bold.Grey" parent="MatchWrap.Bold"> <item name="android:textColor">@color/lib_base_grey</item>  </style>
     <style name="MatchWrap.Regular.Grey" parent="MatchWrap.Regular"> <item name="android:textColor">@color/lib_base_grey</item>  </style>
-
+    <style name="MatchMatch.Bold.Grey" parent="MatchMatch.Bold"> <item name="android:textColor">@color/lib_base_grey</item>  </style>
+    <style name="WrapMatch.Bold.Grey" parent="WrapMatch.Bold"><item name="android:textColor">@color/lib_base_grey</item></style>
 
     <style name="WrapWrap.Regular..Grey.5" parent="WrapWrap.Regular.Grey">   <item name="android:textSize">5sp</item>  </style>
     <style name="WrapWrap.Regular.Grey.6" parent="WrapWrap.Regular.Grey">   <item name="android:textSize">6sp</item>  </style>
@@ -64,4 +65,8 @@
 
     <style name="MatchpWrap.Bold.Grey.14" parent="MatchWrap.Bold.Grey">   <item name="android:textSize">14sp</item>  </style>
 
+
+    <style name="MatchMatch.Bold.Grey.14" parent="MatchMatch.Bold.Grey">  <item name="android:textSize">14sp</item> </style>
+
+    <style name="WrapMatch.Bold.Grey.14" parent="MatchMatch.Bold.Grey">  <item name="android:textSize">14sp</item> </style>
 </resources>

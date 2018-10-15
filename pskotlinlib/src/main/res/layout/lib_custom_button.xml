@@ -7,11 +7,14 @@
     <TextView
         android:id="@+id/nShadow"
         style="@style/MatchMatch.Regular.White.14"
+        android:textColor="@color/lib_base_green"
         android:gravity="center" />
 
     <TextView
         android:id="@+id/nButton"
         style="@style/MatchMatch.Regular.White.14"
+        android:text="dadadadaadad"
         android:gravity="center"
+        android:textColor="@color/lib_base_black"
         android:layout_marginBottom="3dp" />
 </RelativeLayout>

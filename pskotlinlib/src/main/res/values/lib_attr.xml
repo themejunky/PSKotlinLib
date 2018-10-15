@@ -54,6 +54,22 @@
 
     </declare-styleable>
 
+    <declare-styleable name="CustomButtonImageText">
+        <attr name="cbuit_text" format="string" />
+        <attr name="cbuit_tag" format="string" />
+        <attr name="cbuit_enable" format="boolean" />
+        <attr name="cbuit_icon" format="boolean"/>
+        <attr name="cbuit_button_color" format="enum">
+            <enum name="blue" value="1" />
+            <enum name="green" value="2" />
+            <enum name="grey" value="3" />
+            <enum name="red" value="4" />
+            <enum name="violet" value="5" />
+        </attr>
+
+    </declare-styleable>
+
+
     <declare-styleable name="CustomTextView">
 
         <attr name="ctv_text_color" format="enum">
