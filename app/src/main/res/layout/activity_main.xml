@@ -16,7 +16,7 @@
        app:cbuit_text="Indisponibi"
        app:cbuit_tag="asdad"
        app:cbuit_enable="false"
-       app:cbuit_icon="true"
+       app:cbuit_icon="false"
        />
 
 </android.support.constraint.ConstraintLayout>
