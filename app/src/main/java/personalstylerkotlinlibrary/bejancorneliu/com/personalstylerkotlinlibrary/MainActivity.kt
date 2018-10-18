@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customButton.CustomButton
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customImageGallery.dialogs.ManageImage
@@ -13,7 +14,11 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cus
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner.adapter.CustomSpinnerAdapter
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 
-class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface, ManageImage.ChooseManageImage, CustomImageText.CustomImageTextInterface {
+class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface, ManageImage.ChooseManageImage, CustomImageText.CustomImageTextInterface,  View.OnClickListener {
+    override fun onClick(v: View?) {
+        Toast.makeText(this,"sdaas",Toast.LENGTH_SHORT).show()
+    }
+
     override fun onCustomBoxImageTextChange(mTag: String) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
@@ -46,4 +51,6 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
         setContentView(R.layout.activity_main)
 
     }
+
+
 }

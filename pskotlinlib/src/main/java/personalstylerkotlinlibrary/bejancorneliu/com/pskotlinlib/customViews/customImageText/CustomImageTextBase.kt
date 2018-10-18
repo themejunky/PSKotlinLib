@@ -28,6 +28,7 @@ open class CustomImageTextBase(context: Context, attrs: AttributeSet) : BaseCust
                     try {
                         mListener.onCustomBoxImageTextChange(mContainer.tag.toString())
                     } catch (e: Exception) {
+                        callOnClick()
                         Log.d("CUSTOM_IMAGE_TEXT", e.message)
                     }
                 }
