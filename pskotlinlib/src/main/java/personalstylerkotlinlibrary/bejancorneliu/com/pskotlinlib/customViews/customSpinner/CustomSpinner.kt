@@ -1,6 +1,7 @@
 package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.customSpinner
 
 import android.content.Context
+import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
@@ -50,6 +51,13 @@ class CustomSpinner(context: Context, attrs: AttributeSet) : CustomSpinnerBase(c
             // set tag
             if (it.hasValue(R.styleable.CustomSpinner_cs_tag)) {
                 nContainer.tag = it.getString(R.styleable.CustomSpinner_cs_tag)
+            }
+
+            //set background
+            if (it.hasValue(R.styleable.CustomSpinner_cs_transparent)) {
+                if (it.getBoolean(R.styleable.CustomSpinner_cs_transparent,false)) {
+                    nSpinner.background = ContextCompat.getDrawable(context, R.drawable.lib_spinner_selector_transparent  )
+                }
             }
         }
     }

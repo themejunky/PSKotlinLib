@@ -50,6 +50,20 @@ class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, Cust
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        val mOrderStartHour: MutableList<Item> = ArrayList(0)
+        mOrderStartHour.add(Item("1","1"))
+        mOrderStartHour.add(Item("1","1"))
+        mOrderStartHour.add(Item("1","1"))
+        mOrderStartHour.add(Item("1","1"))
+        mOrderStartHour.add(Item("1","1"))
+        mOrderStartHour.add(Item("1","1"))
+        mOrderStartHour.add(Item("1","1"))
+        mOrderStartHour.add(Item("1","1"))
+        mOrderStartHour.add(Item("1","1"))
+        mOrderStartHour.add(Item("1","1"))
+
+        mAvailable.setSpinner(mOrderStartHour,"left",false)
     }
 
 

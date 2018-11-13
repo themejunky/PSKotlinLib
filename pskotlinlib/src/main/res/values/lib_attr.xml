@@ -33,6 +33,7 @@
         <attr name="cs_tag" format="string" />
         <attr name="cs_ws_error_text" format="string" />
         <attr name="cs_show_error" format="boolean" />
+        <attr name="cs_transparent" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="CustomButton">

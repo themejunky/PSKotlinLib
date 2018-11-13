@@ -3,6 +3,7 @@ package personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.customViews.cu
 import android.content.Context
 import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.lib_custom_button_image_text.view.*
 import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.R
@@ -48,6 +49,7 @@ class CustomButtonImageText(context: Context, attrs: AttributeSet) : CustomButto
             //set icon
             if (it.hasValue(R.styleable.CustomButtonImageText_cbuit_icon)) {
                 if (it.getBoolean(R.styleable.CustomButtonImageText_cbuit_icon,false)) {
+
                     nIcon.visibility = View.VISIBLE
                 }
             }
