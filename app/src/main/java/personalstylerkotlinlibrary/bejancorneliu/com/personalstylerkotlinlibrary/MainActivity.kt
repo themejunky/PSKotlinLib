@@ -16,7 +16,7 @@ import personalstylerkotlinlibrary.bejancorneliu.com.pskotlinlib.model.Item
 
 class MainActivity : AppCompatActivity(), CustomInput.CustomInputInterface, CustomButton.CustomButtonInterface, CustomSpinner.CustomSpinnerInterface, ManageImage.ChooseManageImage, CustomImageText.CustomImageTextInterface,  View.OnClickListener {
     override fun onClick(v: View?) {
-        Toast.makeText(this,"sdaas",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,"sdaas1234",Toast.LENGTH_SHORT).show()
     }
 
     override fun onCustomBoxImageTextChange(mTag: String) {
